@@ -44,8 +44,11 @@ export default function AboutUs() {
               <p className="text-base/7 font-semibold text-indigo-600">
                 About Us
               </p>
-              <h1 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-[2.50rem] whitespace-nowrap">
-                Rebeca Schvartzman, SLP, reg. CASLPO
+              <h1 className="mt-2 text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-[2.50rem]">
+                Rebeca Schvartzman, SLP
+              </h1>
+              <h1 className="mt-2 text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-[2.50rem]">
+                reg. CASLPO
               </h1>
               <p className="mt-6 text-xl/8 text-gray-700">
                 Here, we empower every child to communicate and interact to the
