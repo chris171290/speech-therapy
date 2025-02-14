@@ -71,7 +71,7 @@ export default function Header() {
             <div className="flex items-center gap-4">
               <div className="sm:flex sm:gap-4">
                 <a
-                  className="rounded-md bg-primary text-white hover:bg-secondary hover:text-gray-500 px-5 py-2.5 lg:text-base text-sm font-medium shadow-sm"
+                  className="rounded-md bg-primary text-white hover:bg-secondary hover:text-gray-500 px-3 py-2.5 lg:text-base text-sm font-medium shadow-sm truncate"
                   href="#"
                 >
                   Free Consultation
