@@ -71,7 +71,7 @@ export default function Header() {
               </ul>
             </nav>
             <div className="border-l border-gray-400/50 h-8 mx-1 hidden md:block" />
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 md:gap-4">
               <div className="sm:flex sm:gap-4 active:scale-95">
                 <a
                   className="rounded-md bg-primary text-white font-extrabold hover:bg-tertiary p-2 py-1 lg:text-xl text-base shadow-sm truncate [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]"
@@ -81,7 +81,6 @@ export default function Header() {
                 </a>
               </div>
               <LanguageSwitch />
-
               <div className="block md:hidden">
                 <button
                   className="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"

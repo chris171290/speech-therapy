@@ -4,13 +4,14 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import SVGLumnino from "./svg/Lumino";
+import LogoCarousel from "./ui/LogoCarousel";
 
 export default function Hero() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className="mt-16 max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-5 ">
+    <div className="mt-16 max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-5 gap-1">
       <div className="border rounded-3xl border-gray-500 p-3">
         <div className="relative p-4 grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
           <motion.div
@@ -34,7 +35,7 @@ export default function Hero() {
               growth at home and beyond.
             </p>
 
-            <div className="mt-6 lg:mt-6 flex items-center gap-x-5">
+            <div className="mt-3 lg:mt-6 flex items-center gap-x-5">
               <div className="h-auto text-gray-900">
                 <SVGLumnino />
               </div>
@@ -111,9 +112,9 @@ export default function Hero() {
                 </p>
               </div>
             </div>
-            <div className="mt-7 grid gap-3 w-full sm:inline-flex">
+            <div className="mt-4 flex gap-5 sm:inline-flex">
               <a
-                className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm md:text-xl md:font-extrabold font-medium rounded-lg border border-transparent bg-primary text-white hover:bg-tertiary focus:outline-none focus:bg-tertiary disabled:opacity-50 disabled:pointer-events-none active:scale-95 [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]"
+                className="py-2 px-2 inline-flex justify-center items-center gap-x-2 text-sm md:text-xl md:font-extrabold font-medium rounded-lg border border-transparent bg-primary text-white hover:bg-tertiary focus:outline-none focus:bg-tertiary disabled:opacity-50 disabled:pointer-events-none active:scale-95 [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]"
                 href="#"
               >
                 Free Consultation
@@ -133,7 +134,7 @@ export default function Hero() {
                 </svg>
               </a>
               <a
-                className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm md:text-lg md:font-extrabold font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none active:scale-95"
+                className="py-2 px-2 inline-flex justify-center items-center gap-x-2 text-sm md:text-lg md:font-extrabold font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none active:scale-95"
                 href="#about"
               >
                 View more
@@ -248,6 +249,9 @@ export default function Hero() {
           </div> */}
           </motion.div>
         </div>
+      </div>
+      <div className="bg-white h-[8.5rem] rounded-3xl mt-2">
+        <LogoCarousel />
       </div>
     </div>
   );
