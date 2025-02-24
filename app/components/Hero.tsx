@@ -27,7 +27,7 @@ export default function Hero() {
               {/* Fun, effective speech <br />
               therapy for <span className="text-primary">kids</span> */}
             </h1>
-            <p className="mt-3 text-xl text-gray-900 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
+            <p className="mt-3 text-xl text-gray-900">
               By focusing on communication, social interaction, and real-life
               skills to help children turn small steps into big milestones –
               while equipping families with the tools to support their child’s
