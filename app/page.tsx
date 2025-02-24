@@ -12,17 +12,17 @@ import Parallax from "./components/Parallax";
 
 export default function Home() {
   return (
-    <main className="bg-main">
+    <main className="bg-secondary">
       <div className="relative min-h-screen overflow-hidden">
         <TopBar />
         <Header />
-        <Parallax />
+        {/* <Parallax /> */}
         <Hero />
       </div>
-      <AboutUs />
+      {/* <AboutUs /> */}
       {/* <Services /> */}
-      <Testimonials />
-      <Blog />
+      {/* <Testimonials /> */}
+      {/* <Blog /> */}
       {/* <FAQ /> */}
       {/* <Contact /> */}
       {/* <Footer /> */}

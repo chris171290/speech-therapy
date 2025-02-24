@@ -18,15 +18,19 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#4F46E5",
+          DEFAULT: "#e88174",
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#DCD3FF",
+          DEFAULT: "#e1dad5",
+          foreground: "#FFFFFF",
+        },
+        tertiary: {
+          DEFAULT: "#D07468",
           foreground: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#FF6757",
+          DEFAULT: "#b8a997",
           foreground: "#000000",
         },
         muted: {

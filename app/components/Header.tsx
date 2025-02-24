@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { SlSpeech } from "react-icons/sl";
+import LanguageSwitch from "./ui/LanguageSwitch";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,8 +29,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed left-0 right-0 w-full z-50 bg-white opacity-90 transition-all duration-500 ease-in-out ${
-        isScrolled ? "top-0 shadow-md" : "top-11 sm:top-11 md:top-9 lg:top-9 " // Ajusta este valor según la altura de tu TopBar
+      className={`fixed left-0 right-0 w-full z-50  transition-all duration-500 ease-in-out ${
+        isScrolled
+          ? "top-0 shadow-md bg-white opacity-90"
+          : "top-11 sm:top-11 md:top-9 lg:top-9 " // Ajusta este valor según la altura de tu TopBar
       }`}
     >
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-1.5 transition-all duration-500 ease-in-out">
@@ -40,13 +43,13 @@ export default function Header() {
               href="/"
               className="text-xl md:text-2xl font-bold text-gray-900"
             >
-              Rebeca Schvartzman
+              Talk &amp; Bloom
             </Link>
           </div>
 
           <div className="lg:gap-6 md:flex md:items-center md:gap-3">
             <nav aria-label="Global" className="hidden md:block">
-              <ul className="flex items-center lg:gap-10 text-base md:gap-3">
+              <ul className="flex items-center lg:gap-6 text-base md:text-lg md:gap-3">
                 <li>
                   <NavLink href="#about">About</NavLink>
                 </li>
@@ -69,14 +72,15 @@ export default function Header() {
             </nav>
             <div className="border-l border-gray-400/50 h-8 mx-1 hidden md:block" />
             <div className="flex items-center gap-4">
-              <div className="sm:flex sm:gap-4">
+              <div className="sm:flex sm:gap-4 active:scale-95">
                 <a
-                  className="rounded-md bg-primary text-white hover:bg-secondary hover:text-gray-500 px-3 py-2.5 lg:text-base text-sm font-medium shadow-sm truncate"
+                  className="rounded-md bg-primary text-white font-extrabold hover:bg-tertiary p-2 py-1 lg:text-xl text-base shadow-sm truncate [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]"
                   href="#"
                 >
                   Free Consultation
                 </a>
               </div>
+              <LanguageSwitch />
 
               <div className="block md:hidden">
                 <button
@@ -109,7 +113,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <NavLink href="#about" mobile>
+            <NavLink href="/#about" mobile>
               About
             </NavLink>
             <NavLink href="#services" mobile>
@@ -134,7 +138,8 @@ export default function Header() {
   );
 }
 
-const scrollTo = (id: string) => {
+const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  e.preventDefault();
   const element = document.getElementById(id);
   if (element) {
     window.scrollTo({
@@ -154,14 +159,14 @@ function NavLink({
   mobile?: boolean;
 }) {
   return (
-    <button
-      // href={"#"}
-      className={`font-semibold text-[#8770e3] hover:text-primary transition duration-500 ${
+    <Link
+      href={`/${href}`}
+      className={`font-semibold  text-gray-900 hover:text-primary transition duration-500 ${
         mobile ? "block py-2" : ""
       }`}
-      onClick={() => scrollTo(href.slice(1))}
+      onClick={(e) => scrollTo(e, href.slice(1))}
     >
       {children}
-    </button>
+    </Link>
   );
 }
