@@ -35,6 +35,9 @@ export default function Hero() {
             </p>
 
             <div className="mt-6 lg:mt-6 flex items-center gap-x-5">
+              <div className="h-auto text-gray-900">
+                <SVGLumnino />
+              </div>
               <div className="">
                 <div className="flex gap-x-1">
                   <svg
@@ -106,9 +109,6 @@ export default function Hero() {
                 <p className="mt-3 text-sm text-gray-900">
                   <span className="font-bold">4.9</span> /5 - from 137 reviews
                 </p>
-              </div>
-              <div className="h-auto w-16 text-gray-900">
-                <SVGLumnino />
               </div>
             </div>
             <div className="mt-7 grid gap-3 w-full sm:inline-flex">
