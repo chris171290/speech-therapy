@@ -11,6 +11,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        marquee: "marquee 50s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(calc(-200px * 8))" },
+        },
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
