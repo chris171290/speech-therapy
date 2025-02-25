@@ -28,7 +28,7 @@ const institutions = [
   },
   {
     name: "DIR Floortime",
-    src: "/DIRFloortime.png?height=80&width=160",
+    src: "/DIRFloorTime.png?height=80&width=160",
     alt: "Logo de Microsoft",
   },
   {
