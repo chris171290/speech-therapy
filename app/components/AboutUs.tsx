@@ -1,12 +1,83 @@
-import { FaCloudArrowUp } from "react-icons/fa6";
+"use client";
+
+import { MdOutlineTaskAlt } from "react-icons/md";
+import { CgAwards } from "react-icons/cg";
+import { ReactNode } from "react";
+import { Card, CardContent, CardHeader } from "./ui/Card";
+import { LuLanguages } from "react-icons/lu";
+import { GiBrain } from "react-icons/gi";
+import { MdFamilyRestroom } from "react-icons/md";
+
+// Interfaz para los ítems de la lista
+interface ListItem {
+  title: string;
+}
+interface FeatureCardProps {
+  icon: ReactNode;
+  title: string;
+  description: string;
+}
 
 export default function AboutUs() {
+  // Datos de los ítems de la lista
+  const listItems: ListItem[] = [
+    { title: "Speech and language delays & disorders." },
+    {
+      title:
+        "Autism Spectrum Disorder (ASD) & social communication challenges with all levels of ability.",
+    },
+    {
+      title:
+        "Executive Function (EF) difficulties & ADHD (Attention Deficit Hyperactivity Disorder.",
+    },
+  ];
+
+  const features = [
+    {
+      icon: <CgAwards className="size-6 text-white" />,
+      title: "Experience & Expertise",
+      description: "Over two decades of hands-on experience",
+    },
+    {
+      icon: <LuLanguages className="size-6 text-white" />,
+      title: "Bilingual Services",
+      description: "Full support in English & Spanish",
+    },
+    {
+      icon: <GiBrain className="size-6 text-white" />,
+      title: "Neurodiversity Affirming",
+      description: "A welcoming, strengths-based approach",
+    },
+    {
+      icon: <MdFamilyRestroom className="size-6 text-white" />,
+      title: "Experience & Expertise",
+      description: "Partnering with parents for real, lasting",
+    },
+  ];
+
+  function FeatureCard({ icon, title, description }: FeatureCardProps) {
+    return (
+      <Card className=" bg-transparent h-full transition-all duration-300 hover:shadow-lg border-[0.5px]">
+        <CardHeader className="flex items-center justify-center pt-6">
+          <div className="w-10 h-10 inline-flex items-center justify-center rounded-full dark:bg-primary bg-primary text-white flex-shrink-0">
+            {icon}
+          </div>
+          <h3 className="text-xl font-semibold mb-2">{title}</h3>
+        </CardHeader>
+        <CardContent className="text-center">
+          <p className="text-black text-xl">{description}</p>
+        </CardContent>
+      </Card>
+    );
+  }
+
   return (
-    <div
-      className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
+    <section
+      className="relative isolate overflow-hidden bg-secondary px-6 py-10 sm:py-24 lg:overflow-visible lg:px-0"
       id="about"
     >
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+      {/* Fondo SVG */}
+      {/* <div className="absolute inset-0 -z-10 overflow-hidden">
         <svg
           aria-hidden="true"
           className="absolute top-0 left-[max(50%,25rem)] h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
@@ -36,141 +107,86 @@ export default function AboutUs() {
             strokeWidth={0}
           />
         </svg>
-      </div>
+      </div> */}
+
+      {/* Contenido principal */}
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+        {/* Sección izquierda */}
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <p className="text-base/7 font-semibold text-indigo-600">
-                About Us
-              </p>
-              <h1 className="mt-2 text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-[2.50rem]">
+              <p className="text-3xl font-semibold text-primary">About Us</p>
+              <h1 className="mt-4 text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-[2.50rem]">
                 Rebeca Schvartzman, SLP
               </h1>
               <h1 className="mt-2 text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-[2.50rem]">
                 reg. CASLPO
               </h1>
-              <p className="mt-6 text-xl/8 text-gray-700">
-                Here, we empower every child to communicate and interact to the
-                best of their ability. As a registered Speech-Language
-                Pathologist (SLP) with over 20 years of experience, I provide
-                personalized, culturally sensitive, and evidence-based services.
+              <p className="mt-8 text-lg/7 text text-gray-700">
+                Hi, I’m Beca!
+                <br />
+                <br />
+                I’m a passionate, registered{" "}
+                <strong>speech-language pathologist (SLP) </strong>
+                with over <strong>25 years of experience</strong> helping
+                children develop the communication skills they need to thrive. I
+                am fully bilingual in <strong>English and Spanish</strong> and
+                proudly provide services in both languages.
+                <br />
+                <br />
+                Throughout my career, I’ve worked with children of{" "}
+                <strong>diverse cultural and linguistic backgrounds</strong>,
+                always striving to create an inclusive, supportive, and engaging
+                environment for learning. I deeply respect each family’s unique
+                experiences and tailor my approach to fit their child’s
+                individual needs.
               </p>
             </div>
           </div>
         </div>
+
+        {/* Imagen */}
         <div className="-mt-12 -ml-12 p-12 lg:sticky lg:top-20 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
             alt=""
-            // src="https://tailwindui.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
             src="/aboutMe.png"
             className="w-[48rem] rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10 sm:w-[57rem]"
           />
         </div>
+
+        {/* Sección derecha */}
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
-              <p>
-                I am a member in good standing with the College of Audiologists
-                and Speech-Language Pathologists of Ontario (CASLPO) and have
-                worked in both government-funded programs and private settings.
-                Bilingual in English and Spanish , I offer services in both
-                languages to support diverse families.
-                <br />
-                My career has focused on working with children and families from
-                varied cultural and linguistic backgrounds. This has taught me
-                to be mindful of cultural sensitivities, adapt teaching methods,
-                and build strong relationships to meet each child’s unique
-                needs.
-                <br />
-                As an advocate for neurodiversity , I celebrate the strengths
-                and challenges of different brain patterns. Since the early
-                2000s, I’ve championed acceptance and inclusion for
-                neurodivergent individuals.
-                <br />I specialize in assessing and treating:
+              <h2 className="mt-2 text-base font-semibold tracking-tight text-pretty text-gray-900 sm:text-[2.50rem]">
+                How I Can Help
+              </h2>
+              <p className="mt-8 text-lg/7 font-semibold text text-gray-700">
+                I specialize in assessing and treating:
               </p>
+
+              {/* Lista de especialidades */}
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
-                <li className="flex gap-x-3">
-                  <FaCloudArrowUp
-                    aria-hidden="true"
-                    className="mt-1 size-5 flex-none text-indigo-600"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Autism Spectrum Disorder (ASD)
-                    </strong>{" "}
-                    {/* Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Maiores impedit perferendis suscipit eaque, iste dolor
-                    cupiditate blanditiis ratione. */}
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <FaCloudArrowUp
-                    aria-hidden="true"
-                    className="mt-1 size-5 flex-none text-indigo-600"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Social communication challenges across all levels of
-                      ability.
-                    </strong>{" "}
-                    {/* Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                    qui lorem cupidatat commodo. */}
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <FaCloudArrowUp
-                    aria-hidden="true"
-                    className="mt-1 size-5 flex-none text-indigo-600"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      A wide range of speech and language delays and disorders.
-                    </strong>{" "}
-                    {/* Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis. */}
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <FaCloudArrowUp
-                    aria-hidden="true"
-                    className="mt-1 size-5 flex-none text-indigo-600"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Executive function (EF) difficulties.
-                    </strong>{" "}
-                    {/* Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis. */}
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <FaCloudArrowUp
-                    aria-hidden="true"
-                    className="mt-1 size-5 flex-none text-indigo-600"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Attention Deficit Hyperactivity Disorder (ADHD)
-                    </strong>{" "}
-                    {/* Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis. */}
-                  </span>
-                </li>
+                {listItems.map((item, index) => (
+                  <li key={index} className="flex gap-x-3">
+                    <MdOutlineTaskAlt
+                      aria-hidden="true"
+                      className="mt-1 size-6 flex-none text-primary"
+                    />
+                    <span>
+                      <strong className="text-lg/7 font-semibold text-gray-900">
+                        {item.title}
+                      </strong>
+                    </span>
+                  </li>
+                ))}
               </ul>
-              <p className="mt-8">
-                Foundational skills are key to unlocking a child’s potential. By
-                building these skills, supporting emotional regulation, and
-                addressing sensory processing, I help children learn and develop
-                social interactions more effectively.
-              </p>
-              {/* <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
-                No server? No problem.
-              </h2> */}
-              <p className="mt-6">
-                Let’s work together to help your child thrive! Whether you need
-                assessment, therapy, or guidance, I’m here to support your
-                family’s journey.
+
+              <p className="mt-8 text-lg/7 text text-gray-700">
+                I believe in a <strong>holistic approach</strong> to learning-
+                where strong foundational skills, emotional regulation, and
+                sensory processing all play a role in a child’s ability to
+                communicate and interact confidently.
               </p>
               <span className="block mt-8 text-gray-600 italic">
                 Your child’s voice matters—and together, we can make it heard.
@@ -179,6 +195,44 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-    </div>
+      {/* Divider */}
+      <div className={`flex items-center justify-center my-8`}>
+        <div className="flex-grow h-px bg-gradient-to-r from-transparent to-primary" />
+        <div className="mx-4 w-4 h-4 bg-primary rotate-45" />
+        <div className="flex-grow h-px bg-gradient-to-l from-transparent to-primary" />
+      </div>
+      {/* Why Work With Me? */}
+      <div className="px-8">
+        <div className="border-[0.8px] rounded-3xl border-black bg-accent/50 p-5 mx-auto grid max-w-2xl grid-cols-1 gap-y-8 lg:mx-0 lg:max-w-none">
+          <div className="flex items-center justify-center">
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-[2.50rem]">
+              Why Work With Me?
+            </h2>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 md:gap-y-4 lg:grid-cols-4 mx-auto lg:gap-x-8">
+            {features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+              />
+            ))}
+          </div>
+          <div className="flex flex-col items-center gap-8">
+            <p className="text-black text-center text-lg/7">
+              Let’s help your child find their voice and build meaningful
+              connections!
+            </p>
+            <a
+              className="rounded-md bg-primary text-white font-extrabold hover:bg-tertiary p-2 py-2 lg:text-xl text-base shadow-sm truncate [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]"
+              href="#"
+            >
+              Reach out today to start your journey
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import TopBar from "./components/TopBar";
 import Parallax from "./components/Parallax";
+import LogoCarousel from "./components/ui/LogoCarousel";
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
         <Header />
         {/* <Parallax /> */}
         <Hero />
+        <div className="bg-white h-[8.5rem] mt-2">
+          <LogoCarousel />
+        </div>
       </div>
       <AboutUs />
       {/* <Services /> */}
