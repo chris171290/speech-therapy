@@ -12,12 +12,12 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        marquee: "marquee 50s linear infinite",
+        marquee: "marquee 40s linear infinite",
       },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(calc(-200px * 8))" },
+          "100%": { transform: "translateX(calc(-198.5px * 10))" },
         },
       },
       colors: {

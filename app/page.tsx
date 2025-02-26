@@ -13,13 +13,13 @@ import Parallax from "./components/Parallax";
 export default function Home() {
   return (
     <main className="bg-secondary">
-      <div className="relative min-h-screen overflow-hidden">
+      <div className="relative overflow-hidden lg:overflow-visible" id="home">
         <TopBar />
         <Header />
         {/* <Parallax /> */}
         <Hero />
       </div>
-      {/* <AboutUs /> */}
+      <AboutUs />
       {/* <Services /> */}
       {/* <Testimonials /> */}
       {/* <Blog /> */}
