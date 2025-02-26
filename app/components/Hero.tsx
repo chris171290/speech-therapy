@@ -50,9 +50,9 @@ export default function Hero() {
             transition={{ duration: 1.2 }}
             className="lg:col-span-4"
           >
-            <h1 className="block text-xl font-bold text-gray-900 [text-shadow:_0_1px_0_rgb(0_0_0_/_50%)] sm:text-2xl lg:text-3xl lg:leading-tight">
+            <h1 className="block text-xl font-bold text-gray-900 sm:text-2xl lg:text-3xl lg:leading-tight">
               Helping Kids Develop Speech, Language, and Social Skills –{" "}
-              <span className="text-gray-900 [text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]">
+              <span className="text-gray-900">
                 Through Play, Family Involvement, and Expert Guidance
               </span>
             </h1>
@@ -124,9 +124,6 @@ export default function Hero() {
             />
           </motion.div>
         </div>
-      </div>
-      <div className="bg-white h-[8.5rem] rounded-3xl mt-2">
-        <LogoCarousel />
       </div>
     </div>
   );
