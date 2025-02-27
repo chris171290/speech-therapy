@@ -41,55 +41,9 @@ export default function Testimonials() {
   };
 
   return (
-    // <section ref={ref} id="testimonios" className="py-20 bg-secondary">
-    //   <div className="container mx-auto px-6">
-    //     <h2 className="text-4xl font-bold mb-12 text-center text-white">Lo que Dicen Nuestras Familias</h2>
-    //     <div className="relative max-w-4xl mx-auto">
-    //       <motion.div
-    //         key={currentIndex}
-    //         initial={{ opacity: 0 }}
-    //         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-    //         exit={{ opacity: 0 }}
-    //         transition={{ duration: 2 }}
-    //         className="bg-white p-8 rounded-lg shadow-xl"
-    //       >
-    //         <div className="flex items-center mb-6">
-    //           <Image
-    //             src={testimonials[currentIndex].image || "/placeholder.svg"}
-    //             alt={testimonials[currentIndex].name}
-    //             width={80}
-    //             height={80}
-    //             className="rounded-full mr-4"
-    //           />
-    //           <div>
-    //             <h3 className="font-semibold text-xl text-primary">{testimonials[currentIndex].name}</h3>
-    //             <p className="text-gray-600">{testimonials[currentIndex].role}</p>
-    //           </div>
-    //         </div>
-    //         <p className="text-gray-700 text-lg italic mb-6">"{testimonials[currentIndex].text}"</p>
-    //         <div className="flex justify-between items-center">
-    //           <button onClick={prevTestimonial} className="text-primary hover:text-secondary transition duration-300">
-    //             ← Anterior
-    //           </button>
-    //           <div className="flex space-x-2">
-    //             {testimonials.map((_, index) => (
-    //               <span
-    //                 key={index}
-    //                 className={`h-3 w-3 rounded-full ${index === currentIndex ? "bg-primary" : "bg-gray-300"}`}
-    //               />
-    //             ))}
-    //           </div>
-    //           <button onClick={nextTestimonial} className="text-primary hover:text-secondary transition duration-300">
-    //             Siguiente →
-    //           </button>
-    //         </div>
-    //       </motion.div>
-    //     </div>
-    //   </div>
-    // </section>
-    <section className="bg-white">
+    <section className="bg-secondary" id="testimonials">
       <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <h2 className="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+        <h2 className="text-center text-4xl font-bold tracking-tight text-primary sm:text-5xl">
           Read trusted reviews from our customers
         </h2>
 
