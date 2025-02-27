@@ -57,7 +57,7 @@ export default function AboutUs() {
 
   function FeatureCard({ icon, title, description }: FeatureCardProps) {
     return (
-      <Card className=" bg-transparent h-full transition-all duration-300 hover:shadow-lg border-[0.5px]">
+      <Card className=" bg-transparent h-full transition-all duration-300 hover:shadow-lg border-[0.5px] hover:scale-105">
         <CardHeader className="flex items-center justify-center pt-6">
           <div className="w-10 h-10 inline-flex items-center justify-center rounded-full dark:bg-primary bg-primary text-white flex-shrink-0">
             {icon}
