@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { FaClock } from "react-icons/fa";
+import { MdDateRange } from "react-icons/md";
 const posts = [
   {
     title: "The Future of Speech Therapy: Trends and Innovations in 2025",
@@ -6,7 +8,8 @@ const posts = [
       "Explore the cutting-edge techniques and technologies shaping the future of speech therapy. From AI-driven tools to personalized treatment plans, discover what’s revolutionizing communication therapies in 2025.",
     slug: "future-speech-therapy-trends-innovations-2025",
     imagenSrc: "/blog1.png",
-    by: "Rebeca Schvartzman",
+    by: "Rebeca Schvartzman, SLP.",
+    background: "bg-accent/70",
   },
   {
     title: "How Speech Therapists Are Empowering Non-Verbal Communication",
@@ -14,7 +17,8 @@ const posts = [
       "Dive into the world of alternative communication methods and learn how therapists are helping individuals express themselves beyond words. This post highlights breakthroughs in AAC devices and inclusive practices for all ages.",
     slug: "speech-therapists-empowering-non-verbal-communication",
     imagenSrc: "/blog2.png",
-    by: "Rebeca Schvartzman",
+    by: "Rebeca Schvartzman, SLP.",
+    background: "bg-primary/35",
   },
   {
     title: "Navigating Screen Time and Language Growth",
@@ -22,18 +26,22 @@ const posts = [
       "In an era dominated by screens, find out how speech therapists are addressing the impact of digital media on language development. Get expert tips on balancing technology use while fostering strong communication skills in children.",
     slug: "navigating-screen-time-language-growth",
     imagenSrc: "/blog3.png",
-    by: "Rebeca Schvartzman",
+    by: "Rebeca Schvartzman, SLP.",
+    background: "bg-white/75",
   },
 ];
 
 export default function Blog() {
   return (
-    <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div
+      className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto"
+      id="blog"
+    >
       <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-        <h2 className="text-2xl font-bold md:text-4xl md:leading-tight">
+        <h2 className="text-2xl text-primary font-bold md:text-4xl md:leading-tight">
           Our Blog
         </h2>
-        <p className="mt-1 text-gray-600">
+        <p className="mt-1 text-black font-medium text-lg">
           Discover how speech therapists are transforming every interaction into
           a step toward success with innovative strategies and practical tools.
         </p>
@@ -49,18 +57,18 @@ const BlogList: React.FC = () => (
       <Link
         key={index}
         href={`/blog/${post.slug}`}
-        className="group flex flex-col h-full border bg-[#dcd9e9e0] border-gray-200 hover:border-transparent hover:scale-105 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg transition duration-300 rounded-xl p-5"
+        className={`group flex flex-col h-full border border-black/70 ${post.background} border-gray-200 hover:border-transparent hover:scale-105 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg transition duration-300 rounded-xl p-5`}
       >
         <div className="aspect-w-16 aspect-h-11">
           <img
-            className="w-full object-cover rounded-xl"
+            className="w-full h-52 object-cover rounded-xl"
             src={post.imagenSrc}
             alt="Blog Image"
           />
         </div>
         <div className="my-6">
           <h3 className="text-xl font-semibold text-gray-800">{post.title}</h3>
-          <p className="mt-5 text-gray-600">{post.description}</p>
+          <p className="mt-5 text-gray-800">{post.description}</p>
         </div>
         <div className="mt-auto flex items-center gap-x-3">
           <img
@@ -69,12 +77,24 @@ const BlogList: React.FC = () => (
             alt="Avatar"
           />
           <div>
-            <h5 className="text-sm text-gray-800">By {post.by}</h5>
+            <h5 className="font-semibold text-sm text-gray-800">
+              By {post.by}
+            </h5>
           </div>
         </div>
         <div className="flex items-center justify-between gap-x-3 mt-5">
-          <p className="text-sm text-gray-500">Published 2 days ago</p>
-          <p className="text-sm text-gray-500">3 min read</p>
+          <div className="text-sm text-gray-800">
+            <div className=" flex items-center justify-center gap-2 bg-primary px-2 py-1 font-semibold text-base rounded-lg text-white">
+              <MdDateRange />
+              <span>Published 2 days ago</span>
+            </div>
+          </div>
+          <div className="text-sm text-gray-800">
+            <div className=" flex items-center justify-center gap-2 bg-primary px-2 py-1 font-semibold text-base rounded-lg text-white">
+              <FaClock />
+              <span>3 min read</span>
+            </div>
+          </div>
         </div>
       </Link>
     ))}
