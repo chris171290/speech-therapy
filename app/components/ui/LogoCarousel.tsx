@@ -57,7 +57,7 @@ const institutions: Institution[] = [
 // Componente reutilizable para mostrar un logo
 const LogoItem: FC<Institution> = ({ name, src, alt }) => (
   <div className="flex flex-col items-center justify-center w-[200px] flex-shrink-0 group">
-    <div className="h-[100px] w-[200px] flex items-center justify-center bg-[#f9f9f9] rounded-lg shadow-md transition-all duration-300 ease-in-out transform group-hover:scale-105 group-hover:shadow-lg">
+    <div className="h-[50px] w-[150px] md:h-[100px] md:w-[200px] flex items-center justify-center bg-[#f9f9f9] rounded-lg shadow-md transition-all duration-300 ease-in-out transform group-hover:scale-105 group-hover:shadow-lg">
       <Image
         src={src || "/placeholder.svg"}
         alt={alt}
@@ -76,7 +76,7 @@ const LogoItem: FC<Institution> = ({ name, src, alt }) => (
 export default function LogoCarousel() {
   return (
     <div className="w-full overflow-hidden rounded-2xl shadow-lg bg-white p-5 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
-      <div className="flex animate-marquee space-x-12 hover:[animation-play-state:paused]">
+      <div className="flex animate-marquee space-x-0 md:space-x-12 hover:[animation-play-state:paused]">
         {/* Renderizado dinámico de los logos */}
         {institutions.map((institution, index) => (
           <LogoItem key={index} {...institution} />

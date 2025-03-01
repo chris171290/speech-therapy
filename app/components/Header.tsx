@@ -121,7 +121,7 @@ export default function Header() {
 
             {/* Separador y botones adicionales */}
             <div className="border-l border-gray-400/50 h-8 mx-1 hidden md:block" />
-            <div className="flex items-center gap-2 md:gap-4">
+            <div className="flex items-center gap-2 justify-center md:gap-4">
               {/* Botón de consulta gratuita */}
               <a
                 className="rounded-md bg-primary text-white font-extrabold hover:bg-tertiary p-2 py-1 lg:text-xl text-base shadow-sm truncate [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]"

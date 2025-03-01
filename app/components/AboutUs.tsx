@@ -110,7 +110,7 @@ export default function AboutUs() {
       </div> */}
 
       {/* Contenido principal */}
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
         {/* Sección izquierda */}
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
@@ -146,7 +146,7 @@ export default function AboutUs() {
         </div>
 
         {/* Imagen */}
-        <div className="-mt-12 -ml-12 p-12 lg:sticky lg:top-20 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+        <div className="-mt-6 -ml-12 p-12 lg:sticky lg:top-20 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
             alt=""
             src="/aboutMe.png"
@@ -158,15 +158,15 @@ export default function AboutUs() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
-              <h2 className="mt-2 text-base font-semibold tracking-tight text-pretty text-gray-900 sm:text-[2.50rem]">
+              <h2 className="mt-2 text-xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-[2.50rem]">
                 How I Can Help
               </h2>
-              <p className="mt-8 text-lg/7 font-semibold text text-gray-700">
+              <p className="mt-4 text-lg/7 font-semibold text text-gray-700">
                 I specialize in assessing and treating:
               </p>
 
               {/* Lista de especialidades */}
-              <ul role="list" className="mt-8 space-y-8 text-gray-600">
+              <ul role="list" className="mt-8 space-y-4 text-gray-600">
                 {listItems.map((item, index) => (
                   <li key={index} className="flex gap-x-3">
                     <MdOutlineTaskAlt
@@ -202,7 +202,7 @@ export default function AboutUs() {
         <div className="flex-grow h-px bg-gradient-to-l from-transparent to-primary" />
       </div>
       {/* Why Work With Me? */}
-      <div className="px-8">
+      <div className="md:px-8">
         <div className="border-[0.8px] rounded-3xl border-black bg-accent/50 p-5 mx-auto grid max-w-2xl grid-cols-1 gap-y-8 lg:mx-0 lg:max-w-none">
           <div className="flex items-center justify-center">
             <h2 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-[2.50rem]">

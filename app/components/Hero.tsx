@@ -15,7 +15,7 @@ interface Review {
 // Componente reutilizable para los íconos de estrellas
 const StarIcon = () => (
   <svg
-    className="size-6 text-gray-900"
+    className="size-4 text-gray-900 md:size-6"
     width="51"
     height="51"
     viewBox="0 0 51 51"
@@ -50,7 +50,7 @@ export default function Hero() {
             transition={{ duration: 1.2 }}
             className="lg:col-span-4"
           >
-            <h1 className="block text-xl font-bold text-gray-900 sm:text-2xl lg:text-3xl lg:leading-tight">
+            <h1 className="block text-2xl font-bold text-gray-900 lg:text-3xl lg:leading-tight">
               Helping Kids Develop Speech, Language, and Social Skills –{" "}
               <span className="text-gray-900">
                 Through Play, Family Involvement, and Expert Guidance
@@ -64,7 +64,7 @@ export default function Hero() {
             </p>
             <div className="mt-3 lg:mt-6 flex items-center gap-x-5">
               <div className="h-auto text-gray-900">
-                <SVGLumnino />
+                <SVGLumnino className="w-32 h-auto md:w-36" />
               </div>
               <div>
                 <div className="flex gap-x-1">
@@ -80,7 +80,7 @@ export default function Hero() {
             </div>
             <div className="mt-4 flex gap-5 sm:inline-flex">
               <a
-                className="py-2 px-2 inline-flex justify-center items-center gap-x-2 text-sm md:text-xl md:font-extrabold font-medium rounded-lg border border-transparent bg-primary text-white hover:bg-tertiary focus:outline-none focus:bg-tertiary disabled:opacity-50 disabled:pointer-events-none active:scale-95 [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]"
+                className="py-2 px-2 inline-flex justify-center items-center gap-x-2 text-lg md:text-xl md:font-extrabold font-medium rounded-lg border border-transparent bg-primary text-white hover:bg-tertiary focus:outline-none focus:bg-tertiary disabled:opacity-50 disabled:pointer-events-none active:scale-95 [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]"
                 href="#"
               >
                 Free Consultation
@@ -100,7 +100,7 @@ export default function Hero() {
                 </svg>
               </a>
               <a
-                className="py-2 px-2 inline-flex justify-center items-center gap-x-2 text-sm md:text-lg md:font-extrabold font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none active:scale-95"
+                className="py-2 px-2 inline-flex justify-center items-center gap-x-2 text-lg md:text-xl md:font-extrabold font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none active:scale-95"
                 href="#about"
               >
                 View more

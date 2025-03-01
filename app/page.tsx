@@ -19,7 +19,7 @@ export default function Home() {
         <Header />
         {/* <Parallax /> */}
         <Hero />
-        <div className="bg-white h-[8.5rem] mt-2">
+        <div className="bg-white h-[5rem] md:h-[8.5rem] mt-2">
           <LogoCarousel />
         </div>
       </div>

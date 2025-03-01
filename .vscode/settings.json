@@ -4,5 +4,13 @@
   "editor.formatOnSave": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "conventionalCommits.scopes": [
+    "hero",
+    "about",
+    "services",
+    "blog",
+    "testimonials",
+    "faq"
+  ]
 }

@@ -52,7 +52,7 @@ export default function Blog() {
 }
 
 const BlogList: React.FC = () => (
-  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 px-5">
     {posts.map((post, index) => (
       <Link
         key={index}
@@ -84,13 +84,13 @@ const BlogList: React.FC = () => (
         </div>
         <div className="flex items-center justify-between gap-x-3 mt-5">
           <div className="text-sm text-gray-800">
-            <div className=" flex items-center justify-center gap-2 bg-primary px-2 py-1 font-semibold text-base rounded-lg text-white">
+            <div className=" flex items-center justify-center gap-2 bg-primary px-2 py-1 font-semibold text-sm md:text-base rounded-lg text-white">
               <MdDateRange />
               <span>Published 2 days ago</span>
             </div>
           </div>
           <div className="text-sm text-gray-800">
-            <div className=" flex items-center justify-center gap-2 bg-primary px-2 py-1 font-semibold text-base rounded-lg text-white">
+            <div className=" flex items-center justify-center gap-2 bg-primary px-2 py-1 font-semibold text-sm md:text-base rounded-lg text-white">
               <FaClock />
               <span>3 min read</span>
             </div>
