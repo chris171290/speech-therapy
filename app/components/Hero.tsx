@@ -80,7 +80,7 @@ export default function Hero() {
             </div>
             <div className="mt-4 flex gap-5 sm:inline-flex">
               <a
-                className="py-2 px-2 inline-flex justify-center items-center gap-x-2 text-lg md:text-xl md:font-extrabold font-medium rounded-lg border border-transparent bg-primary text-white hover:bg-tertiary focus:outline-none focus:bg-tertiary disabled:opacity-50 disabled:pointer-events-none active:scale-95 [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]"
+                className="py-2 px-2 inline-flex justify-center items-center gap-x-2 text-sm md:text-xl md:font-extrabold font-semibold tracking-wider rounded-lg border border-transparent bg-primary text-white hover:bg-tertiary focus:outline-none focus:bg-tertiary disabled:opacity-50 disabled:pointer-events-none active:scale-95 [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]"
                 href="#"
               >
                 Free Consultation
@@ -100,7 +100,7 @@ export default function Hero() {
                 </svg>
               </a>
               <a
-                className="py-2 px-2 inline-flex justify-center items-center gap-x-2 text-lg md:text-xl md:font-extrabold font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none active:scale-95"
+                className="py-2 px-2 inline-flex justify-center items-center gap-x-2 text-sm md:text-xl md:font-extrabold font-semibold tracking-wider rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none active:scale-95"
                 href="#about"
               >
                 View more
