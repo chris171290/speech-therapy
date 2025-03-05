@@ -96,10 +96,12 @@ const Service = () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1000 100"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        transform="matrix(1,0,0,-1,0,0)"
         className="bg-white -mt-[1px]"
       >
-        <path d="M0 0v100S0 4 500 4s500 96 500 96V0H0Z" fill="#e1dad5" />
+        <path
+          d="M0 100v-100S0 96 500 96s500 -96 500 -96V100H0Z"
+          fill="#e1dad5"
+        />
       </svg>
     </>
   );
