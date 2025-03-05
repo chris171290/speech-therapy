@@ -34,7 +34,7 @@ export default function AboutUs() {
 
   const features = [
     {
-      icon: <CgAwards className="size-6 text-white" />,
+      icon: <CgAwards className=" size-6 text-white" />,
       title: "Experience & Expertise",
       description: "Over two decades of hands-on experience",
     },
@@ -59,7 +59,7 @@ export default function AboutUs() {
     return (
       <Card className=" bg-transparent h-full transition-all duration-300 hover:shadow-lg border-[0.5px] hover:scale-105">
         <CardHeader className="flex items-center justify-center pt-6">
-          <div className="w-10 h-10 inline-flex items-center justify-center rounded-full dark:bg-primary bg-primary text-white flex-shrink-0">
+          <div className="border-b-4 border-l-2 border-[#D07468] w-10 h-10 inline-flex items-center justify-center rounded-full dark:bg-primary bg-primary text-white flex-shrink-0">
             {icon}
           </div>
           <h3 className="text-xl font-semibold mb-2">{title}</h3>
@@ -73,7 +73,7 @@ export default function AboutUs() {
 
   return (
     <section
-      className="relative isolate overflow-hidden bg-secondary px-6 py-10 sm:py-24 lg:overflow-visible lg:px-0"
+      className="-mt-[1px] relative isolate overflow-hidden bg-secondary px-6 py-10 sm:py-24 lg:overflow-visible lg:px-0"
       id="about"
     >
       {/* Fondo SVG */}
@@ -219,16 +219,17 @@ export default function AboutUs() {
               />
             ))}
           </div>
-          <div className="flex flex-col items-center gap-8">
+          <div className="flex flex-col items-center gap-4 md:gap-8">
             <p className="text-black text-center text-lg/7">
               Let’s help your child find their voice and build meaningful
               connections!
             </p>
             <a
-              className="rounded-md bg-primary text-white font-extrabold hover:bg-tertiary p-2 py-2 lg:text-xl text-base shadow-sm truncate [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]"
-              href="#"
+              href="#_"
+              className="text-base truncate rounded-xl font-extrabold tracking-wider relative inline-flex group items-center justify-center px-2 py-2 md:px-3.5 md:py-2 md:m-1 cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#D07468] text-white"
             >
-              Reach out today to start your journey
+              <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
+              <span>Reach out today to start your journey</span>
             </a>
           </div>
         </div>

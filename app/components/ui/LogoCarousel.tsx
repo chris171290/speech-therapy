@@ -75,7 +75,7 @@ const LogoItem: FC<Institution> = ({ name, src, alt }) => (
 
 export default function LogoCarousel() {
   return (
-    <div className="w-full overflow-hidden rounded-2xl shadow-lg bg-white p-5 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
+    <div className="absolute w-full overflow-hidden rounded-2xl shadow-lg bg-white p-5 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
       <div className="flex animate-marquee space-x-0 md:space-x-12 hover:[animation-play-state:paused]">
         {/* Renderizado dinámico de los logos */}
         {institutions.map((institution, index) => (

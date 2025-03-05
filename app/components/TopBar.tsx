@@ -22,7 +22,7 @@ interface SocialItem {
 // Componente reutilizable para los ítems de contacto
 const ContactLink = ({ href, icon, label }: ContactItem) => (
   <Link href={href} className="flex items-center">
-    <span className="block p-2 rounded-full bg-primary text-white md:text-gray-900 transition-all duration-200 ease-in-out transform md:pointer-events-none hover:scale-110 active:scale-95 md:bg-transparent md:hover:bg-gray-700 md:p-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+    <span className="border-b-4 border-l-2 border-[#D07468] md:border-transparent block p-2 rounded-full bg-primary text-white md:text-gray-900 transition-all duration-200 ease-in-out transform md:pointer-events-none hover:scale-110 active:scale-95 md:bg-transparent md:hover:bg-gray-700 md:p-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
       {icon}
     </span>
     {label && <span className="hidden md:block">{label}</span>}
@@ -31,8 +31,15 @@ const ContactLink = ({ href, icon, label }: ContactItem) => (
 
 // Componente reutilizable para los ítems de redes sociales
 const SocialLink = ({ href, icon }: SocialItem) => (
+  // <a
+  //   href="#_"
+  //   className=" text-base truncate rounded-xl  font-extrabold tracking-wider relative inline-flex group items-center justify-center px-3.5 py-2 m-1 cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#D07468] text-white"
+  // >
+  //   <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
+  //   <span className="relative">Free Consultation</span>
+  // </a>
   <Link href={href} className="flex items-center">
-    <span className="block p-2 rounded-full bg-primary text-white md:text-gray-900 transition-all duration-200 ease-in-out transform md:pointer-events-none hover:scale-110 active:scale-95 md:bg-transparent md:hover:bg-gray-700 md:p-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+    <span className="border-b-4 border-l-2 border-[#D07468] md:border-transparent block p-2 rounded-full bg-primary text-white md:text-gray-900 transition-all duration-200 ease-in-out transform md:pointer-events-none hover:scale-110 active:scale-95 md:bg-transparent md:hover:bg-gray-700 md:p-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
       {icon}
     </span>
   </Link>

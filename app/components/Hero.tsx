@@ -4,7 +4,6 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import SVGLumnino from "./svg/Lumino";
-import LogoCarousel from "./ui/LogoCarousel";
 
 // Interfaz para los datos de las reseñas
 interface Review {
@@ -78,32 +77,52 @@ export default function Hero() {
                 </p>
               </div>
             </div>
-            <div className="mt-4 flex gap-5 sm:inline-flex">
+            <div className="flex mt-5 items-center justify-between sm:flex-row gap-2 md:gap-4 w-auto">
               <a
-                className="py-2 px-2 inline-flex justify-center items-center gap-x-2 text-sm md:text-xl md:font-extrabold font-semibold tracking-wider rounded-lg border border-transparent bg-primary text-white hover:bg-tertiary focus:outline-none focus:bg-tertiary disabled:opacity-50 disabled:pointer-events-none active:scale-95 [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]"
-                href="#"
+                href="#_"
+                className="flex-1 text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center px-4 py-2 md:px-3.5 md:py-2 md:m-1 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#D07468] text-white"
               >
-                Free Consultation
-                <svg
-                  className="shrink-0 size-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="m9 18 6-6-6-6" />
-                </svg>
+                <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
+                <span className="flex items-center justify-center">
+                  Free Consultation
+                  <svg
+                    className="shrink-0 size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </span>
               </a>
               <a
-                className="py-2 px-2 inline-flex justify-center items-center gap-x-2 text-sm md:text-xl md:font-extrabold font-semibold tracking-wider rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none active:scale-95"
-                href="#about"
+                href="#_"
+                className=" flex-1 text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center px-3.5 py-2 md:px-3.5 md:py-2 md:m-1 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-white border-gray-300 text-black"
               >
-                View more
+                <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
+                <span className="flex items-center justify-center">
+                  View more
+                  <svg
+                    className="shrink-0 size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </span>
               </a>
             </div>
           </motion.div>

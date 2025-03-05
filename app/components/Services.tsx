@@ -57,32 +57,51 @@ const servicesData: Service[] = [
 
 const Service = () => {
   return (
-    <section className="px-4 pb-12 pt-5 bg-white lg:py-10" id="services">
-      <div className="container mx-auto">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-12">
-              <span className="mb-2 block text-3xl font-semibold text-primary">
-                Our Services
-              </span>
-              <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
-                What We Do
-              </h2>
-              <p className="text-base text-body-color dark:text-dark-6">
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
-              </p>
+    <>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1000 100"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        className="bg-white"
+      >
+        <path d="M0 0v100S0 4 500 4s500 96 500 96V0H0Z" fill="#e1dad5" />
+      </svg>
+      <section className="px-4 pb-12 pt-5 bg-white lg:py-10" id="services">
+        <div className="container mx-auto">
+          <div className="-mx-4 flex flex-wrap">
+            <div className="w-full px-4">
+              <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-12">
+                <span className="mb-2 block text-3xl font-semibold text-primary">
+                  Our Services
+                </span>
+                <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
+                  What We Do
+                </h2>
+                <p className="text-base text-body-color dark:text-dark-6">
+                  There are many variations of passages of Lorem Ipsum available
+                  but the majority have suffered alteration in some form.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="grid gap-4 md:grid-cols-2 md:gap-y-4 lg:grid-cols-3 mx-auto lg:gap-x-8">
-          {servicesData.map((service, index) => (
-            <ServiceCard key={index} {...service} />
-          ))}
+          <div className="grid gap-4 md:grid-cols-2 md:gap-y-4 lg:grid-cols-3 mx-auto lg:gap-x-8">
+            {servicesData.map((service, index) => (
+              <ServiceCard key={index} {...service} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1000 100"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        transform="matrix(1,0,0,-1,0,0)"
+        className="bg-white -mt-[1px]"
+      >
+        <path d="M0 0v100S0 4 500 4s500 96 500 96V0H0Z" fill="#e1dad5" />
+      </svg>
+    </>
   );
 };
 

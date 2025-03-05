@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { SlSpeech } from "react-icons/sl";
 import LanguageSwitch from "./ui/LanguageSwitch";
+import { FaVideo } from "react-icons/fa";
 
 // Interfaz para los ítems del menú de navegación
 interface NavItem {
@@ -96,7 +97,7 @@ export default function Header() {
             <SlSpeech className="text-xl md:text-4xl" />
             <Link
               href="/"
-              className="text-2xl md:text-xl lg:text-2xl font-bold text-gray-900"
+              className="text-base md:text-xl lg:text-2xl font-bold text-gray-900"
             >
               Talk &amp; Bloom
             </Link>
@@ -123,12 +124,37 @@ export default function Header() {
             <div className="border-l border-gray-400/50 h-8 mx-1 hidden md:block" />
             <div className="flex items-center gap-2 justify-center md:gap-4">
               {/* Botón de consulta gratuita */}
-              <a
+              {/* <a
                 className="rounded-md bg-primary text-white font-extrabold hover:bg-tertiary p-2 py-1 lg:text-xl text-base shadow-sm truncate [text-shadow:_0_2px_4px_rgba(0,0,0,0.5)]"
                 href="#"
               >
                 Free Consultation
+              </a> */}
+              {/* <div className="flex justify-center items-center dark:bg-gray-200 min-w-full min-h-full">
+                <div className="group p-5">
+                  <button className="border-2 dark:bg-purple-500 dark:text-blue-800 dark:font-bold shadow-md drop-shadow-lg shadow-gray-400 dark:shadow-gray-500 p-5 rounded-full group-hover:bg-blue-500  group-hover:text-white group-hover:border-none group-hover:shadow-2xl group-hover:shadow-purple-700 group-hover:font-bold group-hover:translate-y-2 duration-500 group-hover:skew-x-6 group-hover:skew-y-3 ease-in-out">
+                    Free Consultation
+                  </button>
+                  <div className="hidden absolute bg-slate-700 text-wrap border-white border-2 rounded text-white px-2 py-1 line-height-2 translate-y-5 translate-x-10 group-hover:block duration-500 ease-in dark:bg-gray-200 dark:text-gray-800">
+                    You have hovered on me!
+                  </div>
+                </div>
+              </div> */}
+              <a
+                href="#_"
+                className="text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center py-1 px-1 md:px-3.5 md:py-2 md:m-1 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#D07468] text-white"
+              >
+                <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
+                <FaVideo className="mr-2 text-center" />
+                <span className="relative">Free Consultation</span>
               </a>
+              {/* <a
+                href="#_"
+                className="rounded relative inline-flex group items-center justify-center px-3.5 py-2 m-1 cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-gradient-to-tr from-primary to-accent border-[#D07468] text-white"
+              >
+                <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
+                <span className="relative">Free Consultation</span>
+              </a> */}
 
               {/* Selector de idioma */}
               <LanguageSwitch />
