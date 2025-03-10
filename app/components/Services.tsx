@@ -8,6 +8,7 @@ import {
   FaGraduationCap,
 } from "react-icons/fa";
 import { LuMessageSquareText } from "react-icons/lu";
+import ExpandableCardDemo from "./ui/expandable-card-demo-standard";
 interface Service {
   icon: JSX.Element;
   title: string;
@@ -64,32 +65,33 @@ const Service = () => {
         xmlnsXlink="http://www.w3.org/1999/xlink"
         className="bg-white"
       >
-        <path d="M0 0v100S0 4 500 4s500 96 500 96V0H0Z" fill="#e1dad5" />
+        <path d="M0 0v100S0 4 500 4s500 96 500 96V0H0Z" fill="#B2B8FF" />
       </svg>
       <section className="px-4 pb-12 pt-5 bg-white lg:py-10" id="services">
         <div className="container mx-auto">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-12">
-                <span className="mb-2 block text-3xl font-semibold text-primary">
+                <span className="mb-5 block text-3xl font-semibold text-primary underline underline-offset-4 decoration-2">
                   Our Services
                 </span>
-                <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
+                <h2 className="mb-3 text-3xl text-primary font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
                   What We Do
                 </h2>
-                <p className="text-base text-body-color dark:text-dark-6">
+                <p className="text-base text-body-color dark:text-dark-6 text-primary">
                   There are many variations of passages of Lorem Ipsum available
                   but the majority have suffered alteration in some form.
                 </p>
               </div>
             </div>
           </div>
+          <ExpandableCardDemo />
 
-          <div className="grid gap-4 md:grid-cols-2 md:gap-y-4 lg:grid-cols-3 mx-auto lg:gap-x-8">
+          {/* <div className="grid gap-4 md:grid-cols-2 md:gap-y-4 lg:grid-cols-3 mx-auto lg:gap-x-8">
             {servicesData.map((service, index) => (
               <ServiceCard key={index} {...service} />
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
       <svg
@@ -100,7 +102,7 @@ const Service = () => {
       >
         <path
           d="M0 100v-100S0 96 500 96s500 -96 500 -96V100H0Z"
-          fill="#e1dad5"
+          fill="#B2B8FF"
         />
       </svg>
     </>
@@ -120,12 +122,12 @@ const ServiceCard = ({ icon, title, details }: any) => {
               <div className="flex h-[50px] w-[50px] items-center justify-center rounded-2xl bg-primary/80 text-white">
                 {icon}
               </div>
-              <h4 className="text-2xl font-semibold text-dark dark:text-white">
-                {title}
-              </h4>
+              <h4 className="text-2xl font-semibold text-primary">{title}</h4>
             </div>
           </div>
-          <p className="text-body-color dark:text-dark-6">{details}</p>
+          <p className="text-body-color dark:text-dark-6 text-primary">
+            {details}
+          </p>
         </div>
       </div>
     </div>

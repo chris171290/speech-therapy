@@ -9,7 +9,7 @@ const posts = [
     slug: "future-speech-therapy-trends-innovations-2025",
     imagenSrc: "/blog1.png",
     by: "Rebeca Schvartzman, SLP.",
-    background: "bg-accent/70",
+    background: "bg-white/75",
   },
   {
     title: "How Speech Therapists Are Empowering Non-Verbal Communication",
@@ -38,10 +38,10 @@ export default function Blog() {
       id="blog"
     >
       <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-        <h2 className="text-2xl text-primary font-bold md:text-4xl md:leading-tight">
+        <h2 className="mb-5 text-2xl text-primary font-bold md:text-4xl md:leading-tight underline underline-offset-8 decoration-2">
           Our Blog
         </h2>
-        <p className="mt-1 text-black font-medium text-lg">
+        <p className="mt-1 text-primary font-medium text-lg">
           Discover how speech therapists are transforming every interaction into
           a step toward success with innovative strategies and practical tools.
         </p>
@@ -57,7 +57,7 @@ const BlogList: React.FC = () => (
       <Link
         key={index}
         href={`/blog/${post.slug}`}
-        className={`group flex flex-col h-full border border-black/70 ${post.background} border-gray-200 hover:border-transparent hover:scale-105 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg transition duration-300 rounded-xl p-5`}
+        className={`group flex flex-col h-full border border-black/70 ${post.background} border-transparent hover:border-transparent hover:scale-105 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg transition duration-300 rounded-xl p-5`}
       >
         <div className="aspect-w-16 aspect-h-11">
           <img

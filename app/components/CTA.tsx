@@ -12,7 +12,7 @@ const CTA = () => {
         >
           <path
             d="M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12.0441132 L0,12.0441132 L0,0 Z"
-            fill="#e1dad5"
+            fill="#B2B8FF"
           ></path>
         </svg>
       </div>
@@ -40,7 +40,7 @@ const CTA = () => {
             </a> */}
             <a
               href="#_"
-              className="shadow-[0_0_10px_5px_rgba(0,0,0,0.3)] shadow-white text-base truncate rounded-xl font-extrabold tracking-wider relative inline-flex group items-center justify-center px-4 py-2 m-1 cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none bg-primary border-[#D07468] text-white"
+              className="shadow-[0_0_10px_5px_rgba(0,0,0,0.3)] shadow-white text-base truncate rounded-xl font-extrabold tracking-wider relative inline-flex group items-center justify-center px-4 py-2 m-1 cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none bg-primary border-[#7248d4] text-white"
             >
               <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
 

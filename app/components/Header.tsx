@@ -94,10 +94,10 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex gap-2 items-center px-1">
-            <SlSpeech className="text-xl md:text-4xl" />
+            <SlSpeech className="text-xl md:text-4xl text-primary" />
             <Link
               href="/"
-              className="text-base md:text-xl lg:text-2xl font-bold text-gray-900"
+              className="text-base md:text-xl lg:text-2xl font-bold text-primary"
             >
               Talk &amp; Bloom
             </Link>
@@ -142,7 +142,7 @@ export default function Header() {
               </div> */}
               <a
                 href="#_"
-                className="text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center py-1 px-1 md:px-3.5 md:py-2 md:m-1 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#D07468] text-white"
+                className="text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center py-1 px-1 md:px-3.5 md:py-2 md:m-1 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#7248d4] text-white"
               >
                 <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
                 <FaVideo className="mr-2 text-center" />
@@ -239,7 +239,7 @@ function NavLink({
   return (
     <Link
       href={href}
-      className={`text-gray-900 hover:text-primary transition duration-700 relative group ${
+      className={`text-gray-900 font-semibold hover:text-primary transition duration-700 relative group ${
         mobile ? "block py-2" : ""
       }`}
       onClick={scrollTo}

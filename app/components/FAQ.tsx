@@ -47,9 +47,9 @@ const AccordionItem: React.FC<AccordionItemData> = ({ header, text }) => {
   return (
     <div className="mb-8 w-full rounded-lg bg-secondary/75 p-4 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] sm:p-8 lg:px-6 xl:px-8">
       <button className="faq-btn flex w-full text-left" onClick={handleToggle}>
-        <div className="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg bg-accent/60 text-primary dark:bg-white/5">
+        <div className="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg bg-[#7248d4] text-primary dark:bg-white/5">
           <svg
-            className={`fill-primary stroke-primary duration-1000 ease-in-out ${
+            className={`fill-white stroke-white duration-1000 ease-in-out ${
               active ? "rotate-180" : ""
             }`}
             width="17"
@@ -93,13 +93,13 @@ export default function Accordion() {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div className="mx-auto mb-[60px] max-w-[520px] text-center lg:mb-10">
-              <span className="mb-2 block text-2xl md:text-4xl font-semibold text-primary">
+              <span className="mb-5 block text-2xl md:text-4xl font-semibold text-primary underline underline-offset-8 decoration-2">
                 FAQ
               </span>
-              <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]">
+              <h2 className="mb-4 text-3xl font-bold text-primary sm:text-[40px]/[48px]">
                 Look Here
               </h2>
-              <p className="text-base text-body-color dark:text-dark-6">
+              <p className="text-base text-body-color dark:text-dark-6 text-primary">
                 There are many variations of passages of Lorem Ipsum available
                 but the majority have suffered alteration in some form.
               </p>

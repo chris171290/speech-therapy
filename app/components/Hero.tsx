@@ -40,7 +40,7 @@ export default function Hero() {
 
   return (
     <div className="mt-16 max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-5 gap-1">
-      <div className="border rounded-3xl border-gray-500 p-3">
+      <div className="border rounded-3xl border-primary p-3">
         <div className="relative p-4 grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
           {/* Sección izquierda */}
           <motion.div
@@ -49,20 +49,20 @@ export default function Hero() {
             transition={{ duration: 1.2 }}
             className="lg:col-span-4"
           >
-            <h1 className="block text-2xl font-bold text-gray-900 lg:text-3xl lg:leading-tight">
+            <h1 className="block text-2xl font-bold text-primary lg:text-3xl lg:leading-tight">
               Helping Kids Develop Speech, Language, and Social Skills –{" "}
-              <span className="text-gray-900">
+              <span className="text-primary">
                 Through Play, Family Involvement, and Expert Guidance
               </span>
             </h1>
-            <p className="mt-3 text-xl text-gray-900">
+            <p className="mt-3 text-xl text-primary">
               By focusing on communication, social interaction, and real-life
               skills to help children turn small steps into big milestones –
               while equipping families with the tools to support their child’s
               growth at home and beyond.
             </p>
             <div className="mt-3 lg:mt-6 flex items-center gap-x-5">
-              <div className="h-auto text-gray-900">
+              <div className="h-auto text-primary">
                 <SVGLumnino className="w-32 h-auto md:w-36" />
               </div>
               <div>
@@ -80,7 +80,7 @@ export default function Hero() {
             <div className="flex mt-5 items-center justify-between sm:flex-row gap-2 md:gap-4 w-auto">
               <a
                 href="#_"
-                className="flex-1 text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center px-4 py-2 md:px-3.5 md:py-2 md:m-1 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#D07468] text-white"
+                className="flex-1 text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center px-4 py-2 md:px-3.5 md:py-2 md:m-1 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#7248d4] text-white"
               >
                 <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
                 <span className="flex items-center justify-center">
@@ -103,10 +103,10 @@ export default function Hero() {
               </a>
               <a
                 href="#_"
-                className=" flex-1 text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center px-3.5 py-2 md:px-3.5 md:py-2 md:m-1 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-white border-gray-300 text-black"
+                className=" flex-1 text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center px-3.5 py-2 md:px-3.5 md:py-2 md:m-1 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-white border-[#7248d4] text-black"
               >
                 <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
-                <span className="flex items-center justify-center">
+                <span className="flex items-center justify-center text-primary">
                   View more
                   <svg
                     className="shrink-0 size-4"
@@ -135,7 +135,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <Image
-              className="w-full max-w-2xl h-auto rounded-[1rem]"
+              className="w-full max-w-2xl h-auto rounded-[2rem]"
               src="https://gepediatras.com/images/terapia-de-lenguaje-gep.jpg"
               alt="Hero Image"
               width={650}
