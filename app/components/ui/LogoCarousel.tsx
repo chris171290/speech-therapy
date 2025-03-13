@@ -12,16 +12,16 @@ interface Institution {
 
 // Datos de las instituciones (eliminando duplicados)
 const institutions: Institution[] = [
-  {
-    name: "Universidad del Rosario",
-    src: "/UniversidadRosario.svg?height=80&width=160",
-    alt: "Logo de Universidad del Rosario",
-  },
-  {
-    name: "University of Toronto",
-    src: "/UoT.png?height=80&width=160",
-    alt: "Logo de University of Toronto",
-  },
+  // {
+  //   name: "Universidad del Rosario",
+  //   src: "/UniversidadRosario.svg?height=80&width=160",
+  //   alt: "Logo de Universidad del Rosario",
+  // },
+  // {
+  //   name: "University of Toronto",
+  //   src: "/UoT.png?height=80&width=160",
+  //   alt: "Logo de University of Toronto",
+  // },
   {
     name: "CASLPO",
     src: "/CASLPO.svg?height=80&width=160",
@@ -76,7 +76,8 @@ const LogoItem: FC<Institution> = ({ name, src, alt }) => (
 export default function LogoCarousel() {
   return (
     <div className="absolute w-full overflow-hidden rounded-2xl shadow-lg bg-white p-5 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
-      <div className="flex animate-marquee space-x-0 md:space-x-12 hover:[animation-play-state:paused]">
+      {/* <div className="flex animate-marquee space-x-0 md:space-x-12 hover:[animation-play-state:paused]"> */}
+      <div className="flex space-x-0 md:space-x-12">
         {/* Renderizado dinámico de los logos */}
         {institutions.map((institution, index) => (
           <LogoItem key={index} {...institution} />

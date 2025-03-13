@@ -22,14 +22,14 @@ interface FeatureCardProps {
 export default function AboutUs() {
   // Datos de los ítems de la lista
   const listItems: ListItem[] = [
-    { title: "Speech and language delays & disorders." },
+    { title: "Speech and language delays & disorders" },
     {
       title:
-        "Autism Spectrum Disorder (ASD) & social communication challenges with all levels of ability.",
+        "Autism Spectrum Disorder (ASD) & social communication challenges with all levels of ability",
     },
     {
       title:
-        "Executive Function (EF) difficulties & ADHD (Attention Deficit Hyperactivity Disorder.",
+        "Executive Function (EF) difficulties & ADHD (Attention Deficit Hyperactivity Disorder",
     },
   ];
 
@@ -51,8 +51,8 @@ export default function AboutUs() {
     },
     {
       icon: <MdFamilyRestroom className="size-6 text-white" />,
-      title: "Experience & Expertise",
-      description: "Partnering with parents for real, lasting",
+      title: "Family-Centered Care",
+      description: "Partnering with parents for real, lasting progress",
     },
   ];
 
@@ -120,10 +120,10 @@ export default function AboutUs() {
                 About Us
               </p>
               <h1 className="mt-4 text-2xl font-semibold tracking-tight text-pretty text-primary sm:text-[2.50rem]">
-                Rebeca Schvartzman, SLP
+                Rebeca Schvartzman, <span className="text-3xl">SLP</span>
               </h1>
               <h1 className="mt-2 text-2xl font-semibold tracking-tight text-pretty text-primary sm:text-[2.50rem]">
-                reg. CASLPO
+                reg. <span className="text-3xl">CASLPO</span>
               </h1>
               <p className="mt-8 text-lg/7 text text-primary">
                 Hi, I’m Beca!
@@ -140,9 +140,9 @@ export default function AboutUs() {
                 Throughout my career, I’ve worked with children of{" "}
                 <strong>diverse cultural and linguistic backgrounds</strong>,
                 always striving to create an inclusive, supportive, and engaging
-                environment for learning. I deeply respect each family’s unique
-                experiences and tailor my approach to fit their child’s
-                individual needs.
+                environment for learning. I deeply respect{" "}
+                <strong>each family’s unique experiences</strong> and tailor my
+                approach to fit their child’s individual needs.
               </p>
             </div>
           </div>
@@ -199,11 +199,11 @@ export default function AboutUs() {
         </div>
       </div>
       {/* Divider */}
-      <div className={`flex items-center justify-center my-8`}>
+      {/* <div className={`flex items-center justify-center my-8`}>
         <div className="flex-grow h-px bg-gradient-to-r from-transparent to-primary" />
         <div className="mx-4 w-4 h-4 bg-primary rotate-45" />
         <div className="flex-grow h-px bg-gradient-to-l from-transparent to-primary" />
-      </div>
+      </div> */}
       {/* Why Work With Me? */}
       <div className="md:px-8">
         <div className="border-[0.8px] rounded-3xl border-primary bg-white p-5 mx-auto grid max-w-2xl grid-cols-1 gap-y-8 lg:mx-0 lg:max-w-none">
