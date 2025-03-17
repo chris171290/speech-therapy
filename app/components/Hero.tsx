@@ -107,7 +107,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
-            transition={{ duration: 1.2 }}
+            transition={{ duration: 0.5 }}
             className="lg:col-span-4"
           >
             <h1 className="block text-2xl font-bold text-primary lg:text-3xl lg:leading-tight">
@@ -154,7 +154,7 @@ export default function Hero() {
             className="lg:col-span-3 mt-10 lg:mt-0"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 20 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.5 }}
           >
             <Image
               className="w-full max-w-2xl h-auto rounded-[2rem]"
