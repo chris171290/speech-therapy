@@ -125,7 +125,7 @@ export default function Hero() {
               <div>
                 <div
                   className="flex gap-x-1"
-                  aria-label={`Rating: ${reviewData.rating} out of 5 stars`}
+                  // aria-label={`Rating: ${reviewData.rating} out of 5 stars`}
                 >
                   {[...Array(5)].map((_, index) => (
                     <StarIcon key={index} />
