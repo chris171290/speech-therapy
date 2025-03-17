@@ -153,7 +153,7 @@ export default function AboutUs() {
         <div className="-mt-6 -ml-12 p-12 lg:sticky lg:top-20 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <Image
             alt=""
-            src="/aboutMe.png"
+            src="/aboutMe.avif"
             width={0}
             height={0}
             className="w-[48rem] rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10 sm:w-[57rem]"

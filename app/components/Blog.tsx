@@ -9,7 +9,7 @@ const posts = [
     description:
       "Explore the cutting-edge techniques and technologies shaping the future of speech therapy. From AI-driven tools to personalized treatment plans, discover what’s revolutionizing communication therapies in 2025.",
     slug: "future-speech-therapy-trends-innovations-2025",
-    imagenSrc: "/blog1.png",
+    imagenSrc: "/blog1.avif",
     by: "Rebeca Schvartzman, SLP. CASLPO",
     background: "bg-white/75",
   },
@@ -18,7 +18,7 @@ const posts = [
     description:
       "Dive into the world of alternative communication methods and learn how therapists are helping individuals express themselves beyond words. This post highlights breakthroughs in AAC devices and inclusive practices for all ages.",
     slug: "speech-therapists-empowering-non-verbal-communication",
-    imagenSrc: "/blog2.png",
+    imagenSrc: "/blog2.avif",
     by: "Rebeca Schvartzman, SLP. CASLPO",
     background: "bg-primary/35",
   },
@@ -27,7 +27,7 @@ const posts = [
     description:
       "In an era dominated by screens, find out how speech therapists are addressing the impact of digital media on language development. Get expert tips on balancing technology use while fostering strong communication skills in children.",
     slug: "navigating-screen-time-language-growth",
-    imagenSrc: "/blog3.png",
+    imagenSrc: "/blog3.avif",
     by: "Rebeca Schvartzman, SLP. CASLPO",
     background: "bg-white/75",
   },
