@@ -177,6 +177,7 @@ export default function Hero() {
               width={650}
               height={550}
               priority
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 75vw, 650px" // Ajusta según tu diseño
             />
           </div>
         </div>

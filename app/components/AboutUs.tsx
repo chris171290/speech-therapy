@@ -140,12 +140,13 @@ export default function AboutUs() {
         {/* Imagen */}
         <div className="-mt-6 -ml-12 p-12 lg:sticky lg:top-20 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <Image
-            alt="Rebeca Schvartzman, Speech-Language Pathologist"
+            className="w-full max-w-[48rem] rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10"
             src="/aboutMe.avif"
+            alt="Rebeca Schvartzman, Speech-Language Pathologist"
             width={800}
             height={600}
-            className="w-[48rem] rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10 sm:w-[57rem]"
-            priority
+            priority // Si es above-the-fold
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 768px"
           />
         </div>
 

@@ -24,32 +24,32 @@ const institutions: Institution[] = [
   // },
   {
     name: "CASLPO",
-    src: "/CASLPO.svg?height=80&width=160",
+    src: "/CASLPO.svg",
     alt: "Logo de CASLPO",
   },
   {
     name: "The Hanen Centre",
-    src: "/hanen.avif?height=80&width=160",
+    src: "/hanen.avif",
     alt: "Logo de The Hanen Centre",
   },
   {
     name: "Social Thinking",
-    src: "/SocialThinking.png?height=80&width=160",
+    src: "/SocialThinking.png",
     alt: "Logo de Social Thinking",
   },
   {
     name: "DIR Floortime",
-    src: "/DIRFloorTime.png?height=80&width=160",
+    src: "/DIRFloorTime.png",
     alt: "Logo de DIR Floortime",
   },
   {
     name: "MeaningFullSpeech",
-    src: "/MeaningFullSpeech.webp?height=80&width=160",
+    src: "/MeaningFullSpeech.webp",
     alt: "Logo de MeaningFullSpeech",
   },
   {
     name: "GenevaCentre",
-    src: "/GenevaCentre.png?height=80&width=160",
+    src: "/GenevaCentre.png",
     alt: "Logo de GenevaCentre",
   },
 ];
@@ -63,6 +63,8 @@ const LogoItem: FC<Institution> = ({ name, src, alt }) => (
         alt={alt}
         width={160}
         height={80}
+        loading="lazy"
+        sizes="160px"
         className="max-w-[80%] max-h-[80%] object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
       />
     </div>
