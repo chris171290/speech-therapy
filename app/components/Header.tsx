@@ -164,6 +164,7 @@ export default function Header() {
                 <button
                   className="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
                   onClick={() => setIsOpen(!isOpen)}
+                  aria-label="Open menu"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

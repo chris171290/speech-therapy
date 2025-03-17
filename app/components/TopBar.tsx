@@ -11,17 +11,19 @@ interface ContactItem {
   href: string;
   icon: JSX.Element;
   label?: string; // Opcional porque algunos ítems no tienen etiqueta
+  ariaLabel: string;
 }
 
 // Definimos una interfaz para los ítems de redes sociales
 interface SocialItem {
   href: string;
   icon: JSX.Element;
+  ariaLabel: string;
 }
 
 // Componente reutilizable para los ítems de contacto
-const ContactLink = ({ href, icon, label }: ContactItem) => (
-  <Link href={href} className="flex items-center">
+const ContactLink = ({ href, icon, label, ariaLabel }: ContactItem) => (
+  <Link href={href} className="flex items-center" aria-label={ariaLabel}>
     <span className="border-b-4 border-l-2 border-[#7248d4] md:border-transparent block p-2 rounded-full bg-primary text-white md:text-gray-900 transition-all duration-200 ease-in-out transform md:pointer-events-none hover:scale-110 active:scale-95 md:bg-transparent md:hover:bg-gray-700 md:p-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
       {icon}
     </span>
@@ -30,15 +32,8 @@ const ContactLink = ({ href, icon, label }: ContactItem) => (
 );
 
 // Componente reutilizable para los ítems de redes sociales
-const SocialLink = ({ href, icon }: SocialItem) => (
-  // <a
-  //   href="#_"
-  //   className=" text-base truncate rounded-xl  font-extrabold tracking-wider relative inline-flex group items-center justify-center px-3.5 py-2 m-1 cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#D07468] text-white"
-  // >
-  //   <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
-  //   <span className="relative">Free Consultation</span>
-  // </a>
-  <Link href={href} className="flex items-center">
+const SocialLink = ({ href, icon, ariaLabel }: SocialItem) => (
+  <Link href={href} className="flex items-center" aria-label={ariaLabel}>
     <span className="border-b-4 border-l-2 border-[#7248d4] md:border-transparent block p-2 rounded-full bg-primary text-white md:text-gray-900 transition-all duration-200 ease-in-out transform md:pointer-events-none hover:scale-110 active:scale-95 md:bg-transparent md:hover:bg-gray-700 md:p-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
       {icon}
     </span>
@@ -52,16 +47,19 @@ export default function TopBar() {
       href: "tel:+123456789",
       icon: <FaPhoneSquareAlt className="h-5 w-5 text-white md:text-primary" />,
       label: "+1 (234) 567-89",
+      ariaLabel: "Call +1 (234) 567-89",
     },
     {
       href: "mailto:info@example.com",
       icon: <IoIosMail className="h-5 w-5 text-white md:text-primary" />,
       label: "info@example.com",
+      ariaLabel: "Send an email to info@example.com",
     },
     {
       href: "#",
       icon: <IoLocation className="h-5 w-5 text-white md:text-primary" />,
       label: "123 Calle Principal, Ciudad",
+      ariaLabel: "View our office address on Google Maps",
     },
   ];
 
@@ -70,16 +68,19 @@ export default function TopBar() {
     {
       href: "#",
       icon: <FaFacebookF className="h-5 w-5 text-white md:text-primary" />,
+      ariaLabel: "Go to our Facebook page",
     },
     {
       href: "#",
       icon: <FaInstagram className="h-5 w-5 text-white md:text-primary" />,
+      ariaLabel: "Go to our Instagram account",
     },
     {
       href: "#",
       icon: (
         <RiLinkedinBoxLine className="h-6 w-6 text-white md:text-primary" />
       ),
+      ariaLabel: "Go to our LinkedIn account",
     },
   ];
 
