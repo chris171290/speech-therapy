@@ -9,9 +9,10 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Terapia de Lenguaje para Niños",
+  title: "Talk & Bloom | Helping Kids Communicate, Connect, and Thrive",
   description:
-    "Especialistas en terapia de lenguaje para niños, ayudando a mejorar la comunicación y el desarrollo del habla.",
+    "Talk & Bloom helps kids communicate, connect, and thrive with personalized therapy, expert guidance, and a nurturing environment.",
+  openGraph: { images: [{ url: "/hero-speech-therapy.avif" }] },
 };
 
 export default function RootLayout({
