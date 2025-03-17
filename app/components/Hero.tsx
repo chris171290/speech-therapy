@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import SVGLumnino from "./svg/Lumino";
@@ -10,6 +10,17 @@ interface Review {
   rating: number;
   totalReviews: number;
 }
+
+const heroInfo: {
+  title1: string;
+  title2: string;
+  description: string;
+} = {
+  title1: "Helping Kids Develop Speech, Language, and Social Skills",
+  title2: "Through Play, Family Involvement, and Expert Guidance",
+  description:
+    "By focusing on communication, social interaction, and real-life skills to help children turn small steps into big milestones – while equipping families with the tools to support their child’s growth at home and beyond.",
+};
 
 // Componente reutilizable para los íconos de estrellas
 const StarIcon = () => (
@@ -30,7 +41,7 @@ const StarIcon = () => (
 
 export default function Hero() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  // const isInView = useInView(ref, { once: true });
 
   // Datos de la reseña
   const reviewData: Review = {
@@ -50,17 +61,10 @@ export default function Hero() {
             className="lg:col-span-4"
           >
             <h1 className="block text-2xl font-bold text-primary lg:text-3xl lg:leading-tight">
-              Helping Kids Develop Speech, Language, and Social Skills –{" "}
-              <span className="text-primary">
-                Through Play, Family Involvement, and Expert Guidance
-              </span>
+              {heroInfo.title1} –{" "}
+              <span className="text-primary">{heroInfo.title2}</span>
             </h1>
-            <p className="mt-3 text-xl text-primary">
-              By focusing on communication, social interaction, and real-life
-              skills to help children turn small steps into big milestones –
-              while equipping families with the tools to support their child’s
-              growth at home and beyond.
-            </p>
+            <p className="mt-3 text-xl text-primary">{heroInfo.description}</p>
             <div className="mt-3 lg:mt-6 flex items-center gap-x-5">
               <div className="h-auto text-primary">
                 <SVGLumnino className="w-32 h-auto md:w-36" />
