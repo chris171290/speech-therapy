@@ -1,9 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import SVGLumnino from "./svg/Lumino";
 
 // Interfaz para los datos de las reseñas
@@ -12,7 +10,7 @@ interface Review {
   totalReviews: number;
 }
 
-// Datos del hero
+// Datos del hero (mueve esto fuera del componente para evitar recreaciones)
 const heroInfo = {
   title1: "Helping Kids Develop Speech, Language, and Social Skills",
   title2: "Through Play, Family Involvement, and Expert Guidance",
@@ -20,21 +18,18 @@ const heroInfo = {
     "By focusing on communication, social interaction, and real-life skills to help children turn small steps into big milestones – while equipping families with the tools to support their child's growth at home and beyond.",
 };
 
-// Componente reutilizable para los íconos de estrellas
+// Componente reutilizable para los íconos de estrellas (optimizado)
 const StarIcon = () => (
   <svg
     className="size-4 text-gray-900 md:size-6"
-    width="51"
-    height="51"
+    width="24"
+    height="24"
     viewBox="0 0 51 51"
-    fill="none"
+    fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
   >
-    <path
-      d="M27.0352 1.6307L33.9181 16.3633C34.2173 16.6768 34.5166 16.9903 34.8158 16.9903L50.0779 19.1845C50.9757 19.1845 51.275 20.4383 50.6764 21.0652L39.604 32.3498C39.3047 32.6632 39.3047 32.9767 39.3047 33.2901L41.998 49.2766C42.2973 50.217 41.1002 50.8439 40.5017 50.5304L26.4367 43.3208C26.1375 43.3208 25.8382 43.3208 25.539 43.3208L11.7732 50.8439C10.8754 51.1573 9.97763 50.5304 10.2769 49.59L12.9702 33.6036C12.9702 33.2901 12.9702 32.9767 12.671 32.6632L1.29923 21.0652C0.700724 20.4383 0.999979 19.4979 1.89775 19.4979L17.1598 17.3037C17.459 17.3037 17.7583 16.9903 18.0575 16.6768L24.9404 1.6307C25.539 0.69032 26.736 0.69032 27.0352 1.6307Z"
-      fill="currentColor"
-    />
+    <path d="M27.0352 1.6307L33.9181 16.3633C34.2173 16.6768 34.5166 16.9903 34.8158 16.9903L50.0779 19.1845C50.9757 19.1845 51.275 20.4383 50.6764 21.0652L39.604 32.3498C39.3047 32.6632 39.3047 32.9767 39.3047 33.2901L41.998 49.2766C42.2973 50.217 41.1002 50.8439 40.5017 50.5304L26.4367 43.3208C26.1375 43.3208 25.8382 43.3208 25.539 43.3208L11.7732 50.8439C10.8754 51.1573 9.97763 50.5304 10.2769 49.59L12.9702 33.6036C12.9702 33.2901 12.9702 32.9767 12.671 32.6632L1.29923 21.0652C0.700724 20.4383 0.999979 19.4979 1.89775 19.4979L17.1598 17.3037C17.459 17.3037 17.7583 16.9903 18.0575 16.6768L24.9404 1.6307C25.539 0.69032 26.736 0.69032 27.0352 1.6307Z" />
   </svg>
 );
 
@@ -65,15 +60,14 @@ const Button = ({ href, variant, children, className = "" }: ButtonProps) => {
   );
 };
 
-// Componente de flecha
+// Componente de flecha (optimizado)
 const ArrowIcon = () => (
   <svg
     className="shrink-0 size-4 ml-1"
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="16"
+    height="16"
     viewBox="0 0 24 24"
-    fill="none"
     stroke="currentColor"
     strokeWidth="2"
     strokeLinecap="round"
@@ -85,15 +79,45 @@ const ArrowIcon = () => (
 );
 
 export default function Hero() {
-  // Referencia para animación basada en visibilidad
+  // Estado para animaciones basadas en CSS
+  const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  // Reemplazar Framer Motion con IntersectionObserver nativo
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   // Datos de la reseña
   const reviewData: Review = {
     rating: 4.9,
     totalReviews: 137,
   };
+
+  // Clases CSS para animaciones en lugar de Framer Motion
+  const leftSectionClasses = `lg:col-span-4 transition-all duration-500 ${
+    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+  }`;
+
+  const rightSectionClasses = `lg:col-span-3 mt-10 lg:mt-0 transition-all duration-500 ${
+    isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-5"
+  }`;
 
   return (
     <section
@@ -104,12 +128,7 @@ export default function Hero() {
       <div className="border rounded-3xl border-primary p-3">
         <div className="relative p-4 grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
           {/* Sección izquierda */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
-            transition={{ duration: 0.5 }}
-            className="lg:col-span-4"
-          >
+          <div className={leftSectionClasses}>
             <h1 className="block text-2xl font-bold text-primary lg:text-3xl lg:leading-tight">
               {heroInfo.title1} –{" "}
               <span className="text-primary">{heroInfo.title2}</span>
@@ -125,7 +144,7 @@ export default function Hero() {
               <div>
                 <div
                   className="flex gap-x-1"
-                  // aria-label={`Rating: ${reviewData.rating} out of 5 stars`}
+                  aria-label={`Rating: ${reviewData.rating} out of 5 stars`}
                 >
                   {[...Array(5)].map((_, index) => (
                     <StarIcon key={index} />
@@ -147,15 +166,10 @@ export default function Hero() {
                 <ArrowIcon />
               </Button>
             </div>
-          </motion.div>
+          </div>
 
           {/* Sección derecha (imagen) */}
-          <motion.div
-            className="lg:col-span-3 mt-10 lg:mt-0"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 20 }}
-            transition={{ duration: 0.5 }}
-          >
+          <div className={rightSectionClasses}>
             <Image
               className="w-full max-w-2xl h-auto rounded-[2rem]"
               src="/hero-speech-therapy.avif"
@@ -164,7 +178,7 @@ export default function Hero() {
               height={550}
               priority
             />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
