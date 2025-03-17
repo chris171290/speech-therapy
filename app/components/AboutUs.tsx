@@ -8,6 +8,7 @@ import { LuLanguages } from "react-icons/lu";
 import { GiBrain } from "react-icons/gi";
 import { MdFamilyRestroom } from "react-icons/md";
 import { GiTrophyCup } from "react-icons/gi";
+import Image from "next/image";
 
 // Interfaz para los ítems de la lista
 interface ListItem {
@@ -150,9 +151,11 @@ export default function AboutUs() {
 
         {/* Imagen */}
         <div className="-mt-6 -ml-12 p-12 lg:sticky lg:top-20 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <img
+          <Image
             alt=""
             src="/aboutMe.png"
+            width={0}
+            height={0}
             className="w-[48rem] rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10 sm:w-[57rem]"
           />
         </div>

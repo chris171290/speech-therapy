@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { FaClock } from "react-icons/fa";
 import { MdDateRange } from "react-icons/md";
+import Image from "next/image";
+
 const posts = [
   {
     title: "The Future of Speech Therapy: Trends and Innovations in 2025",
@@ -60,9 +62,11 @@ const BlogList: React.FC = () => (
         className={`group flex flex-col h-full border border-black/70 ${post.background} border-transparent hover:border-transparent hover:scale-105 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg transition duration-300 rounded-xl p-5`}
       >
         <div className="aspect-w-16 aspect-h-11">
-          <img
+          <Image
             className="w-full h-52 object-cover rounded-xl"
             src={post.imagenSrc}
+            width={0}
+            height={0}
             alt="Blog Image"
           />
         </div>
@@ -71,9 +75,11 @@ const BlogList: React.FC = () => (
           <p className="mt-5 text-gray-800">{post.description}</p>
         </div>
         <div className="mt-auto flex items-center gap-x-3">
-          <img
+          <Image
             className="size-8 rounded-full"
-            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+            src="/avatar.avif"
+            width={0}
+            height={0}
             alt="Avatar"
           />
           <div>

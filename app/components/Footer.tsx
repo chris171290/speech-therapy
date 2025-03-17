@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Footer = () => {
@@ -8,13 +9,13 @@ const Footer = () => {
           <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
             <div className="mb-10 w-full">
               <a href="/#" className="mb-6 inline-block max-w-[160px]">
-                <img
-                  src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo.svg"
+                <Image
+                  src="/logofooter.svg"
                   alt="logo"
                   className="max-w-full dark:hidden"
                 />
-                <img
-                  src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo-white.svg"
+                <Image
+                  src="/logofooterwhite.svg"
                   alt="logo"
                   className="max-w-full hidden dark:block"
                 />

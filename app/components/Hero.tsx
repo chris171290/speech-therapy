@@ -136,7 +136,7 @@ export default function Hero() {
           >
             <Image
               className="w-full max-w-2xl h-auto rounded-[2rem]"
-              src="https://gepediatras.com/images/terapia-de-lenguaje-gep.jpg"
+              src="/hero-speech-therapy.jpg"
               alt="Hero Image"
               width={650}
               height={550}
