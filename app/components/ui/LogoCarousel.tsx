@@ -29,7 +29,7 @@ const institutions: Institution[] = [
   },
   {
     name: "The Hanen Centre",
-    src: "/hanen.png?height=80&width=160",
+    src: "/hanen.avif?height=80&width=160",
     alt: "Logo de The Hanen Centre",
   },
   {
