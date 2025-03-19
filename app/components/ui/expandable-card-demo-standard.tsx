@@ -219,7 +219,7 @@ const cards = [
       "Confirm if your child is meeting age-appropriate milestones. Early identification can change your child's developmental path.",
     title: "Free Screening",
     icon: <FaStethoscope className="size-6 text-white" />,
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    src: "/hero-speech-therapy.avif",
     ctaText: "Book Now",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
@@ -236,7 +236,7 @@ const cards = [
       "Comprehensive evaluation of your child's communication abilities, ideal if you have specific concerns or notice developmental delays.",
     title: "Full Assessment",
     icon: <FaClipboardList className="size-6 text-white" />,
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
+    src: "/hero-speech-therapy.avif",
     ctaText: "Book Now",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
@@ -253,7 +253,7 @@ const cards = [
       "Addresses difficulties in understanding and expressing language, including grammar, vocabulary, and sentence organization.",
     title: "Language Therapy",
     icon: <LuMessageSquareText className="size-6 text-white" />,
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
+    src: "/hero-speech-therapy.avif",
     ctaText: "Book Now",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
@@ -270,7 +270,7 @@ const cards = [
       "Improves social interaction skills, use of gestures, facial expressions, and ability to maintain conversations.",
     title: "Social Communication Therapy",
     icon: <FaUsers className="size-6 text-white" />,
-    src: "https://assets.aceternity.com/demos/led-zeppelin.jpeg",
+    src: "/hero-speech-therapy.avif",
     ctaText: "Book Now",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
@@ -287,7 +287,7 @@ const cards = [
       "Helps correct difficulties in pronouncing sounds and words to improve speech clarity.",
     title: "Articulation Therapy",
     icon: <FaMicrophoneAlt className="size-6 text-white" />,
-    src: "https://assets.aceternity.com/demos/toh-phir-aao.jpeg",
+    src: "/hero-speech-therapy.avif",
     ctaText: "Book Now",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
@@ -304,7 +304,7 @@ const cards = [
       "Offers training and support to other professionals involved in a current client's care, including daycare and school visits.",
     title: "Professional Consultation",
     icon: <FaGraduationCap className="size-6 text-white" />,
-    src: "https://assets.aceternity.com/demos/toh-phir-aao.jpeg",
+    src: "/hero-speech-therapy.avif",
     ctaText: "Book Now",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
