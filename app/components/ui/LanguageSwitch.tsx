@@ -1,19 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-// import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function LanguageSwitch() {
+  const pathname = usePathname(); // Obtiene la ruta actual
+  const router = useRouter(); // Para redirigir al cambiar idioma
   const [isEnglish, setIsEnglish] = useState(true);
-  // const router = useRouter();
+
+  // Detecta el idioma inicial basado en la URL
+  useEffect(() => {
+    const locale = pathname.startsWith("/en") ? "en" : "es";
+    setIsEnglish(locale === "en");
+  }, [pathname]); // Se ejecuta cada vez que cambia la ruta
 
   const toggleLanguage = () => {
-    setIsEnglish(!isEnglish);
-    // Aquí puedes agregar la lógica para cambiar el idioma de tu aplicación
-    // Por ejemplo, usando next-i18next o tu sistema de internacionalización preferido
-    //router.push(isEnglish ? "/es" : "/en")
+    const newLocale = isEnglish ? "/es" : "/en";
+    // Redirige a la misma página pero con el nuevo idioma
+    const newPath = pathname.replace(/^\/(en|es)/, newLocale) || newLocale;
+    router.push(newPath);
+    setIsEnglish(!isEnglish); // Cambia el estado después de redirigir
   };
 
   return (

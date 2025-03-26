@@ -1,20 +1,24 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import AboutUs from "./components/AboutUs";
-import Services from "./components/Services";
-import Testimonials from "./components/Testimonials";
-import Blog from "./components/Blog";
-import FAQ from "./components/FAQ";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import TopBar from "./components/TopBar";
-import LogoCarousel from "./components/ui/LogoCarousel";
-import CTA from "./components/CTA";
-import Floating from "./components/Floating";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import AboutUs from "../components/AboutUs";
+import Services from "../components/Services";
+import Testimonials from "../components/Testimonials";
+import Blog from "../components/Blog";
+import FAQ from "../components/FAQ";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import TopBar from "../components/TopBar";
+import LogoCarousel from "../components/ui/LogoCarousel";
+import CTA from "../components/CTA";
+import Floating from "../components/Floating";
+
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("about");
   return (
     <main className="bg-secondary">
+      <h1>{t("title")}</h1>
       <div className="relative overflow-hidden lg:overflow-visible" id="home">
         <TopBar />
         <Header />
