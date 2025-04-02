@@ -176,7 +176,7 @@ export default function Contact() {
                 </p>
                 <a
                   className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-primary hover:text-gray-800 focus:outline-none focus:text-gray-800"
-                  href="#"
+                  href="tel:+4162746729"
                 >
                   {t("phone.number")}
                   <svg
@@ -208,7 +208,7 @@ export default function Contact() {
                 </p>
                 <a
                   className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-primary hover:text-gray-800 focus:outline-none focus:text-gray-800"
-                  href="#"
+                  href="mailto:info@talkandbloom.ca"
                 >
                   {t("email.address")}
                   <svg
