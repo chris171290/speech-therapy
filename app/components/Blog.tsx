@@ -3,6 +3,7 @@ import { FaClock } from "react-icons/fa";
 import { MdDateRange } from "react-icons/md";
 import Image from "next/image";
 import { useMemo } from "react";
+import { useTranslations } from "next-intl";
 
 // Definir tipos para mejorar la seguridad y autocompletado
 interface BlogPost {
@@ -15,43 +16,6 @@ interface BlogPost {
   publishedDate: string;
   readTime: string;
 }
-
-// Mover los datos fuera del componente para evitar recreación en cada renderizado
-const BLOG_POSTS: BlogPost[] = [
-  {
-    title: "The Future of Speech Therapy: Trends and Innovations in 2025",
-    description:
-      "Explore the cutting-edge techniques and technologies shaping the future of speech therapy. From AI-driven tools to personalized treatment plans, discover what's revolutionizing communication therapies in 2025.",
-    slug: "future-speech-therapy-trends-innovations-2025",
-    imageSrc: "/blog1.avif",
-    by: "Rebeca Schvartzman, SLP. CASLPO",
-    background: "bg-white/75",
-    publishedDate: "Published 2 days ago",
-    readTime: "3 min read",
-  },
-  {
-    title: "How Speech Therapists Are Empowering Non-Verbal Communication",
-    description:
-      "Dive into the world of alternative communication methods and learn how therapists are helping individuals express themselves beyond words. This post highlights breakthroughs in AAC devices and inclusive practices for all ages.",
-    slug: "speech-therapists-empowering-non-verbal-communication",
-    imageSrc: "/blog2.avif",
-    by: "Rebeca Schvartzman, SLP. CASLPO",
-    background: "bg-primary/35",
-    publishedDate: "Published 2 days ago",
-    readTime: "3 min read",
-  },
-  {
-    title: "Navigating Screen Time and Language Growth",
-    description:
-      "In an era dominated by screens, find out how speech therapists are addressing the impact of digital media on language development. Get expert tips on balancing technology use while fostering strong communication skills in children.",
-    slug: "navigating-screen-time-language-growth",
-    imageSrc: "/blog3.avif",
-    by: "Rebeca Schvartzman, SLP. CASLPO",
-    background: "bg-white/75",
-    publishedDate: "Published 2 days ago",
-    readTime: "3 min read",
-  },
-];
 
 // Componente de tarjeta de blog para mejorar la modularidad
 interface BlogCardProps {
@@ -107,6 +71,39 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => (
 );
 
 const BlogList: React.FC = () => {
+  const t = useTranslations("blog");
+  const BLOG_POSTS: BlogPost[] = [
+    {
+      title: t("post1.title"),
+      description: t("post1.content"),
+      slug: "future-speech-therapy-trends-innovations-2025",
+      imageSrc: "/blog1.avif",
+      by: "Rebeca Schvartzman, SLP. CASLPO",
+      background: "bg-white/75",
+      publishedDate: t("post1.metadata.published"),
+      readTime: t("post1.metadata.readTime"),
+    },
+    {
+      title: t("post2.title"),
+      description: t("post2.content"),
+      slug: "speech-therapists-empowering-non-verbal-communication",
+      imageSrc: "/blog2.avif",
+      by: "Rebeca Schvartzman, SLP. CASLPO",
+      background: "bg-primary/35",
+      publishedDate: t("post2.metadata.published"),
+      readTime: t("post2.metadata.readTime"),
+    },
+    {
+      title: t("post3.title"),
+      description: t("post3.content"),
+      slug: "navigating-screen-time-language-growth",
+      imageSrc: "/blog3.avif",
+      by: "Rebeca Schvartzman, SLP. CASLPO",
+      background: "bg-white/75",
+      publishedDate: t("post3.metadata.published"),
+      readTime: t("post3.metadata.readTime"),
+    },
+  ];
   // Usar useMemo para evitar recrear el array en cada renderizado
   const renderedPosts = useMemo(
     () =>
@@ -122,6 +119,7 @@ const BlogList: React.FC = () => {
 };
 
 export default function Blog() {
+  const t = useTranslations("blog");
   return (
     <section
       className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto"
@@ -133,11 +131,10 @@ export default function Blog() {
           id="blog-heading"
           className="mb-5 text-2xl text-primary font-bold md:text-4xl md:leading-tight underline underline-offset-8 decoration-2"
         >
-          Our Blog
+          {t("title")}
         </h2>
         <p className="mt-1 text-primary font-medium text-lg">
-          Discover how speech therapists are transforming every interaction into
-          a step toward success with innovative strategies and practical tools.
+          {t("description")}
         </p>
       </div>
       <BlogList />

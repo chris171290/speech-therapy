@@ -10,6 +10,7 @@ import {
 import { LuMessageSquareText } from "react-icons/lu";
 import ExpandableCardDemo from "./ui/expandable-card-demo-standard";
 import { ReactNode } from "react";
+import { useTranslations } from "next-intl";
 
 // Interfaz para la estructura de un servicio
 interface Service {
@@ -90,6 +91,8 @@ const BottomCurveDecoration = () => (
 
 // Componente principal de Servicios
 const Services = () => {
+  const t = useTranslations("services");
+
   return (
     <>
       <TopCurveDecoration />
@@ -103,19 +106,15 @@ const Services = () => {
             <div className="w-full px-4">
               <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-12">
                 <span className="mb-5 block text-3xl font-semibold text-primary underline underline-offset-4 decoration-2">
-                  Our Services
+                  {t("title")}
                 </span>
                 <h2
                   id="services-heading"
                   className="mb-3 text-3xl text-primary font-bold leading-[1.2] sm:text-4xl md:text-[40px]"
                 >
-                  What We Do
+                  {t("subtitle")}
                 </h2>
-                <p className="text-base text-primary">
-                  We offer specialized speech and language therapy services
-                  designed to help children develop essential communication
-                  skills through evidence-based techniques.
-                </p>
+                <p className="text-base text-primary">{t("description")}</p>
               </div>
             </div>
           </div>

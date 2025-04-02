@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { SlSpeech } from "react-icons/sl";
 import LanguageSwitch from "./ui/LanguageSwitch";
 import { FaVideo } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 // Interfaz para los ítems del menú de navegación
 interface NavItem {
@@ -15,17 +16,20 @@ interface NavItem {
 }
 
 // Datos de los ítems del menú de navegación
-const initialNavItems: NavItem[] = [
-  { href: "#home", label: "Home", selected: true },
-  { href: "#about", label: "About", selected: false },
-  { href: "#services", label: "Services", selected: false },
-  { href: "#testimonials", label: "Testimonials", selected: false },
-  { href: "#blog", label: "Blog", selected: false },
-  { href: "#faq", label: "FAQ", selected: false },
-  { href: "#contact", label: "Contact", selected: false },
-];
 
 export default function Header() {
+  const t = useTranslations("home");
+
+  const initialNavItems: NavItem[] = [
+    { href: "#home", label: t("navbar.home"), selected: true },
+    { href: "#about", label: t("navbar.about"), selected: false },
+    { href: "#services", label: t("navbar.services"), selected: false },
+    { href: "#testimonials", label: t("navbar.testimonials"), selected: false },
+    { href: "#blog", label: t("navbar.blog"), selected: false },
+    { href: "#faq", label: t("navbar.faq"), selected: false },
+    { href: "#contact", label: t("navbar.contact"), selected: false },
+  ];
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [navItems, setNavItems] = useState<NavItem[]>(initialNavItems);
@@ -141,7 +145,7 @@ export default function Header() {
             <Link
               href="/"
               className="text-base md:text-xl lg:text-2xl font-bold text-primary"
-              aria-label="Talk and Bloom Home"
+              aria-label="Talk and Bloom"
             >
               Talk &amp; Bloom
             </Link>
@@ -187,7 +191,7 @@ export default function Header() {
               >
                 <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
                 <FaVideo className="mr-2 text-center" aria-hidden="true" />
-                <span className="relative">Free Consultation</span>
+                <span className="relative">{t("navbar.cta")}</span>
               </a>
 
               {/* Selector de idioma */}

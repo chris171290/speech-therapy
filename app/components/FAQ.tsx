@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useCallback, memo, useMemo } from "react";
+import { useTranslations } from "next-intl";
 
 // Interfaz para los ítems del acordeón
 interface AccordionItemData {
@@ -62,32 +63,33 @@ const AccordionItem: React.FC<AccordionItemData & { id: string }> = memo(
 AccordionItem.displayName = "AccordionItem";
 
 export default function FAQ() {
+  const t = useTranslations("faq");
   // Datos de los ítems del acordeón - mover fuera del componente con useMemo
   const accordionData: AccordionItemData[] = useMemo(
     () => [
       {
-        header: "What is speech therapy?",
-        text: "Speech therapy helps improve communication skills like speaking, understanding, fluency, and voice. It's useful for articulation issues, stuttering, or developmental disorders.",
+        header: t("question1.question"),
+        text: t("question1.answer"),
       },
       {
-        header: "Who does a speech therapist work with?",
-        text: "We work with children (speech delays, autism), adults (post-stroke, Parkinson's), and individuals with specific disorders like stuttering or dysphonia.",
+        header: t("question2.question"),
+        text: t("question2.answer"),
       },
       {
-        header: "How do I know if my child needs speech therapy?",
-        text: "Common signs include: not babbling by 12 months, trouble pronouncing words or following instructions, and delays compared to peers. Early evaluation is key.",
+        header: t("question3.question"),
+        text: t("question3.answer"),
       },
       {
-        header: "How long does treatment last?",
-        text: "It depends on the case. Some improve in weeks, others need months or years. Progress varies based on age, severity, and session frequency.",
+        header: t("question4.question"),
+        text: t("question4.answer"),
       },
       {
-        header: "What happens during a session?",
-        text: "Sessions include an initial assessment, interactive activities (games, exercises), personalized techniques, and homework tasks. Sessions are practical and fun, especially for kids.",
+        header: t("question5.question"),
+        text: t("question5.answer"),
       },
       {
-        header: "Is speech therapy covered by insurance?",
-        text: "It depends on your insurance and medical condition. Some cover part of the costs, especially for diagnosed medical issues. Check with your provider for details.",
+        header: t("question6.question"),
+        text: t("question6.answer"),
       },
     ],
     []
@@ -116,15 +118,12 @@ export default function FAQ() {
                 id="faq-heading"
                 className="mb-5 block text-2xl md:text-4xl font-semibold text-primary underline underline-offset-8 decoration-2"
               >
-                FAQ
+                {t("title")}
               </span>
               <h2 className="mb-4 text-3xl font-bold text-primary sm:text-[40px]/[48px]">
-                Look Here
+                {t("subtitle")}
               </h2>
-              <p className="text-base text-primary">
-                Find answers to the most common questions about speech therapy
-                services and how we can help your child.
-              </p>
+              <p className="text-base text-primary">{t("description")}</p>
             </div>
           </div>
         </div>

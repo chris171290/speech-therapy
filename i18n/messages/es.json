@@ -1,7 +1,245 @@
 {
-  "welcome": "¡Bienvenido a mi aplicación!",
+  "home": {
+    "navbar": {
+      "home": "Inicio",
+      "about": "Sobre Nosotros",
+      "services": "Servicios",
+      "testimonials": "Testimonios",
+      "blog": "Blog",
+      "faq": "FAQ",
+      "contact": "Contact Us",
+      "cta": "Consulta Gratuita"
+    },
+    "hero": {
+      "title1": "Ayudando a los niños a desarrollar el habla, el lenguaje y las habilidades sociales,",
+      "title2": "a través del juego, la participación familiar y la guía de expertos",
+      "description": "Al centrarnos en la comunicación, la interacción social y las habilidades para la vida cotidiana, ayudamos a los niños a convertir pequeños pasos en grandes hitos, mientras equipamos a las familias con las herramientas necesarias para apoyar el crecimiento de sus hijos en casa y más allá.",
+      "primaryButton": "Consulta Gratuita",
+      "secondaryButton": "Saber Más"
+    }
+  },
   "about": {
-    "title": "Sobre nosotros",
-    "description": "Somos un equipo genial."
+    "title": "Acerca de Nosotros",
+    "professional": {
+      "name": "Rebeca Schvartzman",
+      "credentials1": "SLP",
+      "credentials2": "reg.",
+      "credentials3": "CASLPO",
+      "title": "Patóloga del Habla y el Lenguaje",
+      "introduction": "<strong>¡Hola, soy Beca!</strong>",
+      "bio": {
+        "greeting": "¡Hola, soy Beca!",
+        "introduction": "Soy una apasionada y registrada <strong>patóloga del habla y el lenguaje (SLP)</strong> con más de <strong>25 años de experiencia</strong> ayudando a los niños a desarrollar las habilidades de comunicación que necesitan para prosperar.",
+        "bilingual": "Soy completamente bilingüe en <strong>inglés y español</strong> y orgullosamente ofrezco servicios en ambos idiomas.",
+        "career": "A lo largo de mi carrera, he trabajado con niños de <strong>diversos orígenes culturales y lingüísticos</strong>, siempre esforzándome por crear un entorno inclusivo, solidario y atractivo para el aprendizaje.",
+        "approach": "Respeto profundamente <strong>las experiencias únicas de cada familia</strong> y adapto mi enfoque para satisfacer las necesidades individuales de su hijo."
+      }
+    },
+    "services": {
+      "title": "Cómo Puedo Ayudar",
+      "description": "Me especializo en evaluar y tratar:",
+      "specializations1": "Retrasos y trastornos del habla y el lenguaje",
+      "specializations2": "Trastorno del Espectro Autista (TEA) y desafíos de comunicación social en todos los niveles de habilidad",
+      "specializations3": "Dificultades de Función Ejecutiva (FE) y TDAH (Trastorno por Déficit de Atención e Hiperactividad)",
+      "philosophy": "Creo en un <strong>enfoque holístico</strong> para el aprendizaje, donde las habilidades fundamentales sólidas, la regulación emocional y el procesamiento sensorial juegan un papel importante en la capacidad de un niño para comunicarse e interactuar con confianza."
+    },
+    "whyWorkWithMe": {
+      "title": "¿Por qué trabajar conmigo?",
+      "reasons1": {
+        "heading": "Experiencia y Expertise",
+        "description": "Más de dos décadas de experiencia práctica"
+      },
+      "reasons2": {
+        "heading": "Servicios Bilingües",
+        "description": "Soporte completo en inglés y español"
+      },
+      "reasons3": {
+        "heading": "Enfoque Afirmativo de la Neurodiversidad",
+        "description": "Un enfoque acogedor basado en fortalezas"
+      },
+      "reasons4": {
+        "heading": "Atención Centrada en la Familia",
+        "description": "Colaborando con los padres para lograr un progreso real y duradero"
+      },
+      "closingMessage": "¡Ayudemos a su hijo a encontrar su voz y construir conexiones significativas!",
+      "callToAction": "Contácteme hoy para comenzar su camino"
+    },
+    "closingMessage": "La voz de su hijo importa, ¡y juntos podemos hacerla escuchar!"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Lo Que Hacemos",
+    "description": "Ofrecemos servicios especializados de terapia del habla y el lenguaje diseñados para ayudar a los niños a desarrollar habilidades de comunicación esenciales mediante técnicas basadas en evidencia.",
+    "freeScreening": {
+      "title": "Evaluación Gratuita",
+      "description": "Confirma si tu hijo está alcanzando los hitos apropiados para su edad. La identificación temprana puede cambiar el camino de desarrollo de tu hijo."
+    },
+    "fullAssessment": {
+      "title": "Evaluación Completa",
+      "description": "Evaluación integral de las habilidades comunicativas de tu hijo, ideal si tienes preocupaciones específicas o notas retrasos en el desarrollo."
+    },
+    "languageTherapy": {
+      "title": "Terapia del Lenguaje",
+      "description": "Aborda dificultades para comprender y expresar el lenguaje, incluyendo gramática, vocabulario y organización de oraciones."
+    },
+    "socialCommunicationTherapy": {
+      "title": "Terapia de Comunicación Social",
+      "description": "Mejora las habilidades de interacción social, el uso de gestos, expresiones faciales y la capacidad de mantener conversaciones."
+    },
+    "articulationTherapy": {
+      "title": "Terapia de Articulación",
+      "description": "Ayuda a corregir dificultades para pronunciar sonidos y palabras, mejorando la claridad del habla."
+    },
+    "professionalConsultation": {
+      "title": "Consulta Profesional",
+      "description": "Ofrece capacitación y apoyo a otros profesionales involucrados en la atención de un cliente actual, incluidas visitas a guarderías y escuelas."
+    }
+  },
+  "testimonials": {
+    "description": "Lea reseñas confiables de nuestros clientes"
+  },
+  "newsletter": {
+    "title": "Suscríbete a nuestro boletín",
+    "description": "Regístrate con tu dirección de correo electrónico para recibir noticias y actualizaciones.",
+    "form": {
+      "placeholder": "Correo electrónico",
+      "button": "Suscribirse"
+    },
+    "privacyStatement": "Respetamos tu privacidad."
+  },
+  "blog": {
+    "title": "Nuestro Blog",
+    "description": "Descubre cómo los terapeutas del habla están transformando cada interacción en un paso hacia el éxito con estrategias innovadoras y herramientas prácticas.",
+    "post1": {
+      "title": "El Futuro de la Terapia del Habla: Tendencias e Innovaciones en 2025",
+      "featuredImage": "Imagen destacada de El Futuro de la Terapia del Habla: Tendencias e Innovaciones en 2025",
+      "content": "Explora las técnicas y tecnologías de vanguardia que están moldeando el futuro de la terapia del habla. Desde herramientas impulsadas por inteligencia artificial hasta planes de tratamiento personalizados, descubre qué está revolucionando las terapias de comunicación en 2025.",
+      "author": {
+        "name": "Rebeca Schvartzman, SLP. CASLPO",
+        "avatar": "Avatar del autor"
+      },
+      "metadata": {
+        "published": "Publicado hace 2 días",
+        "readTime": "3 minutos de lectura"
+      }
+    },
+    "post2": {
+      "title": "Cómo los Terapeutas del Habla Están Potenciando la Comunicación No Verbal",
+      "featuredImage": "Imagen destacada de Cómo los Terapeutas del Habla Están Potenciando la Comunicación No Verbal",
+      "content": "Adéntrate en el mundo de los métodos alternativos de comunicación y aprende cómo los terapeutas están ayudando a las personas a expresarse más allá de las palabras. Este artículo destaca avances en dispositivos de CAA (Comunicación Aumentativa y Alternativa) y prácticas inclusivas para todas las edades.",
+      "author": {
+        "name": "Rebeca Schvartzman, SLP. CASLPO",
+        "avatar": "Avatar del autor"
+      },
+      "metadata": {
+        "published": "Publicado hace 2 días",
+        "readTime": "3 minutos de lectura"
+      }
+    },
+    "post3": {
+      "title": "Navegando el Tiempo de Pantalla y el Desarrollo del Lenguaje",
+      "featuredImage": "Imagen destacada de Navegando el Tiempo de Pantalla y el Desarrollo del Lenguaje",
+      "content": "En una era dominada por las pantallas, descubre cómo los terapeutas del habla están abordando el impacto de los medios digitales en el desarrollo del lenguaje. Obtén consejos expertos para equilibrar el uso de la tecnología mientras fomentas habilidades comunicativas sólidas en los niños.",
+      "author": {
+        "name": "Rebeca Schvartzman, SLP. CASLPO",
+        "avatar": "Avatar del autor"
+      },
+      "metadata": {
+        "published": "Publicado hace 2 días",
+        "readTime": "3 minutos de lectura"
+      }
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Mira Aquí",
+    "description": "Encuentra respuestas a las preguntas más comunes sobre los servicios de terapia del habla y cómo podemos ayudar a tu hijo.",
+    "question1": {
+      "question": "¿Qué es la terapia del habla?",
+      "answer": "La terapia del habla ayuda a mejorar habilidades comunicativas como hablar, comprender, fluidez y voz. Es útil para problemas de articulación, tartamudeo o trastornos del desarrollo."
+    },
+    "question2": {
+      "question": "¿Con quién trabaja un terapeuta del habla?",
+      "answer": "Trabajamos con niños (retrasos en el habla, autismo), adultos (post-accidente cerebrovascular, Parkinson) y personas con trastornos específicos como tartamudeo o disfonía."
+    },
+    "question3": {
+      "question": "¿Cómo sé si mi hijo necesita terapia del habla?",
+      "answer": "Los signos comunes incluyen: no balbucear a los 12 meses, dificultad para pronunciar palabras o seguir instrucciones, y retrasos en comparación con otros niños. Una evaluación temprana es clave."
+    },
+    "question4": {
+      "question": "¿Cuánto dura el tratamiento?",
+      "answer": "Depende del caso. Algunos mejoran en semanas, otros necesitan meses o años. El progreso varía según la edad, la gravedad y la frecuencia de las sesiones."
+    },
+    "question5": {
+      "question": "¿Qué sucede durante una sesión?",
+      "answer": "Las sesiones incluyen una evaluación inicial, actividades interactivas (juegos, ejercicios), técnicas personalizadas y tareas para casa. Las sesiones son prácticas y divertidas, especialmente para los niños."
+    },
+    "question6": {
+      "question": "¿La terapia del habla está cubierta por el seguro?",
+      "answer": "Depende de tu seguro y condición médica. Algunos cubren parte de los costos, especialmente para problemas médicos diagnosticados. Consulta con tu proveedor para más detalles."
+    }
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "subtitle": "Nos encantaría hablar sobre cómo podemos ayudarte.",
+    "form": {
+      "heading": "Completa el formulario",
+      "firstName": {
+        "label": "Nombre",
+        "placeholder": "Nombre"
+      },
+      "lastName": {
+        "label": "Apellido",
+        "placeholder": "Apellido"
+      },
+      "email": {
+        "label": "Correo electrónico",
+        "placeholder": "Correo electrónico"
+      },
+      "phoneNumber": {
+        "label": "Número de teléfono",
+        "placeholder": "Número de teléfono"
+      },
+      "details": {
+        "label": "Detalles",
+        "placeholder": "Detalles"
+      },
+      "submit": "Enviar consulta",
+      "responseTime": "Nos pondremos en contacto contigo en 1-2 días hábiles."
+    },
+    "socialMedia": {
+      "heading": "Redes sociales",
+      "instagram": {
+        "label": "Síguenos en Instagram",
+        "username": "@talkandbloom"
+      }
+    },
+    "phone": {
+      "heading": "Teléfono",
+      "description": "Llámanos para obtener soporte inmediato",
+      "number": "+1 (234) 567-890"
+    },
+    "email": {
+      "heading": "Correo electrónico",
+      "description": "Envíanos un correo en cualquier momento",
+      "address": "rebeca@talkandbloom.com"
+    },
+    "office": {
+      "heading": "Oficina",
+      "description": "Visita nuestra oficina principal",
+      "address": "1136 Centre St, Thornhill, ON. Unidad 206"
+    }
+  },
+  "footer": {
+    "brand": "Talk & Bloom",
+    "navigation": {
+      "about": "Acerca de",
+      "services": "Servicios",
+      "testimonials": "Testimonios",
+      "blog": "Blog",
+      "faq": "Preguntas Frecuentes",
+      "contact": "Contacto"
+    },
+    "copyright": "© 2025 Talk & Bloom. Todos los derechos reservados."
   }
 }

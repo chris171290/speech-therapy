@@ -1,7 +1,245 @@
 {
-  "welcome": "Welcome to my app!",
+  "home": {
+    "navbar": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "testimonials": "Testimonials",
+      "blog": "Blog",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "cta": "Free Consultation"
+    },
+    "hero": {
+      "title1": "Helping Kids Develop Speech, Language, and Social Skills",
+      "title2": "Through Play, Family Involvement, and Expert Guidance",
+      "description": "By focusing on communication, social interaction, and real-life skills to help children turn small steps into big milestones – while equipping families with the tools to support their child's growth at home and beyond.",
+      "primaryButton": "Free Consultation",
+      "secondaryButton": "Learn More"
+    }
+  },
   "about": {
     "title": "About Us",
-    "description": "We are a cool team."
+    "professional": {
+      "name": "Rebeca Schvartzman",
+      "credentials1": "SLP",
+      "credentials2": "reg.",
+      "credentials3": "CASLPO",
+      "title": "Speech-Language Pathologist",
+      "introduction": "<strong>Hi, I'm Beca!</strong>",
+      "bio": {
+        "greeting": "Hi, I'm Beca!",
+        "introduction": "I'm a passionate, registered <strong>speech-language pathologist (SLP) </strong> with over <strong>25 years of experience</strong> helping children develop the communication skills they need to thrive.",
+        "bilingual": "I am fully bilingual in <strong>English and Spanish</strong> and proudly provide services in both languages.",
+        "career": "Throughout my career, I've worked with children of <strong>diverse cultural and linguistic backgrounds</strong>, always striving to create an inclusive, supportive, and engaging environment for learning.",
+        "approach": "I deeply respect <strong>each family's unique experiences</strong> and tailor my approach to fit their child's individual needs."
+      }
+    },
+    "services": {
+      "title": "How I Can Help",
+      "description": "I specialize in assessing and treating:",
+      "specializations1": "Speech and language delays & disorders",
+      "specializations2": "Autism Spectrum Disorder (ASD) & social communication challenges with all levels of ability",
+      "specializations3": "Executive Function (EF) difficulties & ADHD (Attention Deficit Hyperactivity Disorder)",
+      "philosophy": "I believe in a <strong>holistic approach</strong> to learning—where strong foundational skills, emotional regulation, and sensory processing all play a role in a child's ability to communicate and interact confidently."
+    },
+    "whyWorkWithMe": {
+      "title": "Why Work With Me?",
+      "reasons1": {
+        "heading": "Experience & Expertise",
+        "description": "Over two decades of hands-on experience"
+      },
+      "reasons2": {
+        "heading": "Bilingual Services",
+        "description": "Full support in English & Spanish"
+      },
+      "reasons3": {
+        "heading": "Neurodiversity Affirming",
+        "description": "A welcoming, strengths-based approach"
+      },
+      "reasons4": {
+        "heading": "Family-Centered Care",
+        "description": "Partnering with parents for real, lasting progress"
+      },
+      "closingMessage": "Let's help your child find their voice and build meaningful connections!",
+      "callToAction": "Reach out today to start your journey"
+    },
+    "closingMessage": "Your child's voice matters—and together, we can make it heard."
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "What We Do",
+    "description": "We offer specialized speech and language therapy services designed to help children develop essential communication skills through evidence-based techniques.",
+    "freeScreening": {
+      "title": "Free Screening",
+      "description": "Confirm if your child is meeting age-appropriate milestones. Early identification can change your child's developmental path."
+    },
+    "fullAssessment": {
+      "title": "Full Assessment",
+      "description": "Comprehensive evaluation of your child's communication abilities, ideal if you have specific concerns or notice developmental delays."
+    },
+    "languageTherapy": {
+      "title": "Language Therapy",
+      "description": "Addresses difficulties in understanding and expressing language, including grammar, vocabulary, and sentence organization."
+    },
+    "socialCommunicationTherapy": {
+      "title": "Social Communication Therapy",
+      "description": "Improves social interaction skills, use of gestures, facial expressions, and ability to maintain conversations."
+    },
+    "articulationTherapy": {
+      "title": "Articulation Therapy",
+      "description": "Helps correct difficulties in pronouncing sounds and words to improve speech clarity."
+    },
+    "professionalConsultation": {
+      "title": "Professional Consultation",
+      "description": "Offers training and support to other professionals involved in a current client's care, including daycare and school visits."
+    }
+  },
+  "testimonials": {
+    "description": "Read trusted reviews from our customers"
+  },
+  "newsletter": {
+    "title": "Subscribe to our newsletter",
+    "description": "Sign up with your email address to receive news and updates.",
+    "form": {
+      "placeholder": "Email",
+      "button": "Subscribe"
+    },
+    "privacyStatement": "We respect your privacy."
+  },
+  "blog": {
+    "title": "Our Blog",
+    "description": "Discover how speech therapists are transforming every interaction into a step toward success with innovative strategies and practical tools.",
+    "post1": {
+      "title": "The Future of Speech Therapy: Trends and Innovations in 2025",
+      "featuredImage": "The Future of Speech Therapy: Trends and Innovations in 2025 featured image",
+      "content": "Explore the cutting-edge techniques and technologies shaping the future of speech therapy. From AI-driven tools to personalized treatment plans, discover what's revolutionizing communication therapies in 2025.",
+      "author": {
+        "name": "Rebeca Schvartzman, SLP. CASLPO",
+        "avatar": "Author avatar"
+      },
+      "metadata": {
+        "published": "Published 2 days ago",
+        "readTime": "3 min read"
+      }
+    },
+    "post2": {
+      "title": "How Speech Therapists Are Empowering Non-Verbal Communication",
+      "featuredImage": "How Speech Therapists Are Empowering Non-Verbal Communication featured image",
+      "content": "Dive into the world of alternative communication methods and learn how therapists are helping individuals express themselves beyond words. This post highlights breakthroughs in AAC devices and inclusive practices for all ages.",
+      "author": {
+        "name": "Rebeca Schvartzman, SLP. CASLPO",
+        "avatar": "Author avatar"
+      },
+      "metadata": {
+        "published": "Published 2 days ago",
+        "readTime": "3 min read"
+      }
+    },
+    "post3": {
+      "title": "Navigating Screen Time and Language Growth",
+      "featuredImage": "Navigating Screen Time and Language Growth featured image",
+      "content": "In an era dominated by screens, find out how speech therapists are addressing the impact of digital media on language development. Get expert tips on balancing technology use while fostering strong communication skills in children.",
+      "author": {
+        "name": "Rebeca Schvartzman, SLP. CASLPO",
+        "avatar": "Author avatar"
+      },
+      "metadata": {
+        "published": "Published 2 days ago",
+        "readTime": "3 min read"
+      }
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Look Here",
+    "description": "Find answers to the most common questions about speech therapy services and how we can help your child.",
+    "question1": {
+      "question": "What is speech therapy?",
+      "answer": "Speech therapy helps improve communication skills like speaking, understanding, fluency, and voice. It's useful for articulation issues, stuttering, or developmental disorders."
+    },
+    "question2": {
+      "question": "Who does a speech therapist work with?",
+      "answer": "We work with children (speech delays, autism), adults (post-stroke, Parkinson's), and individuals with specific disorders like stuttering or dysphonia."
+    },
+    "question3": {
+      "question": "How do I know if my child needs speech therapy?",
+      "answer": "Common signs include: not babbling by 12 months, trouble pronouncing words or following instructions, and delays compared to peers. Early evaluation is key."
+    },
+    "question4": {
+      "question": "How long does treatment last?",
+      "answer": "It depends on the case. Some improve in weeks, others need months or years. Progress varies based on age, severity, and session frequency."
+    },
+    "question5": {
+      "question": "What happens during a session?",
+      "answer": "Sessions include an initial assessment, interactive activities (games, exercises), personalized techniques, and homework tasks. Sessions are practical and fun, especially for kids."
+    },
+    "question6": {
+      "question": "Is speech therapy covered by insurance?",
+      "answer": "It depends on your insurance and medical condition. Some cover part of the costs, especially for diagnosed medical issues. Check with your provider for details."
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "We'd love to talk about how we can help you.",
+    "form": {
+      "heading": "Fill in the form",
+      "firstName": {
+        "label": "First Name",
+        "placeholder": "First Name"
+      },
+      "lastName": {
+        "label": "Last Name",
+        "placeholder": "Last Name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Email"
+      },
+      "phoneNumber": {
+        "label": "Phone Number",
+        "placeholder": "Phone Number"
+      },
+      "details": {
+        "label": "Details",
+        "placeholder": "Details"
+      },
+      "submit": "Send inquiry",
+      "responseTime": "We'll get back to you in 1-2 business days."
+    },
+    "socialMedia": {
+      "heading": "Social Media",
+      "instagram": {
+        "label": "Follow us on Instagram",
+        "username": "@talkandbloom"
+      }
+    },
+    "phone": {
+      "heading": "Phone Number",
+      "description": "Call us for immediate support",
+      "number": "+1 (234) 567-890"
+    },
+    "email": {
+      "heading": "Email",
+      "description": "Send us an email anytime",
+      "address": "rebeca@talkandbloom.com"
+    },
+    "office": {
+      "heading": "Office",
+      "description": "Visit our main office",
+      "address": "1136 Centre St, Thornhill, ON. Unit 206"
+    }
+  },
+  "footer": {
+    "brand": "Talk & Bloom",
+    "navigation": {
+      "about": "About",
+      "services": "Services",
+      "testimonials": "Testimonials",
+      "blog": "Blog",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "copyright": "© 2025 Talk & Bloom. All rights reserved."
   }
 }

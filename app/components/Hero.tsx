@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import SVGLumnino from "./svg/Lumino";
+import { useTranslations } from "next-intl";
 
 // Interfaz para los datos de las reseñas
 interface Review {
@@ -79,6 +80,8 @@ const ArrowIcon = () => (
 );
 
 export default function Hero() {
+  const t = useTranslations("home");
+
   // Estado para animaciones basadas en CSS
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -130,10 +133,10 @@ export default function Hero() {
           {/* Sección izquierda */}
           <div className={leftSectionClasses}>
             <h1 className="block text-2xl font-bold text-primary lg:text-3xl lg:leading-tight">
-              {heroInfo.title1} –{" "}
-              <span className="text-primary">{heroInfo.title2}</span>
+              {t("hero.title1")} –{" "}
+              <span className="text-primary">{t("hero.title2")}</span>
             </h1>
-            <p className="mt-3 text-xl text-primary">{heroInfo.description}</p>
+            <p className="mt-3 text-xl text-primary">{t("hero.description")}</p>
             <div className="mt-3 lg:mt-6 flex items-center gap-x-5">
               <div className="h-auto text-primary">
                 <SVGLumnino
@@ -158,11 +161,11 @@ export default function Hero() {
             </div>
             <div className="flex mt-5 items-center justify-between sm:flex-row gap-2 md:gap-4 w-auto">
               <Button href="#contact" variant="primary" className="flex-1">
-                Free Consultation
+                {t("hero.primaryButton")}
                 <ArrowIcon />
               </Button>
               <Button href="#services" variant="secondary" className="flex-1">
-                View more
+                {t("hero.secondaryButton")}
                 <ArrowIcon />
               </Button>
             </div>

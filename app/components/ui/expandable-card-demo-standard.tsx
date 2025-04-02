@@ -11,8 +11,79 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { LuMessageSquareText } from "react-icons/lu";
+import { useTranslations } from "next-intl";
 
 export default function ExpandableCardDemo() {
+  const t = useTranslations("services");
+  const cards = [
+    {
+      description: t("freeScreening.description"),
+      title: t("freeScreening.title"),
+      icon: <FaStethoscope className="size-6 text-white" />,
+      src: "/hero-speech-therapy.avif",
+      ctaText: "Book Now",
+      ctaLink: "https://ui.aceternity.com/templates",
+      content: () => {
+        return <p>{t("freeScreening.description")}</p>;
+      },
+    },
+    {
+      description: t("fullAssessment.description"),
+      title: t("fullAssessment.title"),
+      icon: <FaClipboardList className="size-6 text-white" />,
+      src: "/hero-speech-therapy.avif",
+      ctaText: "Book Now",
+      ctaLink: "https://ui.aceternity.com/templates",
+      content: () => {
+        return <p>{t("fullAssessment.description")}</p>;
+      },
+    },
+    {
+      description: t("languageTherapy.description"),
+      title: t("languageTherapy.title"),
+      icon: <LuMessageSquareText className="size-6 text-white" />,
+      src: "/hero-speech-therapy.avif",
+      ctaText: "Book Now",
+      ctaLink: "https://ui.aceternity.com/templates",
+      content: () => {
+        return <p>{t("languageTherapy.description")}</p>;
+      },
+    },
+    {
+      description: t("socialCommunicationTherapy.description"),
+      title: t("socialCommunicationTherapy.title"),
+      icon: <FaUsers className="size-6 text-white" />,
+      src: "/hero-speech-therapy.avif",
+      ctaText: "Book Now",
+      ctaLink: "https://ui.aceternity.com/templates",
+      content: () => {
+        return <p>{t("socialCommunicationTherapy.description")}</p>;
+      },
+    },
+    {
+      description: t("articulationTherapy.description"),
+      title: t("articulationTherapy.title"),
+      icon: <FaMicrophoneAlt className="size-6 text-white" />,
+      src: "/hero-speech-therapy.avif",
+      ctaText: "Book Now",
+      ctaLink: "https://ui.aceternity.com/templates",
+      content: () => {
+        return <p>{t("articulationTherapy.description")}</p>;
+      },
+    },
+    {
+      description: t("professionalConsultation.description"),
+      title: t("professionalConsultation.title"),
+      icon: <FaGraduationCap className="size-6 text-white" />,
+      src: "/hero-speech-therapy.avif",
+      ctaText: "Book Now",
+      ctaLink: "https://ui.aceternity.com/templates",
+      content: () => {
+        return <p>{t("professionalConsultation.description")}</p>;
+      },
+    },
+  ];
+
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
     null
   );
@@ -212,108 +283,3 @@ export const CloseIcon = () => {
     </motion.svg>
   );
 };
-
-const cards = [
-  {
-    description:
-      "Confirm if your child is meeting age-appropriate milestones. Early identification can change your child's developmental path.",
-    title: "Free Screening",
-    icon: <FaStethoscope className="size-6 text-white" />,
-    src: "/hero-speech-therapy.avif",
-    ctaText: "Book Now",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Confirm if your child is meeting age-appropriate milestones. Early
-          identification can change your child's developmental path.
-        </p>
-      );
-    },
-  },
-  {
-    description:
-      "Comprehensive evaluation of your child's communication abilities, ideal if you have specific concerns or notice developmental delays.",
-    title: "Full Assessment",
-    icon: <FaClipboardList className="size-6 text-white" />,
-    src: "/hero-speech-therapy.avif",
-    ctaText: "Book Now",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Comprehensive evaluation of your child's communication abilities,
-          ideal if you have specific concerns or notice developmental delays.
-        </p>
-      );
-    },
-  },
-  {
-    description:
-      "Addresses difficulties in understanding and expressing language, including grammar, vocabulary, and sentence organization.",
-    title: "Language Therapy",
-    icon: <LuMessageSquareText className="size-6 text-white" />,
-    src: "/hero-speech-therapy.avif",
-    ctaText: "Book Now",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Addresses difficulties in understanding and expressing language,
-          including grammar, vocabulary, and sentence organization.
-        </p>
-      );
-    },
-  },
-  {
-    description:
-      "Improves social interaction skills, use of gestures, facial expressions, and ability to maintain conversations.",
-    title: "Social Communication Therapy",
-    icon: <FaUsers className="size-6 text-white" />,
-    src: "/hero-speech-therapy.avif",
-    ctaText: "Book Now",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Improves social interaction skills, use of gestures, facial
-          expressions, and ability to maintain conversations.
-        </p>
-      );
-    },
-  },
-  {
-    description:
-      "Helps correct difficulties in pronouncing sounds and words to improve speech clarity.",
-    title: "Articulation Therapy",
-    icon: <FaMicrophoneAlt className="size-6 text-white" />,
-    src: "/hero-speech-therapy.avif",
-    ctaText: "Book Now",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Helps correct difficulties in pronouncing sounds and words to improve
-          speech clarity.
-        </p>
-      );
-    },
-  },
-  {
-    description:
-      "Offers training and support to other professionals involved in a current client's care, including daycare and school visits.",
-    title: "Professional Consultation",
-    icon: <FaGraduationCap className="size-6 text-white" />,
-    src: "/hero-speech-therapy.avif",
-    ctaText: "Book Now",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Offers training and support to other professionals involved in a
-          current client's care, including daycare and school visits.
-        </p>
-      );
-    },
-  },
-];

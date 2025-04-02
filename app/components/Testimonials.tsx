@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useState, useRef } from "react";
+import { useTranslations } from "next-intl";
 
 // Define interfaces for type safety
 interface Testimonial {
@@ -149,6 +150,7 @@ const CarouselButton = ({
 };
 
 export default function Testimonials() {
+  const t = useTranslations("testimonials");
   const [currentIndex, setCurrentIndex] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
@@ -197,7 +199,7 @@ export default function Testimonials() {
             variants={itemVariants}
             className="text-center text-4xl font-bold tracking-tight text-primary sm:text-5xl mb-12"
           >
-            Read trusted reviews from our customers
+            {t("description")}
           </motion.h2>
 
           {/* Mobile Carousel View */}

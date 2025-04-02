@@ -2,6 +2,8 @@ import "../globals.css";
 import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 import { ReactNode } from "react";
+import { NextIntlClientProvider } from "next-intl";
+import { notFound } from "next/navigation";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -102,6 +104,13 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children, params }: RootLayoutProps) {
   const { locale } = params;
+  let messages;
+  try {
+    messages = require(`../messages/${locale}.json`);
+  } catch (error) {
+    console.log(error);
+  }
+
   const metadata = metadataByLocale[locale];
 
   return (
@@ -111,7 +120,11 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className={playfairDisplay.className}>{children}</body>
+      <body className={playfairDisplay.className}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }

@@ -6,6 +6,7 @@ import { GiBrain, GiTrophyCup } from "react-icons/gi";
 import { ReactNode, useMemo } from "react";
 import { Card, CardContent, CardHeader } from "./ui/Card";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 // Definir interfaces para los tipos de datos
 interface ListItem {
@@ -44,17 +45,16 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 );
 
 export default function AboutUs() {
+  const t = useTranslations("about");
   // Extraer datos a constantes para mejorar mantenibilidad
   const LIST_ITEMS: ListItem[] = useMemo(
     () => [
-      { title: "Speech and language delays & disorders" },
+      { title: t("services.specializations1") },
       {
-        title:
-          "Autism Spectrum Disorder (ASD) & social communication challenges with all levels of ability",
+        title: t("services.specializations2"),
       },
       {
-        title:
-          "Executive Function (EF) difficulties & ADHD (Attention Deficit Hyperactivity Disorder)",
+        title: t("services.specializations3"),
       },
     ],
     []
@@ -64,25 +64,25 @@ export default function AboutUs() {
     () => [
       {
         icon: <GiTrophyCup className="size-6 text-white" aria-hidden="true" />,
-        title: "Experience & Expertise",
-        description: "Over two decades of hands-on experience",
+        title: t("whyWorkWithMe.reasons1.heading"),
+        description: t("whyWorkWithMe.reasons1.description"),
       },
       {
         icon: <LuLanguages className="size-6 text-white" aria-hidden="true" />,
-        title: "Bilingual Services",
-        description: "Full support in English & Spanish",
+        title: t("whyWorkWithMe.reasons2.heading"),
+        description: t("whyWorkWithMe.reasons2.description"),
       },
       {
         icon: <GiBrain className="size-6 text-white" aria-hidden="true" />,
-        title: "Neurodiversity Affirming",
-        description: "A welcoming, strengths-based approach",
+        title: t("whyWorkWithMe.reasons3.heading"),
+        description: t("whyWorkWithMe.reasons3.description"),
       },
       {
         icon: (
           <MdFamilyRestroom className="size-6 text-white" aria-hidden="true" />
         ),
-        title: "Family-Centered Care",
-        description: "Partnering with parents for real, lasting progress",
+        title: t("whyWorkWithMe.reasons4.heading"),
+        description: t("whyWorkWithMe.reasons4.description"),
       },
     ],
     []
@@ -106,32 +106,35 @@ export default function AboutUs() {
                 id="about-heading"
                 className="mb-5 text-2xl font-semibold text-primary underline underline-offset-4 decoration-2"
               >
-                About Us
+                {t("title")}
               </p>
               <h1 className="mt-4 text-2xl font-semibold tracking-tight text-pretty text-primary sm:text-[2.50rem]">
-                Rebeca Schvartzman, <span className="text-3xl">SLP</span>
+                {t("professional.name")},{" "}
+                <span className="text-3xl">
+                  {t("professional.credentials1")}
+                </span>
               </h1>
               <h1 className="mt-2 text-2xl font-semibold tracking-tight text-pretty text-primary sm:text-[2.50rem]">
-                reg. <span className="text-3xl">CASLPO</span>
+                {t("professional.credentials2")}{" "}
+                <span className="text-3xl">
+                  {t("professional.credentials3")}
+                </span>
               </h1>
               <p className="mt-8 text-lg/7 text-primary">
-                Hi, I'm Beca!
+                {t.rich("professional.bio.introduction", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                })}{" "}
+                {t.rich("professional.bio.bilingual", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                })}
                 <br />
                 <br />
-                I'm a passionate, registered{" "}
-                <strong>speech-language pathologist (SLP) </strong>
-                with over <strong>25 years of experience</strong> helping
-                children develop the communication skills they need to thrive. I
-                am fully bilingual in <strong>English and Spanish</strong> and
-                proudly provide services in both languages.
-                <br />
-                <br />
-                Throughout my career, I've worked with children of{" "}
-                <strong>diverse cultural and linguistic backgrounds</strong>,
-                always striving to create an inclusive, supportive, and engaging
-                environment for learning. I deeply respect{" "}
-                <strong>each family's unique experiences</strong> and tailor my
-                approach to fit their child's individual needs.
+                {t.rich("professional.bio.career", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                })}{" "}
+                {t.rich("professional.bio.approach", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                })}
               </p>
             </div>
           </div>
@@ -155,10 +158,10 @@ export default function AboutUs() {
           <div className="lg:pr-4">
             <div className="max-w-xl text-base/7 text-primary lg:max-w-lg">
               <h2 className="mt-2 text-xl font-semibold tracking-tight text-pretty text-primary sm:text-[2.50rem]">
-                How I Can Help
+                {t("services.title")}
               </h2>
               <p className="mt-4 text-lg/7 font-semibold text-primary">
-                I specialize in assessing and treating:
+                {t("services.description")}
               </p>
 
               {/* Lista de especialidades */}
@@ -179,13 +182,12 @@ export default function AboutUs() {
               </ul>
 
               <p className="mt-8 text-lg/7 text-primary">
-                I believe in a <strong>holistic approach</strong> to learning-
-                where strong foundational skills, emotional regulation, and
-                sensory processing all play a role in a child's ability to
-                communicate and interact confidently.
+                {t.rich("services.philosophy", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                })}
               </p>
               <span className="block mt-8 text-primary italic">
-                Your child's voice matters—and together, we can make it heard.
+                {t("closingMessage")}
               </span>
             </div>
           </div>
@@ -197,7 +199,7 @@ export default function AboutUs() {
         <div className="border-[0.8px] rounded-3xl border-primary bg-white p-5 mx-auto grid max-w-2xl grid-cols-1 gap-y-8 lg:mx-0 lg:max-w-none">
           <div className="flex items-center justify-center">
             <h2 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-primary sm:text-[2.50rem]">
-              Why Work With Me?
+              {t("whyWorkWithMe.title")}
             </h2>
           </div>
           <div className="grid gap-4 md:grid-cols-2 md:gap-y-4 lg:grid-cols-4 mx-auto lg:gap-x-8">
@@ -212,15 +214,14 @@ export default function AboutUs() {
           </div>
           <div className="flex flex-col items-center gap-4 md:gap-8">
             <p className="text-primary text-center text-lg/7">
-              Let's help your child find their voice and build meaningful
-              connections!
+              {t("whyWorkWithMe.closingMessage")}
             </p>
             <a
               href="#contact"
               className="text-base truncate rounded-xl font-extrabold tracking-wider relative inline-flex group items-center justify-center px-2 py-2 md:px-3.5 md:py-2 md:m-1 cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#7248d4] text-white"
             >
               <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
-              <span>Reach out today to start your journey</span>
+              <span>{t("whyWorkWithMe.callToAction")}</span>
             </a>
           </div>
         </div>

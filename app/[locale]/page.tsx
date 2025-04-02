@@ -12,13 +12,13 @@ import LogoCarousel from "../components/ui/LogoCarousel";
 import CTA from "../components/CTA";
 import Floating from "../components/Floating";
 
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 
 export default function Home() {
-  const t = useTranslations("about");
+  // const t = useTranslations("about");
   return (
     <main className="bg-secondary">
-      <h1>{t("title")}</h1>
+      {/* <h1>{t("title")}</h1> */}
       <div className="relative overflow-hidden lg:overflow-visible" id="home">
         <TopBar />
         <Header />
@@ -50,8 +50,8 @@ export default function Home() {
       <CTA />
       <Blog />
       <FAQ />
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+      <Contact />
+      <Footer />
     </main>
   );
 }
