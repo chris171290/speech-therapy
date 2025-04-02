@@ -44,21 +44,21 @@ export default function TopBar() {
   // Datos de los ítems de contacto
   const contactItems: ContactItem[] = [
     {
-      href: "tel:+123456789",
+      href: "tel:+4162746729",
       icon: <FaPhoneSquareAlt className="h-5 w-5 text-white md:text-primary" />,
-      label: "+1 (234) 567-89",
-      ariaLabel: "Call +1 (234) 567-89",
+      label: "+1 (416) 274-6729",
+      ariaLabel: "Call us +1 (416) 274-6729",
     },
     {
-      href: "mailto:info@example.com",
+      href: "mailto:info@talkandbloom.ca",
       icon: <IoIosMail className="h-5 w-5 text-white md:text-primary" />,
-      label: "info@example.com",
-      ariaLabel: "Send an email to info@example.com",
+      label: "info@talkandbloom.ca",
+      ariaLabel: "Send an email to info@talkandbloom.ca",
     },
     {
       href: "#",
       icon: <IoLocation className="h-5 w-5 text-white md:text-primary" />,
-      label: "123 Calle Principal, Ciudad",
+      label: "1136 Centre St, Thornhill, ON. Unit 206",
       ariaLabel: "View our office address on Google Maps",
     },
   ];
