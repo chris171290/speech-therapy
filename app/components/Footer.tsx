@@ -15,7 +15,7 @@ export default function Footer() {
           <SlSpeech className="h-10 w-10 mr-2 text-primary" />
           <Link
             href="/"
-            className="text-4xl font-bold text-primary"
+            className="text-4xl lg:text-6xl font-bold text-primary"
             aria-label="Talk and Bloom"
           >
             Talk &amp; Bloom

@@ -7,7 +7,7 @@
       "testimonials": "Testimonios",
       "blog": "Blog",
       "faq": "FAQ",
-      "contact": "Contact Us",
+      "contact": "Contacto",
       "cta": "Consulta Gratuita"
     },
     "hero": {
@@ -72,23 +72,76 @@
     "description": "Ofrecemos servicios especializados de terapia del habla y el lenguaje diseñados para ayudar a los niños a desarrollar habilidades de comunicación esenciales mediante técnicas basadas en evidencia.",
     "freeScreening": {
       "title": "Evaluación Gratuita",
-      "description": "Confirma si tu hijo está alcanzando los hitos apropiados para su edad. La identificación temprana puede cambiar el camino de desarrollo de tu hijo."
+      "description": "Confirma si tu hijo está alcanzando los hitos apropiados para su edad. La identificación temprana puede cambiar el camino de desarrollo de tu hijo.",
+      "content": {
+        "title": "¿Está preocupado por:",
+        "concern_1": "Comprensión del lenguaje",
+        "concern_2": "Uso del lenguaje y hablar",
+        "concern_3": "Habilidad para jugar y/o interactuar con otros",
+        "concern_4": "Pronunciación de sonidos o palabras",
+        "concern_5": "Capacidad para prestar atención y participar en diferentes actividades durante un período de tiempo",
+        "concern_6": "Que su hijo se quede atrás",
+        "call_to_action": "Contáctenos para programar su evaluación gratuita"
+      }
     },
     "fullAssessment": {
       "title": "Evaluación Completa",
-      "description": "Evaluación integral de las habilidades comunicativas de tu hijo, ideal si tienes preocupaciones específicas o notas retrasos en el desarrollo."
+      "description": "Evaluación integral de las habilidades comunicativas de tu hijo, ideal si tienes preocupaciones específicas o notas retrasos en el desarrollo.",
+      "content": {
+        "title": "Si tiene preocupaciones sobre:",
+        "concern_1": "Lenguaje receptivo (comprensión del lenguaje – por ejemplo, palabras y conceptos, seguir instrucciones, responder preguntas)",
+        "concern_2": "Lenguaje expresivo (comunicar deseos, necesidades, sentimientos e ideas usando gestos, acciones, sonidos y palabras)",
+        "concern_3": "Habla (pronunciación de sonidos y palabras)",
+        "concern_4": "Comunicación social (uso del lenguaje verbal y no verbal en diferentes contextos sociales y por diferentes razones para conectarse y comunicarse con otros)",
+        "concern_5": "Habilidades de juego (uso apropiado de una variedad de juguetes, incluyendo el juego de simulación/imaginario)",
+        "concern_6": "Autorregulación (capacidad para entender y manejar el propio comportamiento/reacción a lo que ocurre a su alrededor)",
+        "concern_7": "Algunas habilidades están en desarrollo, pero otras se están quedando atrás o perdiendo habilidades en cualquier momento",
+        "concern_8": "Algo no está del todo bien en algún área del desarrollo de su hijo, pero no puede explicar qué es",
+        "call_to_action": "¡No espere para buscar una evaluación!"
+      }
     },
     "languageTherapy": {
       "title": "Terapia del Lenguaje",
-      "description": "Aborda dificultades para comprender y expresar el lenguaje, incluyendo gramática, vocabulario y organización de oraciones."
+      "description": "Aborda dificultades para comprender y expresar el lenguaje, incluyendo gramática, vocabulario y organización de oraciones.",
+      "content": {
+        "title": "Comprensión y expresión del lenguaje",
+        "concern_1": "Dificultad para comprender el significado de palabras y/o oraciones",
+        "concern_2": "Dificultad para entender información implícita (es decir, información basada en otras pistas, sacar conclusiones)",
+        "concern_3": "Uso limitado de gestos y acciones",
+        "concern_4": "Uso limitado de sonidos, palabras u oraciones",
+        "concern_5": "Dificultad para entender y/o usar gramática",
+        "concern_6": "Dificultad para entender y/o saber cómo organizar las palabras en una oración",
+        "title2": "Retraso en el habla",
+        "concern2_1": "Uso de un vocabulario limitado para la edad de su hijo mientras progresa bien en otras áreas del desarrollo",
+        "concern2_2": "No tener una explicación para este retraso específico",
+        "title3": "Autorregulación",
+        "concern3_1": "Dificultad para responder a las reglas sociales en una situación específica, controlando las emociones y actuando como se acepta (es decir, regulación emocional)",
+        "concern3_2": "Dificultad para responder al apoyo de los adultos para manejar sus propias emociones (es decir, co-regulación)",
+        "concern3_3": "Dificultad para mantener un nivel adecuado de alerta (ni demasiado activo ni letárgico) y responder en una situación particular (es decir, regulación sensorial)",
+        "concern3_4": "Dificultad para resolver problemas y usar procesos mentales para prestar atención y mantenerse en la tarea actual (es decir, regulación cognitiva)"
+      }
     },
     "socialCommunicationTherapy": {
       "title": "Terapia de Comunicación Social",
-      "description": "Mejora las habilidades de interacción social, el uso de gestos, expresiones faciales y la capacidad de mantener conversaciones."
+      "description": "Mejora las habilidades de interacción social, el uso de gestos, expresiones faciales y la capacidad de mantener conversaciones.",
+      "content": {
+        "title": "Comunicación social",
+        "concern_1": "Dificultad para interactuar con otros",
+        "concern_2": "Dificultad para mirar de un lado a otro entre un padre/cuidador y un objeto que les interesa",
+        "concern_3": "Dificultad para usar expresiones faciales, gestos y sonidos",
+        "concern_4": "Dificultad para mirar, señalar y vocalizar para mostrarle a su padre algo que ven o quieren",
+        "concern_5": "Dificultad para jugar con juguetes de manera apropiada",
+        "concern_6": "Dificultad para usar el lenguaje para mantener una conversación"
+      }
     },
     "articulationTherapy": {
       "title": "Terapia de Articulación",
-      "description": "Ayuda a corregir dificultades para pronunciar sonidos y palabras, mejorando la claridad del habla."
+      "description": "Ayuda a corregir dificultades para pronunciar sonidos y palabras, mejorando la claridad del habla.",
+      "content": {
+        "title": "Articulación/Pronunciación",
+        "concern_1": "Dificultad para pronunciar los sonidos del habla correctamente y con claridad",
+        "concern_2": "Cambiar un sonido, omitir un sonido, sustituir un sonido por otro"
+      }
     },
     "professionalConsultation": {
       "title": "Consulta Profesional",
