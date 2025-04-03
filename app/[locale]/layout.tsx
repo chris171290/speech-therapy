@@ -4,6 +4,7 @@ import { Playfair_Display } from "next/font/google";
 import { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
+import StructuredData from "../components/seo/structured-data";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -114,13 +115,14 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
   const metadata = metadataByLocale[locale];
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={playfairDisplay.className}>
+        <StructuredData type="both" />
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
