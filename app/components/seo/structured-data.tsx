@@ -15,50 +15,50 @@ function generateLocalBusinessSchema() {
       name: "Rebeca Schvartzman",
     },
     telephone: "+14162746729",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "1136 Centre St, Unit 206",
-      addressLocality: "Thornhill",
-      addressRegion: "ON",
-      postalCode: "L4J 3M8",
-      addressCountry: "CA",
+    knowsLanguage: ["en", "es"],
+    sameAs: ["https://instagram.com/talkandbloom.ca"],
+    location: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "1136 Centre St, Unit 206",
+        addressLocality: "Thornhill",
+        addressRegion: "ON",
+        postalCode: "L4J 3M8",
+        addressCountry: {
+          "@type": "Country",
+          name: "CA",
+        },
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 43.80916194244989,
+        longitude: -79.46270383421012,
+      },
+      map: "https://maps.google.com/?q=Talk+and+Bloom",
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "http://schema.org/Monday",
+          "http://schema.org/Tuesday",
+          "http://schema.org/Wednesday",
+          "http://schema.org/Thursday",
+          "http://schema.org/Friday",
+        ],
+        opens: "09:00",
+        closes: "17:00",
+      },
     },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+1-416-274-6729",
-      contactType: "Customer Service",
-      areaServed: "CA",
-      availableLanguage: ["English", "Spanish"],
-    },
-    department: {
+    medicalSpecialty: {
       "@type": "MedicalSpecialty",
       name: "Speech Therapy",
       description:
         "Personalized treatment for speech delays, language disorders, communication development, and more.",
     },
-    areaServed: {
-      "@type": "Place",
-      name: "Ontario, Canada",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: "43.80916194244989",
-      longitude: "-79.46270383421012",
-    },
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "17:00",
-    },
-    hasMap: "https://maps.google.com/?q=Talk+and+Bloom",
-    knowsLanguage: ["en", "es"],
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": "https://talkandbloom.ca",
     },
-    sameAs: ["https://instagram.com/talkandbloom.ca"],
-    priceRange: "$$",
   };
 }
 
