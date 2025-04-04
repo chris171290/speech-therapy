@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
 
-// This would typically come from a CMS or database
+// Simulación de una función para obtener todas las páginas estáticas
 async function getAllPages() {
-  // Simulating a database fetch
+  // Simulando una base de datos
   return [
     {
       url: "/",
@@ -10,48 +10,19 @@ async function getAllPages() {
       changeFrequency: "weekly",
       priority: 1.0,
     },
-    // {
-    //   url: "/about",
-    //   lastModified: new Date(),
-    //   changeFrequency: "monthly",
-    //   priority: 0.8,
-    // },
-    // {
-    //   url: "/services",
-    //   lastModified: new Date(),
-    //   changeFrequency: "monthly",
-    //   priority: 0.8,
-    // },
     {
       url: "/blog",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
-    // {
-    //   url: "/contact",
-    //   lastModified: new Date(),
-    //   changeFrequency: "yearly",
-    //   priority: 0.7,
-    // },
-    // {
-    //   url: "/book-consultation",
-    //   lastModified: new Date(),
-    //   changeFrequency: "yearly",
-    //   priority: 0.9,
-    // },
-    // {
-    //   url: "/resources",
-    //   lastModified: new Date(),
-    //   changeFrequency: "monthly",
-    //   priority: 0.8,
-    // },
+    // Puedes agregar más páginas aquí si es necesario
   ];
 }
 
-// Get all blog posts
+// Simulación de una función para obtener todas las entradas del blog
 async function getAllBlogPosts() {
-  // Simulating a database fetch
+  // Simulando una base de datos
   const posts = [
     {
       slug: "early-signs-of-speech-delay",
@@ -65,29 +36,49 @@ async function getAllBlogPosts() {
       slug: "speech-therapy-at-home",
       lastModified: new Date("2023-09-05"),
     },
-    // More blog posts would be here
+    // Más entradas del blog pueden ir aquí
   ];
 
   return posts.map((post) => ({
     url: `/blog/${post.slug}`,
     lastModified: post.lastModified,
-    // changeFrequency: "monthly",
     priority: 0.7,
   }));
 }
 
+// Función para generar URLs por idioma
+function generateLocalizedUrls(
+  urls: { url: string; lastModified: Date; priority: number }[],
+  languages: string[]
+) {
+  const localizedUrls = [];
+
+  for (const lang of languages) {
+    for (const { url, lastModified, priority } of urls) {
+      localizedUrls.push({
+        url: `https://talkandbloom.ca/${lang}${url}`,
+        lastModified,
+        priority,
+      });
+    }
+  }
+
+  return localizedUrls;
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  // Obtener todas las páginas y entradas del blog
   const pages = await getAllPages();
   const blogPosts = await getAllBlogPosts();
 
-  // Combine all URLs
+  // Combinar todas las URLs
   const allUrls = [...pages, ...blogPosts];
 
-  // Format for sitemap
-  return allUrls.map(({ url, lastModified, priority }) => ({
-    url: `https://talkandbloom.ca${url}`,
-    lastModified,
-    // changeFrequency,
-    priority,
-  }));
+  // Idiomas disponibles
+  const languages = ["es", "en"];
+
+  // Generar URLs localizadas
+  const localizedUrls = generateLocalizedUrls(allUrls, languages);
+
+  return localizedUrls;
 }

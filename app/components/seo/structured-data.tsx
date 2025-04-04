@@ -1,11 +1,19 @@
 function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "SpeechPathology",
+    "@type": "MedicalOrganization",
     name: "Talk & Bloom",
-    image: "https://talkandbloom.ca/logo.png",
-    "@id": `https://talkandbloom.ca/#organization`,
+    alternateName: "Talk and Bloom",
     url: "https://talkandbloom.ca",
+    "@id": `https://talkandbloom.ca/#organization`,
+    logo: "https://talkandbloom.ca/logo.png",
+    image: "https://talkandbloom.ca/og-image.jpg",
+    description:
+      "Talk and Bloom offers professional speech therapy services for children and adults, blending bilingual care, modern therapeutic strategies, and a compassionate approach to language development.",
+    founder: {
+      "@type": "Person",
+      name: "Rebeca Schvartzman",
+    },
     telephone: "+14162746729",
     address: {
       "@type": "PostalAddress",
@@ -14,6 +22,23 @@ function generateLocalBusinessSchema() {
       addressRegion: "ON",
       postalCode: "L4J 3M8",
       addressCountry: "CA",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-416-274-6729",
+      contactType: "Customer Service",
+      areaServed: "CA",
+      availableLanguage: ["English", "Spanish"],
+    },
+    department: {
+      "@type": "MedicalSpecialty",
+      name: "Speech Therapy",
+      description:
+        "Personalized treatment for speech delays, language disorders, communication development, and more.",
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "Ontario, Canada",
     },
     geo: {
       "@type": "GeoCoordinates",
@@ -25,6 +50,12 @@ function generateLocalBusinessSchema() {
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "09:00",
       closes: "17:00",
+    },
+    hasMap: "https://maps.google.com/?q=Talk+and+Bloom",
+    knowsLanguage: ["en", "es"],
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://talkandbloom.ca",
     },
     sameAs: ["https://instagram.com/talkandbloom.ca"],
     priceRange: "$$",
