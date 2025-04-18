@@ -41,7 +41,9 @@ const AccordionItem: React.FC<AccordionItemData & { id: string }> = memo(
             </svg>
           </div>
           <div className="w-full">
-            <h4 className="mt-1 text-lg font-semibold text-dark">{header}</h4>
+            <h4 className="mt-1 text-lg font-semibold text-dark truncate">
+              {header}
+            </h4>
           </div>
         </button>
         <div

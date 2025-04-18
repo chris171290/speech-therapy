@@ -85,7 +85,7 @@
       }
     },
     "fullAssessment": {
-      "title": "Evaluación Completa",
+      "title": "Evaluación",
       "description": "Evaluación integral de las habilidades comunicativas de tu hijo, ideal si tienes preocupaciones específicas o notas retrasos en el desarrollo.",
       "content": {
         "title": "Si tiene preocupaciones sobre:",
@@ -204,32 +204,32 @@
     }
   },
   "faq": {
-    "title": "Preguntas Frecuentes",
+    "title": "FAQ",
     "subtitle": "Mira Aquí",
-    "description": "Encuentra respuestas a las preguntas más comunes sobre los servicios de terapia del habla y cómo podemos ayudar a tu hijo.",
+    "description": "Encuentra respuestas a las preguntas más comunes sobre servicios de terapia del habla y cómo podemos ayudar a tu hijo.",
     "question1": {
-      "question": "¿Qué es la terapia del habla?",
-      "answer": "La terapia del habla ayuda a mejorar habilidades comunicativas como hablar, comprender, fluidez y voz. Es útil para problemas de articulación, tartamudeo o trastornos del desarrollo."
+      "question": "¿Qué es Talk & Bloom?",
+      "answer": "Talk & Bloom es una práctica pediátrica de patología del habla y lenguaje establecida en Thornhill, Ontario. Proporcionamos terapia de habla, lenguaje y comunicación social. Los servicios se ofrecen en inglés y español."
     },
     "question2": {
-      "question": "¿Con quién trabaja un terapeuta del habla?",
-      "answer": "Trabajamos con niños (retrasos en el habla, autismo), adultos (post-accidente cerebrovascular, Parkinson) y personas con trastornos específicos como tartamudeo o disfonía."
+      "question": "¿Cuándo ver a un terapeuta de habla y lenguaje?",
+      "answer": "Si estás preocupado por las habilidades de comunicación de tu hijo a cualquier edad, es mejor realizar una evaluación inicial o completa con un terapeuta de habla y lenguaje lo antes posible. La identificación y el tratamiento temprano conducen a mejores resultados."
     },
     "question3": {
-      "question": "¿Cómo sé si mi hijo necesita terapia del habla?",
-      "answer": "Los signos comunes incluyen: no balbucear a los 12 meses, dificultad para pronunciar palabras o seguir instrucciones, y retrasos en comparación con otros niños. Una evaluación temprana es clave."
+      "question": "¿Cómo elijo un terapeuta de habla y lenguaje privado?",
+      "answer": "En Ontario, Canadá, todos los patólogos de habla y lenguaje (SLP) deben estar registrados en el Colegio de Audiólogos y Patólogos del Habla y Lenguaje de Ontario (CASLPO). Puedes visitar el sitio web de CASLPO para encontrar un SLP calificado que practique en tu ciudad y que hable tu idioma. También te ayudará a encontrar la terapia que mejor se adapte a las necesidades de tu hijo. Además, puedes usar tu buscador o asistente virtual favorito. Recuerda escribir palabras clave específicas relacionadas con lo que necesitas ayuda (por ejemplo, pronunciación, habilidades sociales, etc."
     },
     "question4": {
-      "question": "¿Cuánto dura el tratamiento?",
-      "answer": "Depende del caso. Algunos mejoran en semanas, otros necesitan meses o años. El progreso varía según la edad, la gravedad y la frecuencia de las sesiones."
+      "question": "¿Necesito ser referido por un médico?",
+      "answer": "No. No se necesita la referencia de un médico para acceder a la terapia privada de habla y lenguaje. Puedes reservar una evaluación inicial o completa directamente. Algunas compañías de seguros requieren la referencia de un médico para pagar por tu terapia de habla privada. Por favor verifica con tu proveedor individual."
     },
     "question5": {
-      "question": "¿Qué sucede durante una sesión?",
-      "answer": "Las sesiones incluyen una evaluación inicial, actividades interactivas (juegos, ejercicios), técnicas personalizadas y tareas para casa. Las sesiones son prácticas y divertidas, especialmente para los niños."
+      "question": "¿La terapia del habla está cubierta por OHIP y por seguros privados?",
+      "answer": "Desafortunadamente, OHIP no cubre la terapia del habla privada. Muchos planes de atención médica extendida sí lo hacen. Por favor verifica con tu compañía de seguros para confirmar sus criterios específicos para pagar por tu terapia de habla y lenguaje. La terapia del habla también se considera un gasto médico deducible de impuestos. Por favor verifica cómo reclamar gastos médicos elegibles en tu declaración de impuestos."
     },
     "question6": {
-      "question": "¿La terapia del habla está cubierta por el seguro?",
-      "answer": "Depende de tu seguro y condición médica. Algunos cubren parte de los costos, especialmente para problemas médicos diagnosticados. Consulta con tu proveedor para más detalles."
+      "question": "¿Cuáles son sus tarifas de servicio?",
+      "answer": "Nuestra organización nacional de Habla-Lenguaje y Audiología (SAC) establece las tarifas estándar. Las tarifas de Talk & Bloom se ajustan a estos estándares."
     }
   },
   "contact": {
@@ -254,8 +254,8 @@
         "placeholder": "Número de teléfono"
       },
       "details": {
-        "label": "Detalles",
-        "placeholder": "Detalles"
+        "label": "Mensaje",
+        "placeholder": "Mensaje"
       },
       "submit": "Enviar consulta",
       "responseTime": "Nos pondremos en contacto contigo en 1-2 días hábiles."

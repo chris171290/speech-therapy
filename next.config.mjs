@@ -18,7 +18,12 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ["speech-therapy-eta.vercel.app"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "speech-therapy-eta.vercel.app",
+      },
+    ],
     formats: ["image/avif", "image/webp"],
   },
   experimental: {

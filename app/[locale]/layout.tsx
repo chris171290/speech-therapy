@@ -107,7 +107,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
   const { locale } = params;
   let messages;
   try {
-    messages = require(`../messages/${locale}.json`);
+    messages = require(`../../i18n/messages/${locale}.json`);
   } catch (error) {
     console.log(error);
   }

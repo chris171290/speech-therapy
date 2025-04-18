@@ -311,7 +311,7 @@ export default function ExpandableCardDemo() {
             className="relative flex justify-center items-center cursor-pointer"
           >
             <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-primary rounded-lg dark:bg-gray-200"></span>
-            <div className="relative flex flex-col gap-3 h-[200px] p-6 dark:bg-gray-800 border-2 border-primary dark:border-gray-300 rounded-lg hover:scale-105 transition duration-500 bg-secondary">
+            <div className="relative flex flex-col gap-3 h-[230px] p-6 dark:bg-gray-800 border-2 border-primary dark:border-gray-300 rounded-lg hover:scale-105 transition duration-500 bg-secondary">
               <motion.div
                 layoutId={`image-${card.title}-${id}`}
                 className="flex items-center justify-start gap-4"
@@ -326,13 +326,19 @@ export default function ExpandableCardDemo() {
                   {card.title}
                 </motion.h3>
               </motion.div>
-              <div className="">
+              <div className=" flex flex-col gap-2">
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
                   className="text-body-color dark:text-dark-6 text-primary"
                 >
                   {card.description}
                 </motion.p>
+                <button
+                  className="flex items-end justify-start bg-transparent text-primary"
+                  onClick={() => setActive(null)}
+                >
+                  Read More
+                </button>
               </div>
             </div>
             {/* <motion.button

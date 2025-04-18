@@ -38,9 +38,9 @@ const institutions: Institution[] = [
     alt: "Logo de Social Thinking",
   },
   {
-    name: "DIR Floortime",
-    src: "/DIRFloorTime.png",
-    alt: "Logo de DIR Floortime",
+    name: "AutismNavigator",
+    src: "/autismnavigator.png",
+    alt: "Logo de Autism Navigator",
   },
   {
     name: "MeaningFullSpeech",
@@ -48,9 +48,9 @@ const institutions: Institution[] = [
     alt: "Logo de MeaningFullSpeech",
   },
   {
-    name: "GenevaCentre",
-    src: "/GenevaCentre.png",
-    alt: "Logo de GenevaCentre",
+    name: "DIR Floortime",
+    src: "/DIRFloorTime.png",
+    alt: "Logo de DIR Floortime",
   },
 ];
 

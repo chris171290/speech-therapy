@@ -3,6 +3,7 @@ import { IoIosMail } from "react-icons/io";
 import { IoLocation } from "react-icons/io5";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { IoMdTime } from "react-icons/io";
 import { RiLinkedinBoxLine } from "react-icons/ri";
 import Link from "next/link";
 
@@ -60,6 +61,12 @@ export default function TopBar() {
       icon: <IoLocation className="h-5 w-5 text-white md:text-primary" />,
       label: "1136 Centre St, Thornhill, ON. Unit 206",
       ariaLabel: "View our office address on Google Maps",
+    },
+    {
+      href: "#",
+      icon: <IoMdTime className="h-5 w-5 text-white md:text-primary" />,
+      label: "Office hours by appointment",
+      ariaLabel: "Office hours by appointment",
     },
   ];
 

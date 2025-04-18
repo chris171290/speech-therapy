@@ -85,7 +85,7 @@
       }
     },
     "fullAssessment": {
-      "title": "Full Assessment",
+      "title": "Assessment",
       "description": "Comprehensive evaluation of your child's communication abilities, ideal if you have specific concerns or notice developmental delays.",
       "content": {
         "title": "If you have concerns about your child’s:",
@@ -208,28 +208,28 @@
     "subtitle": "Look Here",
     "description": "Find answers to the most common questions about speech therapy services and how we can help your child.",
     "question1": {
-      "question": "What is speech therapy?",
-      "answer": "Speech therapy helps improve communication skills like speaking, understanding, fluency, and voice. It's useful for articulation issues, stuttering, or developmental disorders."
+      "question": "What is Talk & Bloom?",
+      "answer": "Talk & Bloom is a pediatric speech-language pathology practice established in Thornhill, Ontario. We provide speech, language, and social communication therapy. Services are provided in English and Spanish."
     },
     "question2": {
-      "question": "Who does a speech therapist work with?",
-      "answer": "We work with children (speech delays, autism), adults (post-stroke, Parkinson's), and individuals with specific disorders like stuttering or dysphonia."
+      "question": "When to see a speech and language therapist?",
+      "answer": "If you’re concerned about your child’s communication skills at any age, it’s best to have a screening or an assessment completed by a speech and language therapist as soon as possible. Early identification and treatment lead to best outcomes."
     },
     "question3": {
-      "question": "How do I know if my child needs speech therapy?",
-      "answer": "Common signs include: not babbling by 12 months, trouble pronouncing words or following instructions, and delays compared to peers. Early evaluation is key."
+      "question": "How do I choose a private speech and language therapist?",
+      "answer": "In Ontario, Canada, all speech-language pathologists (SLP) must be registered with the College of Audiologists and Speech Language Pathologists of Ontario (CASLPO). You may visit the CASLPO website to find a qualified SLP, that practices in your city, and who speaks your language. It’ll also help you find the therapy that best matches your child’s needs. Additionally, you can use your favourity search engine or virtual assistant. Remember to type keywords specifically related to what you need help with (e.g., pronunciation, social skills, etc."
     },
     "question4": {
-      "question": "How long does treatment last?",
-      "answer": "It depends on the case. Some improve in weeks, others need months or years. Progress varies based on age, severity, and session frequency."
+      "question": "Do I need to be referred by a doctor?",
+      "answer": "No. A doctor’s referral is not needed to access private speech and language therapy. You may book a screening or an assessment directly. Some insurance companies require a doctor’s referral to pay for your private speech therapy. Please check with your individual provider."
     },
     "question5": {
-      "question": "What happens during a session?",
-      "answer": "Sessions include an initial assessment, interactive activities (games, exercises), personalized techniques, and homework tasks. Sessions are practical and fun, especially for kids."
+      "question": "Is speech therapy covered by OHIP and by private insurance?",
+      "answer": "Unfortunately, OHIP doesn’t cover private speech therapy. Many extended health care plans do. Please check with your insurance company to confirm their specific criteria to pay for your speech and language therapy. Speech therapy is also considered a tax-deductible medical expense. Please check how to claim eligible medical expenses on your tax return."
     },
     "question6": {
-      "question": "Is speech therapy covered by insurance?",
-      "answer": "It depends on your insurance and medical condition. Some cover part of the costs, especially for diagnosed medical issues. Check with your provider for details."
+      "question": "What are your service fees?",
+      "answer": "Our national Speech-Language &amp; Audiology organization (SAC) sets the standard rates. Talk &amp; Bloom fees fall under these standards."
     }
   },
   "contact": {
@@ -254,8 +254,8 @@
         "placeholder": "Phone Number"
       },
       "details": {
-        "label": "Details",
-        "placeholder": "Details"
+        "label": "Message",
+        "placeholder": "Message"
       },
       "submit": "Send inquiry",
       "responseTime": "We'll get back to you in 1-2 business days."

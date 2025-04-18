@@ -121,6 +121,9 @@ export default function AboutUs() {
                 </span>
               </h1>
               <p className="mt-8 text-lg/7 text-primary">
+                {t("professional.bio.greeting")}
+                <br />
+                <br />
                 {t.rich("professional.bio.introduction", {
                   strong: (chunks) => <strong>{chunks}</strong>,
                 })}{" "}
