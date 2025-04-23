@@ -59,6 +59,50 @@ export default function Footer() {
         </ul>
       </nav>
 
+      {/* Policies Links */}
+      <div className="w-full max-w-4xl mb-8">
+        <ul className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+          <li>
+            <a
+              href={t("policies.privacyUrl")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors hover:underline"
+            >
+              {t("policies.privacy") || "Privacy Policy"}
+            </a>
+          </li>
+          <div
+            className="border-l border-gray-400/50 h-6 mx-1 hidden md:block"
+            aria-hidden="true"
+          />
+          <li>
+            <a
+              href={t("policies.termsUrl")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors hover:underline"
+            >
+              {t("policies.terms") || "Terms of Service"}
+            </a>
+          </li>
+          <div
+            className="border-l border-gray-400/50 h-6 mx-1 hidden md:block"
+            aria-hidden="true"
+          />
+          <li>
+            <a
+              href={t("policies.cookiesUrl")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors hover:underline"
+            >
+              {t("policies.cookies") || "Cookies Policy"}
+            </a>
+          </li>
+        </ul>
+      </div>
+
       {/* Copyright and Social Media */}
       <div className="mt-6 w-full flex flex-col md:flex-row justify-between items-center">
         <p className="text-base mb-4 md:mb-0 font-medium text-primary">

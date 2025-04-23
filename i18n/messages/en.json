@@ -293,6 +293,14 @@
       "faq": "FAQ",
       "contact": "Contact"
     },
+    "policies": {
+      "privacy": "Privacy Policy",
+      "privacyUrl": "/policies/privacy-policy.pdf",
+      "terms": "Terms and Conditions",
+      "termsUrl": "/policies/term-conditions.pdf",
+      "cookies": "Cookies Policy",
+      "cookiesUrl": "/policies/cookies-policy.pdf"
+    },
     "copyright": "© 2025 Talk & Bloom. All rights reserved."
   }
 }

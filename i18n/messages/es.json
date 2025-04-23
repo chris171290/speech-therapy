@@ -224,7 +224,7 @@
       "answer": "No. No se necesita la referencia de un médico para acceder a la terapia privada de habla y lenguaje. Puedes reservar una evaluación inicial o completa directamente. Algunas compañías de seguros requieren la referencia de un médico para pagar por tu terapia de habla privada. Por favor verifica con tu proveedor individual."
     },
     "question5": {
-      "question": "¿La terapia del habla está cubierta por OHIP y por seguros privados?",
+      "question": "¿La terapia está cubierta por OHIP y por seguros privados?",
       "answer": "Desafortunadamente, OHIP no cubre la terapia del habla privada. Muchos planes de atención médica extendida sí lo hacen. Por favor verifica con tu compañía de seguros para confirmar sus criterios específicos para pagar por tu terapia de habla y lenguaje. La terapia del habla también se considera un gasto médico deducible de impuestos. Por favor verifica cómo reclamar gastos médicos elegibles en tu declaración de impuestos."
     },
     "question6": {
@@ -292,6 +292,14 @@
       "blog": "Blog",
       "faq": "Preguntas Frecuentes",
       "contact": "Contacto"
+    },
+    "policies": {
+      "privacy": "Política de Privacidad",
+      "privacyUrl": "/policies/politicas-privacidad.pdf",
+      "terms": "Terminos y condiciones",
+      "termsUrl": "/policies/terminos-condiciones.pdf",
+      "cookies": "Política de cookies",
+      "cookiesUrl": "/policies/politicas-cookies.pdf"
     },
     "copyright": "© 2025 Talk & Bloom. Todos los derechos reservados."
   }

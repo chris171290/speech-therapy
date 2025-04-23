@@ -29,7 +29,7 @@ const TopCurveDecoration = () => (
     aria-hidden="true"
     role="presentation"
   >
-    <path d="M0 0v100S0 4 500 4s500 96 500 96V0H0Z" fill="#B2B8FF" />
+    <path d="M0 0v100S0 4 500 4s500 96 500 96V0H0Z" fill="#E0E2FF" />
   </svg>
 );
 
@@ -43,7 +43,7 @@ const BottomCurveDecoration = () => (
     aria-hidden="true"
     role="presentation"
   >
-    <path d="M0 100v-100S0 96 500 96s500 -96 500 -96V100H0Z" fill="#B2B8FF" />
+    <path d="M0 100v-100S0 96 500 96s500 -96 500 -96V100H0Z" fill="#E0E2FF" />
   </svg>
 );
 
