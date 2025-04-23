@@ -5,8 +5,8 @@ import { LuLanguages } from "react-icons/lu";
 import { GiBrain, GiTrophyCup } from "react-icons/gi";
 import { ReactNode, useMemo } from "react";
 import { Card, CardContent, CardHeader } from "./ui/Card";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { ImageWithFallback } from "./ui/image";
 
 // Definir interfaces para los tipos de datos
 interface ListItem {
@@ -145,13 +145,12 @@ export default function AboutUs() {
 
         {/* Imagen */}
         <div className="-mt-6 -ml-12 p-12 lg:sticky lg:top-20 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <Image
+          <ImageWithFallback
             className="w-full max-w-[48rem] rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10"
             src="/aboutMe.avif"
             alt="Rebeca Schvartzman, Speech-Language Pathologist"
             width={800}
             height={600}
-            priority // Si es above-the-fold
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 768px"
           />
         </div>

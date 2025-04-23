@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { FaClock } from "react-icons/fa";
 import { MdDateRange } from "react-icons/md";
-import Image from "next/image";
 import { useMemo } from "react";
 import { useTranslations } from "next-intl";
+import { ImageWithFallback } from "./ui/image";
 
 // Definir tipos para mejorar la seguridad y autocompletado
 interface BlogPost {
@@ -28,7 +28,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => (
     className={`group flex flex-col h-full border border-black/70 ${post.background} border-transparent hover:border-transparent hover:scale-105 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg transition duration-300 rounded-xl p-5`}
   >
     <div className="aspect-w-16 aspect-h-11">
-      <Image
+      <ImageWithFallback
         className="w-full h-52 object-cover rounded-xl"
         src={post.imageSrc}
         width={500}
@@ -42,7 +42,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => (
       <p className="mt-5 text-gray-800">{post.description}</p>
     </div>
     <div className="mt-auto flex items-center gap-x-3">
-      <Image
+      <ImageWithFallback
         className="size-8 rounded-full"
         src="/avatar.avif"
         width={32}

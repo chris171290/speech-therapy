@@ -1,7 +1,7 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { IoShareSocial } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";

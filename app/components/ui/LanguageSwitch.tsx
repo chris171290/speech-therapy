@@ -43,11 +43,7 @@ export default function LanguageSwitch() {
           }}
         >
           <Image
-            src={
-              isEnglish
-                ? "https://www.svgrepo.com/show/57252/canada.svg"
-                : "https://www.svgrepo.com/show/401755/flag-for-spain.svg"
-            }
+            src={isEnglish ? "/canada.svg" : "/spain.svg"}
             alt={isEnglish ? "Canadian flag" : "Spanish flag"}
             width={20}
             height={20}

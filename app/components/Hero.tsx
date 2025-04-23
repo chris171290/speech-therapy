@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import SVGLumnino from "./svg/Lumino";
 import { useTranslations } from "next-intl";
+import { ImageWithFallback } from "./ui/image";
 
 // Interfaz para los datos de las reseñas
 interface Review {
@@ -147,7 +147,7 @@ export default function Hero() {
               <div>
                 <div
                   className="flex gap-x-1"
-                  // aria-label={`Rating: ${reviewData.rating} out of 5 stars`}
+                  aria-label={`Rating: ${reviewData.rating} out of 5 stars`}
                 >
                   {[...Array(5)].map((_, index) => (
                     <StarIcon key={index} />
@@ -171,16 +171,16 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Sección derecha (imagen) */}
+          {/* Sección derecha (imagen) con componente mejorado */}
           <div className={rightSectionClasses}>
-            <Image
+            <ImageWithFallback
               className="w-full max-w-2xl h-auto rounded-[2rem]"
               src="/hero-speech-therapy.avif"
               alt="Child during speech therapy session"
               width={650}
               height={550}
-              priority
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 75vw, 650px" // Ajusta según tu diseño
+              priority={true}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 75vw, 650px"
             />
           </div>
         </div>

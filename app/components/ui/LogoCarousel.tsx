@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { FC } from "react";
+import { ImageWithFallback } from "./image";
 
 // Interfaz para los datos de las instituciones
 interface Institution {
@@ -58,7 +59,7 @@ const institutions: Institution[] = [
 const LogoItem: FC<Institution> = ({ name, src, alt }) => (
   <div className="flex flex-col items-center justify-center w-[200px] flex-shrink-0 group">
     <div className="h-[50px] w-[150px] md:h-[100px] md:w-[200px] flex items-center justify-center bg-[#f9f9f9] rounded-lg shadow-md transition-all duration-300 ease-in-out transform group-hover:scale-105 group-hover:shadow-lg">
-      <Image
+      <ImageWithFallback
         src={src || "/placeholder.svg"}
         alt={alt}
         width={160}

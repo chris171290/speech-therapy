@@ -1,9 +1,9 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
 import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
+import { ImageWithFallback } from "./ui/image";
 
 // Define interfaces for type safety
 interface Testimonial {
@@ -85,7 +85,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
     <div className="mb-8 sm:break-inside-avoid">
       <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm transition-shadow hover:shadow-md sm:p-8">
         <div className="flex items-center gap-4">
-          <Image
+          <ImageWithFallback
             alt={`${testimonial.name}'s avatar`}
             src={testimonial.image}
             width={56}
