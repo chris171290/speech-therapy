@@ -32,7 +32,7 @@
         "introduction": "I'm a passionate, registered <strong>speech-language pathologist (SLP) </strong> with over <strong>25 years of experience</strong> helping children develop the communication skills they need to thrive.",
         "bilingual": "I am fully bilingual in <strong>English and Spanish</strong> and proudly provide services in both languages.",
         "career": "Throughout my career, I've worked with children of <strong>diverse cultural and linguistic backgrounds</strong>, always striving to create an inclusive, supportive, and engaging environment for learning.",
-        "approach": "I deeply respect <strong>each family's unique experiences</strong> and tailor my approach to fit their child's individual needs."
+        "approach": "I deeply respect each family's unique experiences and tailor my approach to <strong>fit their child's individual needs</strong>."
       }
     },
     "services": {
@@ -69,12 +69,12 @@
   "services": {
     "title": "Our Services",
     "subtitle": "What We Do",
-    "description": "We offer specialized speech and language therapy services designed to help children develop essential communication skills through evidence-based techniques.",
+    "description": "We offer specialized speech and language therapy services designed to help parents to support their children's development of communication skills through evidence-based techniques.",
     "freeScreening": {
       "title": "Free Screening",
-      "description": "Confirm if your child is meeting age-appropriate milestones. Early identification can change your child's developmental path.",
+      "description": "A screening is a brief and informal evaluation to confirm if your child is meeting age-appropriate milestones. Early identification can change your child's developmental path.",
       "content": {
-        "title": "Are you concern about:",
+        "title": "Are you concerned about:",
         "concern_1": "Understanding of language",
         "concern_2": "Use of language and talking",
         "concern_3": "Ability to play and/or interact with others",
@@ -86,23 +86,23 @@
     },
     "fullAssessment": {
       "title": "Assessment",
-      "description": "Comprehensive evaluation of your child's communication abilities, ideal if you have specific concerns or notice developmental delays.",
+      "description": "An assessment is a detailed and formal evaluation to determine the type and severity of any identified speech or language difficulties.",
       "content": {
         "title": "If you have concerns about your child’s:",
-        "concern_1": "Receptive Language (understanding language – e.g., words and concepts, following directions, answering questions)",
-        "concern_2": "Expressive Language (communicate wants, needs, feelings, and ideas using gestures, actions, sounds, and words)",
-        "concern_3": "Speech (pronunciation of speech sounds and words)",
-        "concern_4": "Social Communication (use of verbal and non-verbal language in different social contexts and for different reasons to connect and communicate with others)",
-        "concern_5": "Play skills (appropriate use of variety of toys including pretend/imaginary play)",
-        "concern_6": "Self-regulation (ability to understand and manage own behaviour/reaction to things happening around self)",
-        "concern_7": "Some skills are on track, but others are falling behind or losing any skills at any time",
-        "concern_8": "Something isn’t quite right about any area of your child’s development, but you can’t explain what it is",
+        "concern_1": "<u><strong>Receptive Language</strong></u> (understanding language – e.g., words and concepts, following directions, answering questions)",
+        "concern_2": "<u><strong>Expressive Language</strong></u> (communicate wants, needs, feelings, and ideas using gestures, actions, sounds, and words)",
+        "concern_3": "<u><strong>Speech</strong></u> (pronunciation of speech sounds and words)",
+        "concern_4": "<u><strong>Social Communication</strong></u> (use of verbal and non-verbal language in different social contexts and for different reasons to connect and communicate with others)",
+        "concern_5": "<u><strong>Play skills</strong></u> (appropriate use of variety of toys including pretend/imaginary play)",
+        "concern_6": "<u><strong>Self-regulation</strong></u> (ability to understand and manage own behaviour/reaction to things happening around self)",
+        "concern_7": "Some skills are on track, but others are falling behind or <u>losing any skills</u> at any time",
+        "concern_8": "<u><strong>Something isn’t quite right</strong></u> about any area of your child’s development, but you can’t explain what it is",
         "call_to_action": "Don’t wait to seek an assessment!"
       }
     },
     "languageTherapy": {
       "title": "Language Therapy",
-      "description": "Addresses difficulties in understanding and expressing language, including grammar, vocabulary, and sentence organization.",
+      "description": "Addresses children with delays or disorders in the areas of understanding and/or expression of language.",
       "content": {
         "title": "Understanding and expression of language",
         "concern_1": "Difficulty comprehending the meaning of words and/or sentences",
@@ -112,26 +112,31 @@
         "concern_5": "Difficulty understanding and/or using grammar",
         "concern_6": "Difficulty understanding and/or knowing how to organize words in a sentence",
         "title2": "Late Talking",
-        "concern2_1": "Using limited vocabulary for your child’s age while progressing well in other areas of development",
-        "concern2_2": "Not having an explanation for this specific delay",
-        "title3": "Self-Regulation",
-        "concern3_1": "Difficulty responding to social rules in a specific situation controlling emotions and acting as accepted (i.e., emotional regulation)",
-        "concern3_2": "Difficulty responding to adult support to manage own emotions (i.e., co-regulation)",
-        "concern3_3": "Difficulty maintaining an appropriate level of alertness (not too active or lethargic) and responding in a particular situation (i.e., sensory regulation)",
-        "concern3_4": "Difficulty problem solving and using mental processes to pay attention and staying on the current task (i.e., cognitive regulation)"
+        "concern2_1": "Using limited vocabulary for your child’s age while progressing well in the other areas of development",
+        "concern2_2": "Not having an explanation for this specific delay"
       }
     },
     "socialCommunicationTherapy": {
       "title": "Social Communication Therapy",
-      "description": "Improves social interaction skills, use of gestures, facial expressions, and ability to maintain conversations.",
+      "description": "Social communication is how children use verbal and non-verbal skills to interact with others. Therapy helps them understand and use these skills effectively in social situations.",
       "content": {
         "title": "Social Communication",
-        "concern_1": "Difficulty interacting with others",
-        "concern_2": "Difficulty looking back-and-forth between a parent/caregiver and an object they are interested in",
-        "concern_3": "Difficulty using facial expressions, gestures, and sounds",
-        "concern_4": "Difficulty looking, pointing, and vocalizing to show their parent something they see or want",
-        "concern_5": "Difficulty playing with toys in an appropriate way",
-        "concern_6": "Difficulty using language to maintain a conversation"
+        "concern_1": "Stopping and looking when your name is called",
+        "concern_2": "Showing and sharing objects of interest with others",
+        "concern_3": "Paying attention to where the adult is looking and pointing",
+        "concern_4": "Using facial expressions, gestures, sounds, and words",
+        "concern_5": "Playing with toys in an appropriate and creative way",
+        "concern_6": "Taking turns when playing and interacting with others",
+        "concern_7": "Interpreting the words and actions of others and responding accordingly",
+        "concern_8": "Making friends and participating in teamwork",
+        "concern_9": "Understanding others’ point of view",
+        "concern_10": "Maintaining a conversation",
+
+        "title2": "Self-Regulation",
+        "concern2_1": "Difficulty responding to social rules in a specific situation controlling emotions and acting as accepted (i.e., <u>emotional regulation</u>)",
+        "concern2_2": "Difficulty responding to adult support to manage own emotions (i.e., <u>co-regulation</u>)",
+        "concern2_3": "Difficulty maintaining an appropriate level of alertness (not too active or lethargic) and responding in a particular situation (i.e., <u>sensory regulation</u>)",
+        "concern2_4": "Difficulty problem solving, paying attention, and staying on the current task (i.e., <u>cognitive regulation</u>)"
       }
     },
     "articulationTherapy": {
@@ -139,13 +144,13 @@
       "description": "Helps correct difficulties in pronouncing sounds and words to improve speech clarity.",
       "content": {
         "title": "Articulation/Pronunciation",
-        "concern_1": "Difficulty saying speech sounds correctly and clearly",
-        "concern_2": "Changing a sound, leaving out a sound, substituting one sound for another"
+        "concern_1": "Difficulty saying speech sounds or word correctly and clearly",
+        "concern_2": "Changing a sound, leaving out a sound or part of a word, substituting one sound for another"
       }
     },
     "professionalConsultation": {
       "title": "Professional Consultation",
-      "description": "Offers training and support to other professionals involved in a current client's care, including daycare and school visits."
+      "description": "Support or training to other clinicians and service providers that are involved with your child (e.g., resource consultant, behaviour therapist, physiotherapist, etc.). Daycare and school visits"
     }
   },
   "testimonials": {
@@ -217,7 +222,7 @@
     },
     "question3": {
       "question": "How do I choose a private speech and language therapist?",
-      "answer": "In Ontario, Canada, all speech-language pathologists (SLP) must be registered with the College of Audiologists and Speech Language Pathologists of Ontario (CASLPO). You may visit the CASLPO website to find a qualified SLP, that practices in your city, and who speaks your language. It’ll also help you find the therapy that best matches your child’s needs. Additionally, you can use your favourity search engine or virtual assistant. Remember to type keywords specifically related to what you need help with (e.g., pronunciation, social skills, etc."
+      "answer": "In Ontario, Canada, all speech-language pathologists (SLP) must be registered with the College of Audiologists and Speech Language Pathologists of Ontario (CASLPO). You may visit the CASLPO website to find a qualified SLP, that practices in your city, and who speaks your language. It’ll also help you find the therapy that best matches your child’s needs. Additionally, you can use your favorite search engine or virtual assistant. Remember to type keywords specifically related to what you need help with (e.g., pronunciation, social skills, etc.)"
     },
     "question4": {
       "question": "Do I need to be referred by a doctor?",

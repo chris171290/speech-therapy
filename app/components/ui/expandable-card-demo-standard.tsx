@@ -60,14 +60,55 @@ export default function ExpandableCardDemo() {
               {t("fullAssessment.content.title")}
             </h3>
             <ul className="list-disc pl-4 text-neutral-600 space-y-3">
-              <li>{t("fullAssessment.content.concern_1")}</li>
-              <li>{t("fullAssessment.content.concern_2")}</li>
-              <li>{t("fullAssessment.content.concern_3")}</li>
-              <li>{t("fullAssessment.content.concern_4")}</li>
-              <li>{t("fullAssessment.content.concern_5")}</li>
-              <li>{t("fullAssessment.content.concern_6")}</li>
-              <li>{t("fullAssessment.content.concern_7")}</li>
-              <li>{t("fullAssessment.content.concern_8")}</li>
+              {/* <li>{t("fullAssessment.content.concern_1")}</li> */}
+              <li>
+                {t.rich("fullAssessment.content.concern_1", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                  u: (chunks) => <u className="underline">{chunks}</u>,
+                })}
+              </li>
+              <li>
+                {t.rich("fullAssessment.content.concern_2", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                  u: (chunks) => <u className="underline">{chunks}</u>,
+                })}
+              </li>
+              <li>
+                {t.rich("fullAssessment.content.concern_3", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                  u: (chunks) => <u className="underline">{chunks}</u>,
+                })}
+              </li>
+              <li>
+                {t.rich("fullAssessment.content.concern_4", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                  u: (chunks) => <u className="underline">{chunks}</u>,
+                })}
+              </li>
+              <li>
+                {t.rich("fullAssessment.content.concern_5", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                  u: (chunks) => <u className="underline">{chunks}</u>,
+                })}
+              </li>
+              <li>
+                {t.rich("fullAssessment.content.concern_6", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                  u: (chunks) => <u className="underline">{chunks}</u>,
+                })}
+              </li>
+              <li>
+                {t.rich("fullAssessment.content.concern_7", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                  u: (chunks) => <u className="underline">{chunks}</u>,
+                })}
+              </li>
+              <li>
+                {t.rich("fullAssessment.content.concern_8", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                  u: (chunks) => <u className="underline">{chunks}</u>,
+                })}
+              </li>
             </ul>
             <p className="font-bold text-neutral-700 dark:text-neutral-200">
               {t("fullAssessment.content.call_to_action")}
@@ -106,16 +147,6 @@ export default function ExpandableCardDemo() {
               <li>{t("languageTherapy.content.concern2_1")}</li>
               <li>{t("languageTherapy.content.concern2_2")}</li>
             </ul>
-
-            <h3 className="font-bold text-neutral-700">
-              {t("languageTherapy.content.title3")}
-            </h3>
-            <ul className="list-disc pl-4 text-neutral-600 space-y-2">
-              <li>{t("languageTherapy.content.concern3_1")}</li>
-              <li>{t("languageTherapy.content.concern3_2")}</li>
-              <li>{t("languageTherapy.content.concern3_3")}</li>
-              <li>{t("languageTherapy.content.concern3_4")}</li>
-            </ul>
             {/* <p>{t("freeScreening.description")}</p> */}
           </>
         );
@@ -141,6 +172,35 @@ export default function ExpandableCardDemo() {
               <li>{t("socialCommunicationTherapy.content.concern_4")}</li>
               <li>{t("socialCommunicationTherapy.content.concern_5")}</li>
               <li>{t("socialCommunicationTherapy.content.concern_6")}</li>
+            </ul>
+            <h3 className="font-bold text-neutral-700">
+              {t("socialCommunicationTherapy.content.title2")}
+            </h3>
+            <ul className="list-disc pl-4 text-neutral-600 space-y-2">
+              <li>
+                {t.rich("socialCommunicationTherapy.content.concern2_1", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                  u: (chunks) => <u className="underline">{chunks}</u>,
+                })}
+              </li>
+              <li>
+                {t.rich("socialCommunicationTherapy.content.concern2_2", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                  u: (chunks) => <u className="underline">{chunks}</u>,
+                })}
+              </li>
+              <li>
+                {t.rich("socialCommunicationTherapy.content.concern2_3", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                  u: (chunks) => <u className="underline">{chunks}</u>,
+                })}
+              </li>
+              <li>
+                {t.rich("socialCommunicationTherapy.content.concern2_4", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                  u: (chunks) => <u className="underline">{chunks}</u>,
+                })}
+              </li>
             </ul>
             {/* <p>{t("freeScreening.description")}</p> */}
           </>
@@ -311,7 +371,7 @@ export default function ExpandableCardDemo() {
             className="relative flex justify-center items-center cursor-pointer"
           >
             <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-primary rounded-lg dark:bg-gray-200"></span>
-            <div className="relative flex flex-col gap-3 h-[245px] p-6 dark:bg-gray-800 border-2 border-primary dark:border-gray-300 rounded-lg hover:scale-105 transition duration-500 bg-secondary">
+            <div className="relative flex flex-col gap-3 h-[280px] p-6 dark:bg-gray-800 border-2 border-primary dark:border-gray-300 rounded-lg hover:scale-105 transition duration-500 bg-secondary">
               <motion.div
                 layoutId={`image-${card.title}-${id}`}
                 className="flex items-center justify-start gap-4"
@@ -334,6 +394,7 @@ export default function ExpandableCardDemo() {
                   {card.description}
                 </motion.p>
                 <ReadMoreButton
+                  className="mt-5"
                   onClick={(e) => {
                     e.stopPropagation();
                     setActive(card);
