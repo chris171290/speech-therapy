@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import SVGLumnino from "./svg/Lumino";
 import { useTranslations } from "next-intl";
-import { ImageWithFallback } from "./ui/image";
+import Image from "next/image";
+import ImageWithFallback from "./ui/image/ImageWithFallback";
 
 // Interfaz para los datos de las reseñas
 interface Review {
@@ -11,7 +12,7 @@ interface Review {
   totalReviews: number;
 }
 
-// Datos del hero (mueve esto fuera del componente para evitar recreaciones)
+// Datos del hero (fuera del componente para evitar recreaciones)
 const heroInfo = {
   title1: "Helping Kids Develop Speech, Language, and Social Skills",
   title2: "Through Play, Family Involvement, and Expert Guidance",
@@ -85,6 +86,21 @@ export default function Hero() {
   // Estado para animaciones basadas en CSS
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const imageUrl = "/hero-speech-therapy.avif";
+
+  // Preload the hero image
+  useEffect(() => {
+    const preloadLink = document.createElement("link");
+    preloadLink.rel = "preload";
+    preloadLink.as = "image";
+    preloadLink.href = imageUrl;
+    preloadLink.type = "image/avif";
+    document.head.appendChild(preloadLink);
+
+    return () => {
+      document.head.removeChild(preloadLink);
+    };
+  }, []);
 
   // Reemplazar Framer Motion con IntersectionObserver nativo
   useEffect(() => {
@@ -95,7 +111,7 @@ export default function Hero() {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 } // Reduce threshold for earlier visibility
     );
 
     if (ref.current) {
@@ -181,6 +197,8 @@ export default function Hero() {
               height={550}
               priority={true}
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 75vw, 650px"
+              placeholder="blur"
+              blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NTAiIGhlaWdodD0iNTUwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZDhiNGZlIj48L3JlY3Q+PC9zdmc+"
             />
           </div>
         </div>
