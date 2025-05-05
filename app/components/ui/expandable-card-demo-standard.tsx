@@ -23,7 +23,7 @@ export default function ExpandableCardDemo() {
       icon: <FaStethoscope className="size-6 text-white" />,
       src: "/hero-speech-therapy.avif",
       ctaText: "Book Now",
-      ctaLink: "https://ui.aceternity.com/templates",
+      ctaLink: "#contact",
       content: () => {
         return (
           <>
@@ -52,7 +52,7 @@ export default function ExpandableCardDemo() {
       icon: <FaClipboardList className="size-6 text-white" />,
       src: "/hero-speech-therapy.avif",
       ctaText: "Book Now",
-      ctaLink: "https://ui.aceternity.com/templates",
+      ctaLink: "#contact",
       content: () => {
         return (
           <>
@@ -124,7 +124,7 @@ export default function ExpandableCardDemo() {
       icon: <LuMessageSquareText className="size-6 text-white" />,
       src: "/hero-speech-therapy.avif",
       ctaText: "Book Now",
-      ctaLink: "https://ui.aceternity.com/templates",
+      ctaLink: "#contact",
       content: () => {
         return (
           <>
@@ -158,7 +158,7 @@ export default function ExpandableCardDemo() {
       icon: <FaUsers className="size-6 text-white" />,
       src: "/hero-speech-therapy.avif",
       ctaText: "Book Now",
-      ctaLink: "https://ui.aceternity.com/templates",
+      ctaLink: "#contact",
       content: () => {
         return (
           <>
@@ -213,7 +213,7 @@ export default function ExpandableCardDemo() {
       icon: <FaMicrophoneAlt className="size-6 text-white" />,
       src: "/hero-speech-therapy.avif",
       ctaText: "Book Now",
-      ctaLink: "https://ui.aceternity.com/templates",
+      ctaLink: "#contact",
       content: () => {
         return (
           <>
@@ -235,7 +235,7 @@ export default function ExpandableCardDemo() {
       icon: <FaGraduationCap className="size-6 text-white" />,
       src: "/hero-speech-therapy.avif",
       ctaText: "Book Now",
-      ctaLink: "https://ui.aceternity.com/templates",
+      ctaLink: "#contact",
       content: () => {
         return <p></p>;
       },
@@ -266,6 +266,18 @@ export default function ExpandableCardDemo() {
   }, [active]);
 
   useOutsideClick(ref, () => setActive(null));
+
+  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.getElementById(href.slice(1));
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 40, // Ajusta para la altura del encabezado
+        behavior: "smooth",
+      });
+    }
+    setActive(false);
+  };
 
   return (
     <>
@@ -337,9 +349,12 @@ export default function ExpandableCardDemo() {
                   <motion.a
                     layoutId={`button-${active.title}-${id}`}
                     href={active.ctaLink}
-                    target="_blank"
+                    // target="_blank"
                     className="px-4 py-3 text-sm rounded-full font-bold bg-primary text-white"
                     rel="noreferrer"
+                    onClick={(e) => {
+                      scrollTo(e, active.ctaLink);
+                    }}
                   >
                     {active.ctaText}
                   </motion.a>

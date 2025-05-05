@@ -2,11 +2,11 @@
   "home": {
     "navbar": {
       "home": "Inicio",
-      "about": "Sobre Nosotros",
+      "about": "Nosotros",
       "services": "Servicios",
       "testimonials": "Testimonios",
       "blog": "Blog",
-      "faq": "Preguntas Frecuentes",
+      "faq": "FAQ",
       "contact": "Contacto",
       "cta": "Consulta Gratuita"
     },

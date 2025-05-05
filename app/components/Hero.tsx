@@ -87,6 +87,7 @@ export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const imageUrl = "/hero-speech-therapy.avif";
+  const preloadLinkRef = useRef<HTMLLinkElement | null>(null);
 
   // Preload the hero image
   useEffect(() => {
@@ -97,8 +98,17 @@ export default function Hero() {
     preloadLink.type = "image/avif";
     document.head.appendChild(preloadLink);
 
+    // Store reference to the created element
+    preloadLinkRef.current = preloadLink;
+
     return () => {
-      document.head.removeChild(preloadLink);
+      // Safe cleanup - check if the element is still in the DOM and is a child of document.head
+      if (
+        preloadLinkRef.current &&
+        document.head.contains(preloadLinkRef.current)
+      ) {
+        document.head.removeChild(preloadLinkRef.current);
+      }
     };
   }, []);
 
