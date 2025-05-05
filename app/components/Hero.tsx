@@ -41,9 +41,16 @@ interface ButtonProps {
   variant: "primary" | "secondary";
   children: React.ReactNode;
   className?: string;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const Button = ({ href, variant, children, className = "" }: ButtonProps) => {
+const Button = ({
+  href,
+  variant,
+  children,
+  className = "",
+  onClick,
+}: ButtonProps) => {
   const baseStyles =
     "text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center px-4 py-2 md:px-3.5 md:py-2 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg";
   const variantStyles = {
@@ -55,6 +62,7 @@ const Button = ({ href, variant, children, className = "" }: ButtonProps) => {
     <a
       href={href}
       className={`${baseStyles} ${variantStyles[variant]} ${className}`}
+      onClick={onClick}
     >
       <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
       <span className="flex items-center justify-center">{children}</span>
@@ -148,6 +156,17 @@ export default function Hero() {
     isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-5"
   }`;
 
+  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.getElementById(href.slice(1));
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 40, // Ajusta para la altura del encabezado
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section
       id="home"
@@ -186,11 +205,25 @@ export default function Hero() {
               </div>
             </div>
             <div className="flex mt-5 items-center justify-between sm:flex-row gap-2 md:gap-4 w-auto">
-              <Button href="#contact" variant="primary" className="flex-1">
+              <Button
+                href="#"
+                variant="primary"
+                className="flex-1"
+                onClick={(e) => {
+                  scrollTo(e, "#contact");
+                }}
+              >
                 {t("hero.primaryButton")}
                 <ArrowIcon />
               </Button>
-              <Button href="#services" variant="secondary" className="flex-1">
+              <Button
+                href="#services"
+                variant="secondary"
+                className="flex-1"
+                onClick={(e) => {
+                  scrollTo(e, "#about");
+                }}
+              >
                 {t("hero.secondaryButton")}
                 <ArrowIcon />
               </Button>

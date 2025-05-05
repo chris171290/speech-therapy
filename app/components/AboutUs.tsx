@@ -87,6 +87,16 @@ export default function AboutUs() {
     ],
     []
   );
+  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.getElementById(href.slice(1));
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 40, // Ajusta para la altura del encabezado
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <section
@@ -221,6 +231,9 @@ export default function AboutUs() {
             <a
               href="#contact"
               className="text-base truncate rounded-xl font-extrabold tracking-wider relative inline-flex group items-center justify-center px-2 py-2 md:px-3.5 md:py-2 md:m-1 cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#7248d4] text-white"
+              onClick={(e) => {
+                scrollTo(e, "#contact");
+              }}
             >
               <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
               <span>{t("whyWorkWithMe.callToAction")}</span>

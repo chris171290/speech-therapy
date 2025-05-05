@@ -31,7 +31,7 @@ module.exports = {
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#E0E2FF",
+          DEFAULT: "#ebedff",
           foreground: "#FFFFFF",
         },
         tertiary: {
