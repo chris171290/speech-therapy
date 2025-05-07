@@ -21,8 +21,8 @@ export const Logo = ({
   // Mapeo de tamaños
   const sizeMap = {
     sm: { width: 52, height: 52 },
-    md: { width: 120, height: 40 },
-    lg: { width: 180, height: 60 },
+    md: { width: 150, height: 40 },
+    lg: { width: 170, height: 60 },
     xl: { width: 240, height: 80 },
   };
 
@@ -39,7 +39,7 @@ export const Logo = ({
   };
 
   // Selección de la variante del logo
-  let src = "/logo/logo.png";
+  let src = "/logo/hor_logo.png";
 
   // if (variant === "symbol") {
   //   src = "/images/logo/logo-symbol.svg";
@@ -63,12 +63,12 @@ export const Logo = ({
         className="object-contain"
       />
 
-      <span
+      {/* <span
         // className={` text-6xl font-bold text-primary dark:text-purple-100 ml-2`}
         className={`${textSizeMap[textSize]} font-bold text-primary dark:text-purple-100 ml-2`}
       >
         Talk & Bloom
-      </span>
+      </span> */}
     </a>
   );
 };

@@ -138,7 +138,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex gap-2 items-center px-1">
-            <Logo />
+            <Logo size="lg" />
             {/* <SlSpeech
               className="text-xl md:text-4xl text-primary"
               aria-hidden="true"

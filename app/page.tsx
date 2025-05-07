@@ -14,7 +14,7 @@ export default function ComingSoonPage() {
       {/* Header */}
       <header className="sticky top-0 z-50 backdrop-blur-sm bg-white/70 dark:bg-slate-900/70 transition-all duration-300 border-b border-slate-200 dark:border-slate-800">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <Logo />
+          <Logo size="md" />
           <div className="flex items-center gap-4">
             <a
               href="mailto:rebecask65@gmail.com"

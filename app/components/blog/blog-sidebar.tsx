@@ -145,7 +145,7 @@ export function BlogSidebar() {
       <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
         <div className="flex flex-col space-y-1.5 p-6">
           <h3 className="text-2xl font-mediun leading-none tracking-tight">
-            Lastes Resources
+            Lastes Post
           </h3>
         </div>
         <div className="p-0">
