@@ -1,6 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 // import { ThemeProvider } from "@/components/theme-provider"
 
@@ -9,7 +9,7 @@ const playfair = Playfair_Display({
   // variable: "--font-serif",
   // display: "swap",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  // weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {

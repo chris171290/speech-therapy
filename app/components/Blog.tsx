@@ -24,7 +24,7 @@ interface BlogCardProps {
 
 const BlogCard: React.FC<BlogCardProps> = ({ post }) => (
   <Link
-    href={`/blog/${post.slug}`}
+    href={`/en/blog/${post.slug}`}
     className={`group flex flex-col h-full border border-black/70 ${post.background} border-transparent hover:border-transparent hover:scale-105 hover:shadow-lg focus:outline-none focus:border-transparent focus:shadow-lg transition duration-300 rounded-xl p-5`}
   >
     <div className="aspect-w-16 aspect-h-11">
@@ -76,7 +76,7 @@ const BlogList: React.FC = () => {
     {
       title: t("post1.title"),
       description: t("post1.content"),
-      slug: "future-speech-therapy-trends-innovations-2025",
+      slug: "free-resources-for-parents",
       imageSrc: "/blog1.avif",
       by: "Rebeca Schvartzman, SLP. CASLPO",
       background: "bg-white/75",
@@ -122,7 +122,7 @@ export default function Blog() {
   const t = useTranslations("blog");
   return (
     <section
-      className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto"
+      className="max-w-[85rem] px-4 py-20 sm:px-6 lg:px-8 mx-auto"
       id="blog"
       aria-labelledby="blog-heading"
     >

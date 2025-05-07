@@ -8,7 +8,7 @@ import StructuredData from "../components/seo/structured-data";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  // weight: ["400", "700"],
 });
 
 type LanguageCode = "es" | "en";

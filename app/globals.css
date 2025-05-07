@@ -99,4 +99,9 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Custom styles for the blog */
+  .lead {
+    @apply text-xl text-muted-foreground mb-6;
+  }
 }
