@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { SlSpeech } from "react-icons/sl";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { RiLinkedinBoxLine } from "react-icons/ri";
 import { useTranslations } from "next-intl";
-import { Logo } from "./logo";
+import Image from "next/image";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -13,15 +12,16 @@ export default function Footer() {
       {/* Logo */}
       <div className="m-11 flex items-center justify-center">
         <div className="flex items-center">
-          <Logo size="md" textSize="6xl" />
-          {/* <SlSpeech className="h-10 w-10 mr-2 text-primary" />
-          <Link
-            href="/"
-            className="text-4xl lg:text-6xl font-bold text-primary"
-            aria-label="Talk and Bloom"
-          >
-            Talk &amp; Bloom
-          </Link> */}
+          <div className="flex items-center justify-center">
+            <Image
+              src={"/logo/hor_logo.png"}
+              alt="Company logo"
+              width={500}
+              height={100}
+              priority={true} // Carga prioritaria para el logo
+              className="object-contain"
+            />
+          </div>
         </div>
       </div>
 

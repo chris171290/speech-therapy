@@ -2,6 +2,7 @@ import { NewsletterForm } from "./components/newsletter-form";
 import { SocialLinks } from "./components/social-links";
 import { ThemeToggle } from "./components/theme-toggle";
 import { Logo } from "./components/logo";
+import Image from "next/image";
 
 export default function ComingSoonPage() {
   // Launch date: 30 days from now
@@ -27,16 +28,26 @@ export default function ComingSoonPage() {
       </header>
 
       {/* Main Content */}
-      <main className="flex-grow flex items-center justify-center px-4 py-12 md:py-16">
+      <main className="flex-grow flex items-center justify-center px-4 py-1">
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-col items-center text-center">
             <div className="space-y-8 max-w-5xl">
               <div className="space-y-7">
-                <Logo
+                <div className="flex items-center justify-center">
+                  <Image
+                    src={"/logo/hor_logo.png"}
+                    alt="Company logo"
+                    width={300}
+                    height={100}
+                    priority={true} // Carga prioritaria para el logo
+                    className="object-contain"
+                  />
+                </div>
+                {/* <Logo
                   className=" items-center justify-center"
                   size="sm"
                   textSize="5xl"
-                />
+                /> */}
                 <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl text-primary dark:text-purple-100 tracking-tight">
                   We're Coming Soon!
                 </h1>
@@ -48,7 +59,7 @@ export default function ComingSoonPage() {
                 </p>
               </div>
 
-              <div className="pt-12 w-full">
+              <div className="py-8 w-full">
                 <NewsletterForm />
               </div>
 

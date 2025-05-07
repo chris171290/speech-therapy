@@ -3,7 +3,6 @@
 import { useEffect, useState, useCallback, useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { SlSpeech } from "react-icons/sl";
 import LanguageSwitch from "./ui/LanguageSwitch";
 import { FaVideo } from "react-icons/fa";
 import { useTranslations } from "next-intl";
