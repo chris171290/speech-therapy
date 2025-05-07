@@ -13,25 +13,43 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Coming Soon | Wellness Studio",
+  title:
+    "Coming soon | Talk & Bloom | Helping Kids Communicate, Connect, and Thrive",
   description:
-    "Our new wellness platform is launching soon. Sign up to be notified when we go live.",
+    "Talk & Bloom helps kids communicate, connect, and thrive with personalized therapy, expert guidance, and a nurturing environment.",
+  keywords: [
+    "speech therapy",
+    "language therapy",
+    "speech-language pathology",
+    "communication disorders",
+    "speech development in children",
+    "language disorders",
+    "speech pathology",
+  ],
+  authors: [{ name: "Talk & Bloom" }],
+  robots: "index, follow",
   openGraph: {
-    title: "Coming Soon | Wellness Studio",
+    type: "website",
+    locale: "en_US",
+    siteName: "Talk & Bloom",
+    title: "Talk & Bloom | Helping Kids Communicate, Connect, and Thrive",
     description:
-      "Our new wellness platform is launching soon. Sign up to be notified when we go live.",
-    url: "https://wellnessstudio.com",
-    siteName: "Wellness Studio",
+      "Talk & Bloom helps kids communicate, connect, and thrive with personalized therapy, expert guidance, and a nurturing environment.",
     images: [
       {
-        url: "https://wellnessstudio.com/og-image.jpg",
+        url: "/rb_logo.png",
         width: 1200,
         height: 630,
-        alt: "Wellness Studio",
+        alt: "Talk & Bloom - Speech Therapy for Children",
       },
     ],
-    locale: "en_US",
-    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Talk & Bloom | Speech Therapy for Children",
+    description:
+      "Specialized speech therapy helping children communicate and develop.",
+    images: ["/rb_logo.png"],
   },
 };
 
