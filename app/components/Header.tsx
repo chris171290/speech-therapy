@@ -7,6 +7,7 @@ import { SlSpeech } from "react-icons/sl";
 import LanguageSwitch from "./ui/LanguageSwitch";
 import { FaVideo } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import { Logo } from "./logo";
 
 // Interfaz para los ítems del menú de navegación
 interface NavItem {
@@ -138,7 +139,8 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex gap-2 items-center px-1">
-            <SlSpeech
+            <Logo />
+            {/* <SlSpeech
               className="text-xl md:text-4xl text-primary"
               aria-hidden="true"
             />
@@ -148,7 +150,7 @@ export default function Header() {
               aria-label="Talk and Bloom"
             >
               Talk &amp; Bloom
-            </Link>
+            </Link> */}
           </div>
 
           {/* Menú de navegación */}

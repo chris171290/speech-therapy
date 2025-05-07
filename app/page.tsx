@@ -27,11 +27,16 @@ export default function ComingSoonPage() {
       </header>
 
       {/* Main Content */}
-      <main className="flex-grow flex items-center justify-center px-4 py-12 md:py-24">
+      <main className="flex-grow flex items-center justify-center px-4 py-12 md:py-16">
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-col items-center text-center">
             <div className="space-y-8 max-w-5xl">
-              <div className="space-y-10">
+              <div className="space-y-7">
+                <Logo
+                  className=" items-center justify-center"
+                  size="sm"
+                  textSize="5xl"
+                />
                 <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl text-primary dark:text-purple-100 tracking-tight">
                   We're Coming Soon!
                 </h1>
@@ -47,7 +52,7 @@ export default function ComingSoonPage() {
                 <NewsletterForm />
               </div>
 
-              <div className="pt-2 w-full">{/* <SocialLinks /> */}</div>
+              {/* <div className="pt-2 w-full"><SocialLinks /></div> */}
             </div>
           </div>
         </div>

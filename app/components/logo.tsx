@@ -1,14 +1,74 @@
-import Link from "next/link";
+// components/Logo.tsx
+import Image from "next/image";
+// import { useTheme } from "next-themes"; // Si usas modo oscuro
 
-export function Logo() {
+type LogoProps = {
+  variant?: "default" | "symbol" | "horizontal";
+  size?: "sm" | "md" | "lg" | "xl";
+  textSize?: "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl";
+  className?: string;
+};
+
+export const Logo = ({
+  variant = "default",
+  size = "sm",
+  textSize = "2xl",
+  className = "",
+}: LogoProps) => {
+  // const { theme } = useTheme();
+  // const isDark = theme === "dark";
+
+  // Mapeo de tamaños
+  const sizeMap = {
+    sm: { width: 52, height: 52 },
+    md: { width: 120, height: 40 },
+    lg: { width: 180, height: 60 },
+    xl: { width: 240, height: 80 },
+  };
+
+  const textSizeMap = {
+    sm: "text-sm",
+    md: "text-base",
+    lg: "text-lg",
+    xl: "text-xl",
+    "2xl": "text-2xl",
+    "3xl": "text-3xl",
+    "4xl": "text-4xl",
+    "5xl": "text-5xl",
+    "6xl": "text-6xl",
+  };
+
+  // Selección de la variante del logo
+  let src = "/logo/logo.png";
+
+  // if (variant === "symbol") {
+  //   src = "/images/logo/logo-symbol.svg";
+  // } else if (variant === "horizontal") {
+  //   src = "/images/logo/logo-horizontal.svg";
+  // }
+
+  // Versión para modo oscuro si existe
+  // if (isDark) {
+  //   src = src.replace(".svg", "-dark.svg");
+  // }
+
   return (
-    <Link href="/" className="flex items-center gap-2">
-      <div className="w-8 h-8 rounded-full bg-primary dark:bg-purple-600 flex items-center justify-center text-white font-serif font-bold">
-        TB
-      </div>
-      <span className="font-serif font-bold text-xl text-primary dark:text-purple-100">
-        Talk &amp; Bloom
+    <div className={`flex items-center ${className}`}>
+      <Image
+        src={src}
+        alt="Company logo"
+        width={sizeMap[size].width}
+        height={sizeMap[size].height}
+        priority={true} // Carga prioritaria para el logo
+        className="object-contain"
+      />
+
+      <span
+        // className={` text-6xl font-bold text-primary dark:text-purple-100 ml-2`}
+        className={`${textSizeMap[textSize]} font-bold text-primary dark:text-purple-100 ml-2`}
+      >
+        Talk & Bloom
       </span>
-    </Link>
+    </div>
   );
-}
+};

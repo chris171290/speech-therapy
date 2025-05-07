@@ -4,6 +4,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { RiLinkedinBoxLine } from "react-icons/ri";
 import { useTranslations } from "next-intl";
+import { Logo } from "./logo";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -12,14 +13,15 @@ export default function Footer() {
       {/* Logo */}
       <div className="m-11 flex items-center justify-center">
         <div className="flex items-center">
-          <SlSpeech className="h-10 w-10 mr-2 text-primary" />
+          <Logo size="md" textSize="6xl" />
+          {/* <SlSpeech className="h-10 w-10 mr-2 text-primary" />
           <Link
             href="/"
             className="text-4xl lg:text-6xl font-bold text-primary"
             aria-label="Talk and Bloom"
           >
             Talk &amp; Bloom
-          </Link>
+          </Link> */}
         </div>
       </div>
 
