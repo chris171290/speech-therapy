@@ -38,7 +38,7 @@ const metadataByLocale: Record<LanguageCode, Metadata> = {
         "Talk & Bloom helps kids communicate, connect, and thrive with personalized therapy, expert guidance, and a nurturing environment.",
       images: [
         {
-          url: "/hero-speech-therapy.avif",
+          url: "/logo/hor_logo.png",
           width: 1200,
           height: 630,
           alt: "Talk & Bloom - Speech Therapy for Children",
@@ -50,7 +50,7 @@ const metadataByLocale: Record<LanguageCode, Metadata> = {
       title: "Talk & Bloom | Speech Therapy for Children",
       description:
         "Specialized speech therapy helping children communicate and develop.",
-      images: ["/hero-speech-therapy.avif"],
+      images: ["/logo/hor_logo.png"],
     },
   },
   es: {
@@ -79,7 +79,7 @@ const metadataByLocale: Record<LanguageCode, Metadata> = {
         "Talk & Bloom ayuda a los niños a comunicarse, conectar y prosperar con terapia personalizada, orientación experta y un entorno de apoyo.",
       images: [
         {
-          url: "/hero-speech-therapy.avif",
+          url: "/logo/hor_logo.png",
           width: 1200,
           height: 630,
           alt: "Talk & Bloom - Terapia del Habla para Niños",
@@ -91,7 +91,7 @@ const metadataByLocale: Record<LanguageCode, Metadata> = {
       title: "Talk & Bloom | Terapia del Habla para Niños",
       description:
         "Terapia del habla especializada que ayuda a los niños a comunicarse y desarrollarse.",
-      images: ["/hero-speech-therapy.avif"],
+      images: ["/logo/hor_logo.png"],
     },
   },
 };
