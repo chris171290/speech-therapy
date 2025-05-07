@@ -33,7 +33,7 @@ export function BlogSidebar() {
       </div>
 
       {/* Search Section */}
-      <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
+      {/* <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
         <div className="flex flex-col space-y-1.5 p-6">
           <h3 className="text-2xl font-mediun leading-none tracking-tight">
             Search Articles
@@ -49,10 +49,10 @@ export function BlogSidebar() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Categories Section */}
-      <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
+      {/* <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
         <div className="flex flex-col space-y-1.5 p-6">
           <h3 className="text-2xl font-mediun leading-none tracking-tight">
             Popular Categories
@@ -97,10 +97,10 @@ export function BlogSidebar() {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Events Section */}
-      <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
+      {/* <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
         <div className="flex flex-col space-y-1.5 p-6">
           <h3 className="text-lg font-semibold leading-none tracking-tight">
             Upcoming Events
@@ -139,13 +139,13 @@ export function BlogSidebar() {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Resources Section */}
       <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
         <div className="flex flex-col space-y-1.5 p-6">
-          <h3 className="text-lg font-semibold leading-none tracking-tight">
-            Free Resources
+          <h3 className="text-2xl font-mediun leading-none tracking-tight">
+            Lastes Resources
           </h3>
         </div>
         <div className="p-0">

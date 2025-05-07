@@ -6,9 +6,10 @@ import Header from "@/app/components/Header";
 import TopBar from "@/app/components/TopBar";
 import { ImageWithFallback } from "@/app/components/ui/image";
 import type { Metadata } from "next";
-import Image from "next/image";
+// import Image from "next/image";
 import { notFound } from "next/navigation";
-import { FaCalendarDay, FaClock } from "react-icons/fa";
+import { FaClock } from "react-icons/fa";
+import { MdDateRange } from "react-icons/md";
 // import { constructMetadata } from "@/components/seo/page-seo"
 
 // This would typically come from a CMS or database
@@ -152,15 +153,15 @@ export default async function BlogPostPage({
           <div className="lg:col-span-8">
             <article className="prose prose-lg dark:prose-invert max-w-none">
               <div className="mb-8 space-y-2">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="flex items-center gap-4 text-ms text-muted-foreground">
                   <span
                     // variant="outline"
-                    className="bg-primary/10 text-primary border-primary/20"
+                    className="bg-primary/10 text-primary border-primary/20 px-1.5 rounded-xl font-bold"
                   >
                     Language Development
                   </span>
                   <span className="flex items-center gap-1">
-                    <FaCalendarDay className="h-3.5 w-3.5" />
+                    <MdDateRange className="h-3.5 w-3.5" />
                     May 4, 2025
                   </span>
                   <span className="flex items-center gap-1">
@@ -169,7 +170,7 @@ export default async function BlogPostPage({
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mt-2 mb-6 leading-tight">
-                  How to Support Your Child's Language Development at Home
+                  Free Resources for Parents
                 </h1>
 
                 <div className="flex items-center gap-3">

@@ -26,20 +26,32 @@ export function ShareButtons() {
   return (
     <div className="flex flex-wrap items-center gap-2">
       <span className="text-sm font-medium mr-1">Share:</span>
-      <button className="rounded-full h-8 w-8" aria-label="Share on Facebook">
+      {/* <button
+        className="items-center justify-items-center border-gray-400 border rounded-full h-8 w-8"
+        aria-label="Share on Facebook"
+      >
         <FaFacebookF className="h-4 w-4" />
       </button>
-      <button className="rounded-full h-8 w-8" aria-label="Share on Twitter">
+      <button
+        className="items-center justify-items-center border-gray-400 border rounded-full h-8 w-8"
+        aria-label="Share on Twitter"
+      >
         <FaInstagram className="h-4 w-4" />
       </button>
-      <button className="rounded-full h-8 w-8" aria-label="Share on LinkedIn">
+      <button
+        className="items-center justify-items-center border-gray-400 border rounded-full h-8 w-8"
+        aria-label="Share on LinkedIn"
+      >
         <RiLinkedinBoxLine className="h-4 w-4" />
       </button>
-      <button className="rounded-full h-8 w-8" aria-label="Share via Email">
-        <IoIosMail className="h-4 w-4" />
-      </button>
       <button
-        className="rounded-full h-8 w-8"
+        className="items-center justify-items-center border-gray-400 border rounded-full h-8 w-8"
+        aria-label="Share via Email"
+      >
+        <IoIosMail className="h-4 w-4" />
+      </button> */}
+      <button
+        className="items-center justify-items-center border-gray-400 border rounded-full h-8 w-8"
         aria-label="Copy link"
         onClick={handleCopyLink}
       >

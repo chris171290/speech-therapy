@@ -53,7 +53,7 @@ export const Logo = ({
   // }
 
   return (
-    <div className={`flex items-center ${className}`}>
+    <a href="/" className={`flex items-center ${className}`}>
       <Image
         src={src}
         alt="Company logo"
@@ -69,6 +69,6 @@ export const Logo = ({
       >
         Talk & Bloom
       </span>
-    </div>
+    </a>
   );
 };
