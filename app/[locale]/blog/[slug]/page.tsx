@@ -149,54 +149,120 @@ export default async function BlogPostPage({
         <TopBar />
         <Header />
         {/* <ReadingProgressBar /> */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-[85rem] px-4 py-28 sm:px-6 lg:px-8 mx-auto">
-          <div className="lg:col-span-8">
-            <article className="prose prose-lg dark:prose-invert max-w-none">
-              <div className="mb-8 space-y-2">
-                <div className="flex items-center gap-4 text-ms text-muted-foreground">
-                  <span
-                    // variant="outline"
-                    className="bg-primary/10 text-primary border-primary/20 px-1.5 rounded-xl font-bold"
+        {/* Hero */}
+        <div className="relative overflow-hidden border border-primary m-10 mt-24 rounded-2xl">
+          <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-10">
+            {/* Breadcrumbs */}
+            <nav className="mt-8 flex justify-center" aria-label="Breadcrumb">
+              <ol className="bg-white border border-gray-200 rounded-full shadow-sm inline-flex items-center gap-x-2 py-2 px-6">
+                <li className="inline-flex items-center">
+                  <a
+                    href="#"
+                    className="text-gray-700 hover:text-gray-900 inline-flex items-center"
                   >
-                    Language Development
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <MdDateRange className="h-3.5 w-3.5" />
-                    May 4, 2025
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <FaClock className="h-3.5 w-3.5" />8 min read
-                  </span>
-                </div>
-
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mt-2 mb-6 leading-tight">
-                  Free Resources for Parents
-                </h1>
-
-                <div className="flex items-center gap-3">
-                  <div className="mt-auto flex items-center gap-x-3">
-                    <ImageWithFallback
-                      className="size-8 rounded-full"
-                      src="/avatar.avif"
-                      width={32}
-                      height={32}
-                      alt="Author avatar"
-                    />
-                    <div className="my-5">
-                      <h5 className="font-semibold text-sm text-gray-800">
-                        By Rebeca Schvartzman, SLP. CASLPO
-                      </h5>
-                    </div>
+                    <svg
+                      className="w-5 h-5 mr-2.5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                    </svg>
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <div className="flex items-center">
+                    <svg
+                      className="w-6 h-6 text-gray-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                    <a
+                      href="#"
+                      className="text-gray-700 hover:text-gray-900 ml-1 md:ml-2 text-sm font-medium"
+                    >
+                      Blog
+                    </a>
                   </div>
-                  {/* <div>
-                    <p className="font-medium">Rebecca Schvartzman</p>
-                    <p className="text-sm text-muted-foreground">
-                      Speech-Language Pathologist
-                    </p>
-                  </div> */}
+                </li>
+                <li>
+                  <div className="flex items-center">
+                    <svg
+                      className="w-6 h-6 text-gray-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                    <a
+                      href="#"
+                      className="text-gray-700 hover:text-gray-900 ml-1 md:ml-2 text-sm font-bold"
+                    >
+                      Free Resources for Parents
+                    </a>
+                  </div>
+                </li>
+              </ol>
+            </nav>
+            {/* End Breadcrumbs */}
+
+            <div className="mt-14 flex items-center justify-center gap-4 text-ms text-muted-foreground">
+              <span
+                // variant="outline"
+                className="bg-primary/10 text-primary border-primary/20 px-3 rounded-xl font-bold"
+              >
+                Language Development
+              </span>
+              <span className="flex items-center gap-1">
+                <MdDateRange className="h-3.5 w-3.5" />
+                May 4, 2025
+              </span>
+              <span className="flex items-center gap-1">
+                <FaClock className="h-3.5 w-3.5" />8 min read
+              </span>
+              <div className="mt-auto flex items-center gap-x-3">
+                <ImageWithFallback
+                  className="size-8 rounded-full"
+                  src="/avatar.avif"
+                  width={32}
+                  height={32}
+                  alt="Author avatar"
+                />
+                <div className="my-5">
+                  <h5 className="font-semibold text-sm text-gray-800">
+                    By Rebeca Schvartzman, SLP. CASLPO
+                  </h5>
                 </div>
               </div>
+            </div>
 
+            {/* Title */}
+            <div className="mt-5 max-w-2xl text-center mx-auto">
+              <h1 className="block font-bold text-primary text-4xl md:text-5xl lg:text-6xl">
+                Free Resources for Parents
+              </h1>
+            </div>
+            {/* End Title */}
+          </div>
+        </div>
+        {/* End Hero */}
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
+          <div className="lg:col-span-8">
+            <article className="prose prose-lg dark:prose-invert max-w-none">
               {/* <figure className="my-8 rounded-xl overflow-hidden">
                 <Image
                   src="/placeholder.svg?height=600&width=1200"
