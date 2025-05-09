@@ -98,7 +98,7 @@ export default async function BlogPage() {
       />
       <div className="relative overflow-hidden lg:overflow-visible" id="home">
         <TopBar />
-        <Header />
+        <Header origin="blog" />
         <Blog />
         <CTA />
         <Floating />

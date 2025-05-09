@@ -1,6 +1,7 @@
 import { BlogContent } from "@/app/components/blog/blog-content";
 import { BlogSidebar } from "@/app/components/blog/blog-sidebar";
 import { ShareButtons } from "@/app/components/blog/share-buttons";
+import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import TopBar from "@/app/components/TopBar";
@@ -96,47 +97,6 @@ export default async function BlogPostPage({
     },
   };
 
-  // return (
-  //   <article className="blog-post">
-  //     <script
-  //       type="application/ld+json"
-  //       dangerouslySetInnerHTML={{
-  //         __html: JSON.stringify(articleSchema),
-  //       }}
-  //     />
-
-  //     <div className="container max-w-4xl mx-auto px-4 py-12">
-  //       <Image
-  //         src={post.image || "/placeholder.svg"}
-  //         alt={post.title}
-  //         width={1200}
-  //         height={630}
-  //         className="rounded-lg w-full h-auto"
-  //         priority
-  //       />
-
-  //       <h1 className="text-3xl md:text-4xl font-bold mt-8">{post.title}</h1>
-
-  //       <div className="flex items-center mt-4 text-gray-600">
-  //         <time dateTime={post.date}>
-  //           {new Date(post.date).toLocaleDateString("en-CA", {
-  //             year: "numeric",
-  //             month: "long",
-  //             day: "numeric",
-  //           })}
-  //         </time>
-  //         <span className="mx-2">•</span>
-  //         <span>{post.author}</span>
-  //       </div>
-
-  //       <div className="prose prose-lg max-w-none mt-8">
-  //         {/* Render the content here */}
-  //         <p>{post.content}</p>
-  //       </div>
-  //     </div>
-  //   </article>
-  // );
-
   return (
     <main className="bg-secondary">
       <script
@@ -147,7 +107,7 @@ export default async function BlogPostPage({
       />
       <div className="relative overflow-hidden lg:overflow-visible" id="home">
         <TopBar />
-        <Header />
+        <Header origin="blogpost" />
         {/* <ReadingProgressBar /> */}
         {/* Hero */}
         <div className="relative overflow-hidden border border-primary m-10 mt-24 rounded-2xl">
@@ -157,7 +117,7 @@ export default async function BlogPostPage({
               <ol className="bg-white border border-gray-200 rounded-full shadow-sm inline-flex items-center gap-x-2 py-2 px-6">
                 <li className="inline-flex items-center">
                   <a
-                    href="#"
+                    href="/en"
                     className="text-gray-700 hover:text-gray-900 inline-flex items-center"
                   >
                     <svg
@@ -186,7 +146,7 @@ export default async function BlogPostPage({
                       ></path>
                     </svg>
                     <a
-                      href="#"
+                      href="/en/blog"
                       className="text-gray-700 hover:text-gray-900 ml-1 md:ml-2 text-sm font-medium"
                     >
                       Blog
@@ -208,7 +168,7 @@ export default async function BlogPostPage({
                       ></path>
                     </svg>
                     <a
-                      href="#"
+                      href="/en/blog/free-resources-for-parents"
                       className="text-gray-700 hover:text-gray-900 ml-1 md:ml-2 text-sm font-bold"
                     >
                       Free Resources for Parents
@@ -327,6 +287,7 @@ export default async function BlogPostPage({
             <BlogSidebar />
           </div>
         </div>
+        <Contact />
         <Footer />
       </div>
     </main>

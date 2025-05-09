@@ -23,7 +23,7 @@ export const Logo = ({
     sm: { width: 52, height: 52 },
     md: { width: 150, height: 40 },
     lg: { width: 170, height: 60 },
-    xl: { width: 240, height: 80 },
+    xl: { width: 300, height: 80 },
   };
 
   const textSizeMap = {
@@ -39,7 +39,7 @@ export const Logo = ({
   };
 
   // Selección de la variante del logo
-  let src = "/logo/hor_logo.png";
+  let src = "/logo/logo.svg";
 
   // if (variant === "symbol") {
   //   src = "/images/logo/logo-symbol.svg";

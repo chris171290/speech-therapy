@@ -13,26 +13,100 @@ interface NavItem {
   href: string;
   label: string;
   selected: boolean;
+  origins?: string[]; // Orígenes donde este ítem debe mostrarse
 }
 
-// Datos de los ítems del menú de navegación
+// Props para el componente Header
+interface HeaderProps {
+  origin?: "home" | "blog" | "blogpost"; // Origen para filtrar los ítems
+}
 
-export default function Header() {
+export default function Header({ origin = "home" }: HeaderProps) {
   const t = useTranslations("home");
 
-  const initialNavItems: NavItem[] = [
-    { href: "#home", label: t("navbar.home"), selected: true },
-    { href: "#about", label: t("navbar.about"), selected: false },
-    { href: "#services", label: t("navbar.services"), selected: false },
-    { href: "#testimonials", label: t("navbar.testimonials"), selected: false },
-    { href: "#blog", label: t("navbar.blog"), selected: false },
-    { href: "#faq", label: t("navbar.faq"), selected: false },
-    { href: "#contact", label: t("navbar.contact"), selected: false },
+  // Datos de los ítems del menú de navegación con orígenes permitidos
+  const allNavItems: NavItem[] = [
+    {
+      href: "#home",
+      label: t("navbar.home"),
+      selected: true,
+      origins: ["home"],
+    },
+    {
+      href: "#about",
+      label: t("navbar.about"),
+      selected: false,
+      origins: ["home"],
+    },
+    {
+      href: "#services",
+      label: t("navbar.services"),
+      selected: false,
+      origins: ["home"],
+    },
+    {
+      href: "#testimonials",
+      label: t("navbar.testimonials"),
+      selected: false,
+      origins: ["home"],
+    },
+    {
+      href: "#blog",
+      label: t("navbar.blog"),
+      selected: false,
+      origins: ["home"],
+    },
+    {
+      href: "#faq",
+      label: t("navbar.faq"),
+      selected: false,
+      origins: ["home"],
+    },
+    {
+      href: "#contact",
+      label: t("navbar.contact"),
+      selected: false,
+      origins: ["home"],
+    },
+    // Elementos específicos para blog y blogpost
+    {
+      href: "/en",
+      label: "Home",
+      selected: false,
+      origins: ["blog", "blogpost"],
+    },
+    {
+      href: "/en/blog",
+      label: "Post List",
+      selected: false,
+      origins: ["blogpost"],
+    },
+    {
+      href: "#contact",
+      label: t("navbar.contact"),
+      selected: false,
+      origins: ["blog", "blogpost"],
+    },
   ];
+
+  // Filtrar los ítems según el origen
+  const initialNavItems = useMemo(() => {
+    return allNavItems
+      .filter((item) => !item.origins || item.origins.includes(origin))
+      .map((item, index) => ({
+        ...item,
+        selected: index === 0, // El primer ítem después del filtro será seleccionado por defecto
+      }));
+  }, [origin, t]);
 
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [navItems, setNavItems] = useState<NavItem[]>(initialNavItems);
+
+  // Actualizamos los navItems cuando cambia el origen
+  useEffect(() => {
+    setNavItems(initialNavItems);
+  }, [initialNavItems]);
 
   // Función para manejar la selección de un ítem, memorizada para evitar recreaciones
   const handleSelect = useCallback((index: number) => {
@@ -44,38 +118,55 @@ export default function Header() {
     );
   }, []);
 
+  // Determinar si es una URL completa o un ancla
+  const isExternalLink = (href: string) => {
+    return !href.startsWith("#");
+  };
+
   // Efecto para detectar el scroll y ajustar el estado
   useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.2, // Umbral para considerar que una sección está activa
-    };
+    // Solo activar la observación de secciones en la página principal
+    if (origin === "home") {
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.2, // Umbral para considerar que una sección está activa
+      };
 
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const active = navItems.findIndex(
-            (item) => item.href === `#${entry.target.id}`
-          );
-          if (active !== -1) {
-            handleSelect(active);
+      const observerCallback = (entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const active = navItems.findIndex(
+              (item) => item.href === `#${entry.target.id}`
+            );
+            if (active !== -1) {
+              handleSelect(active);
+            }
           }
+        });
+      };
+
+      const observer = new IntersectionObserver(
+        observerCallback,
+        observerOptions
+      );
+
+      // Observar solo las secciones con anclas #
+      navItems.forEach(({ href }) => {
+        if (href.startsWith("#")) {
+          const section = document.querySelector(href);
+          if (section) observer.observe(section);
         }
       });
-    };
 
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
-    );
+      return () => {
+        observer.disconnect();
+      };
+    }
+  }, [navItems, handleSelect, origin]);
 
-    // Observar todas las secciones relevantes
-    navItems.forEach(({ href }) => {
-      const section = document.querySelector(href);
-      if (section) observer.observe(section);
-    });
-
+  // Efecto para el scroll
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
     };
@@ -86,9 +177,8 @@ export default function Header() {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      observer.disconnect();
     };
-  }, [navItems, handleSelect]);
+  }, []);
 
   // Botón de menú memorizado
   const mobileMenuButton = useMemo(
@@ -139,17 +229,6 @@ export default function Header() {
           {/* Logo */}
           <div className="flex gap-2 items-center px-1">
             <Logo size="lg" />
-            {/* <SlSpeech
-              className="text-xl md:text-4xl text-primary"
-              aria-hidden="true"
-            />
-            <Link
-              href="/"
-              className="text-base md:text-xl lg:text-2xl font-bold text-primary"
-              aria-label="Talk and Bloom"
-            >
-              Talk &amp; Bloom
-            </Link> */}
           </div>
 
           {/* Menú de navegación */}
@@ -163,6 +242,7 @@ export default function Header() {
                       label={item.label}
                       selected={item.selected}
                       onClick={() => handleSelect(index)}
+                      isExternal={isExternalLink(item.href)}
                     />
                   </li>
                 ))}
@@ -170,12 +250,15 @@ export default function Header() {
             </nav>
 
             {/* Separador y botones adicionales */}
+
             <div
               className="border-l border-gray-400/50 h-8 mx-1 hidden md:block"
               aria-hidden="true"
             />
+
             <div className="flex items-center gap-2 justify-center md:gap-4">
-              {/* Botón de consulta gratuita */}
+              {/* Botón de consulta gratuita - Solo mostrar en home y blog */}
+
               <a
                 href="#contact"
                 className="text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center py-1 px-1 md:px-3.5 md:py-2 md:m-1 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#7248d4] text-white"
@@ -196,7 +279,7 @@ export default function Header() {
               </a>
 
               {/* Selector de idioma */}
-              <LanguageSwitch />
+              {origin === "home" && <LanguageSwitch />}
 
               {/* Botón de menú móvil */}
               <div className="block md:hidden">{mobileMenuButton}</div>
@@ -224,6 +307,7 @@ export default function Header() {
                   setIsOpen(false); // Cerrar el menú después de seleccionar
                 }}
                 mobile
+                isExternal={isExternalLink(item.href)}
               />
             ))}
           </motion.nav>
@@ -240,14 +324,23 @@ function NavLink({
   selected,
   onClick,
   mobile = false,
+  isExternal = false,
 }: {
   href: string;
   label: string;
   selected: boolean;
   onClick: () => void;
   mobile?: boolean;
+  isExternal?: boolean;
 }) {
-  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Para enlaces externos o rutas completas, comportamiento normal
+    if (isExternal) {
+      onClick();
+      return;
+    }
+
+    // Para anclas, comportamiento con scroll suave
     e.preventDefault();
     const element = document.getElementById(href.slice(1));
     if (element) {
@@ -265,7 +358,7 @@ function NavLink({
       className={`text-gray-900 font-semibold hover:text-primary transition duration-700 relative group ${
         mobile ? "block py-2" : ""
       }`}
-      onClick={scrollTo}
+      onClick={handleClick}
       aria-current={selected ? "page" : undefined}
     >
       {label}

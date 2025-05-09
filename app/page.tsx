@@ -32,22 +32,14 @@ export default function ComingSoonPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-col items-center text-center">
             <div className="space-y-8 max-w-5xl">
-              <div className="space-y-7">
+              <div className="space-y-2">
                 <div className="flex items-center justify-center">
-                  <Image
-                    src={"/logo/hor_logo.png"}
-                    alt="Company logo"
-                    width={300}
-                    height={100}
-                    priority={true} // Carga prioritaria para el logo
-                    className="object-contain"
+                  <Logo
+                    className="items-center justify-center"
+                    size="xl"
+                    textSize="5xl"
                   />
                 </div>
-                {/* <Logo
-                  className=" items-center justify-center"
-                  size="sm"
-                  textSize="5xl"
-                /> */}
                 <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl text-primary dark:text-purple-100 tracking-tight">
                   We're Coming Soon!
                 </h1>
