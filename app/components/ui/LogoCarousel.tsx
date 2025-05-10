@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { FC } from "react";
 import { ImageWithFallback } from "./image";
 
@@ -57,8 +56,8 @@ const institutions: Institution[] = [
 
 // Componente reutilizable para mostrar un logo
 const LogoItem: FC<Institution> = ({ name, src, alt }) => (
-  <div className="flex flex-col items-center justify-center w-[200px] flex-shrink-0 group">
-    <div className="h-[50px] w-[150px] md:h-[100px] md:w-[200px] flex items-center justify-center bg-[#f9f9f9] rounded-lg shadow-md transition-all duration-300 ease-in-out transform group-hover:scale-105 group-hover:shadow-lg">
+  <div className="flex flex-col items-center justify-center w-auto flex-shrink-0 group">
+    <div className="h-auto w-[5rem] md:h-[100px] md:w-[200px] flex items-center justify-center bg-[#f9f9f9] rounded-lg shadow-md transition-all duration-300 ease-in-out transform group-hover:scale-105 group-hover:shadow-lg">
       <ImageWithFallback
         src={src || "/placeholder.svg"}
         alt={alt}
@@ -66,7 +65,7 @@ const LogoItem: FC<Institution> = ({ name, src, alt }) => (
         height={80}
         loading="lazy"
         sizes="160px"
-        className="max-w-[80%] max-h-[80%] object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+        className="w-[10rem] h-[3rem] object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
       />
     </div>
     {/* Opcional: Mostrar el nombre de la institución */}
@@ -80,7 +79,7 @@ export default function LogoCarousel() {
   return (
     <div className="absolute w-full overflow-hidden rounded-2xl shadow-lg bg-white p-5 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
       {/* <div className="flex animate-marquee space-x-0 md:space-x-12 hover:[animation-play-state:paused]"> */}
-      <div className="flex space-x-0 md:space-x-12">
+      <div className="flex space-x-2 md:space-x-12">
         {/* Renderizado dinámico de los logos */}
         {institutions.map((institution, index) => (
           <LogoItem key={index} {...institution} />

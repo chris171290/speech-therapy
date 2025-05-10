@@ -261,7 +261,7 @@ export default function Header({ origin = "home" }: HeaderProps) {
 
               <a
                 href="#contact"
-                className="text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center py-1 px-1 md:px-3.5 md:py-2 md:m-1 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#7248d4] text-white"
+                className="text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center py-1.5 px-1.5 md:px-3.5 md:py-2 md:m-1 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#7248d4] text-white"
                 onClick={(e) => {
                   e.preventDefault();
                   const element = document.getElementById("contact");

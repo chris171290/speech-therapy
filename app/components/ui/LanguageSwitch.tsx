@@ -28,13 +28,13 @@ export default function LanguageSwitch() {
     <div className="flex flex-col items-center justify-center">
       <button
         onClick={toggleLanguage}
-        className={`border-b-2 border-l border-[#7248d4] w-[2.8rem] h-2 md:w-[4rem] md:h-3 bg-primary mt-1.5 rounded-full flex items-center ${
+        className={`border-b-2 border-l border-[#7248d4] w-[2.8rem] h-3 md:w-[4rem] md:h-3 bg-primary mt-1.5 rounded-full flex items-center ${
           isEnglish ? "justify-start" : "justify-end"
         } transition-colors duration-300`}
         aria-label={isEnglish ? "Switch to Spanish" : "Switch to English"}
       >
         <motion.div
-          className="w-[1.10rem] h-[1.15rem] md:w-7 md:h-6 bg-white rounded-full border-black border-[0.5px] shadow-md flex items-center justify-center"
+          className="w-7 h-6 md:w-7 md:h-6 bg-white rounded-full border-black border-[0.5px] shadow-md flex items-center justify-center"
           layout
           transition={{
             type: "spring",
@@ -51,7 +51,7 @@ export default function LanguageSwitch() {
           />
         </motion.div>
       </button>
-      <span className="mt-0.5 md:mt-1.5 text-[0.7rem] font-semibold text-primary">
+      <span className="mt-0.5 md:mt-1.5 text-[0.7rem] font-bold text-primary">
         {isEnglish ? "English" : "Español"}
       </span>
     </div>

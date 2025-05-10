@@ -23,14 +23,24 @@ interface SocialItem {
 }
 
 // Componente reutilizable para los ítems de contacto
-const ContactLink = ({ href, icon, label, ariaLabel }: ContactItem) => (
-  <Link href={href} className="flex items-center" aria-label={ariaLabel}>
-    <span className="border-b-4 border-l-2 border-[#7248d4] md:border-transparent block p-2 rounded-full bg-primary text-white md:text-gray-900 transition-all duration-200 ease-in-out transform md:pointer-events-none hover:scale-110 active:scale-95 md:bg-transparent md:hover:bg-gray-700 md:p-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-      {icon}
-    </span>
-    {label && <span className="hidden md:block">{label}</span>}
-  </Link>
-);
+const ContactLink = ({ href, icon, label, ariaLabel }: ContactItem) => {
+  const isGoogleMaps = href.includes("google.com/maps");
+  const target = isGoogleMaps ? "_blank" : "_self";
+  // const rel = a ? "noopener noreferrer" : undefined;
+  return (
+    <Link
+      href={href}
+      className="flex items-center"
+      target={target}
+      aria-label={ariaLabel}
+    >
+      <span className="border-b-4 border-l-2 border-[#7248d4] md:border-transparent block p-2 rounded-full bg-primary text-white md:text-gray-900 transition-all duration-200 ease-in-out transform md:pointer-events-none hover:scale-110 active:scale-95 md:bg-transparent md:hover:bg-gray-700 md:p-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+        {icon}
+      </span>
+      {label && <span className="hidden md:block">{label}</span>}
+    </Link>
+  );
+};
 
 // Componente reutilizable para los ítems de redes sociales
 const SocialLink = ({ href, icon, ariaLabel }: SocialItem) => (
@@ -43,6 +53,9 @@ const SocialLink = ({ href, icon, ariaLabel }: SocialItem) => (
 
 export default function TopBar() {
   // Datos de los ítems de contacto
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    "1136 Centre St, Thornhill, ON L4J 3M8"
+  )}`;
   const contactItems: ContactItem[] = [
     {
       href: "tel:+4162746729",
@@ -57,7 +70,7 @@ export default function TopBar() {
       ariaLabel: "Send an email to info@talkandbloom.ca",
     },
     {
-      href: "#",
+      href: googleMapsUrl,
       icon: <IoLocation className="h-5 w-5 text-white md:text-primary" />,
       label: "1136 Centre St, Thornhill, ON. Unit 206",
       ariaLabel: "View our office address on Google Maps",
