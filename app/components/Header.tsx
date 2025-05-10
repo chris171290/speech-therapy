@@ -7,6 +7,7 @@ import LanguageSwitch from "./ui/LanguageSwitch";
 import { FaVideo } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 import { Logo } from "./logo";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 // Interfaz para los ítems del menú de navegación
 interface NavItem {
@@ -23,6 +24,7 @@ interface HeaderProps {
 
 export default function Header({ origin = "home" }: HeaderProps) {
   const t = useTranslations("home");
+  const isMobile = useIsMobile();
 
   // Datos de los ítems del menú de navegación con orígenes permitidos
   const allNavItems: NavItem[] = [
@@ -184,7 +186,7 @@ export default function Header({ origin = "home" }: HeaderProps) {
   const mobileMenuButton = useMemo(
     () => (
       <button
-        className="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+        className="rounded-sm bg-primary p-2 text-white transition hover:text-[#B2B6FF]"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
         aria-expanded={isOpen}
@@ -261,7 +263,7 @@ export default function Header({ origin = "home" }: HeaderProps) {
 
               <a
                 href="#contact"
-                className="text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center py-1.5 px-1.5 md:px-3.5 md:py-2 md:m-1 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#7248d4] text-white"
+                className="text-sm truncate rounded-xl font-black tracking-wider relative inline-flex group items-center justify-center py-1.5 px-3.5 md:px-3.5 md:py-2 md:m-1 md:text-base cursor-pointer border-b-4 border-l-2 active:scale-105 transition-all duration-300 ease-out active:shadow-none shadow-lg bg-primary border-[#7248d4] text-white"
                 onClick={(e) => {
                   e.preventDefault();
                   const element = document.getElementById("contact");
@@ -275,7 +277,9 @@ export default function Header({ origin = "home" }: HeaderProps) {
               >
                 <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-black rounded group-hover:w-full group-hover:h-10 opacity-10"></span>
                 <FaVideo className="mr-2 text-center" aria-hidden="true" />
-                <span className="relative">{t("navbar.cta")}</span>
+                <span className="relative">
+                  {isMobile ? "Contact Us" : t("navbar.cta")}
+                </span>
               </a>
 
               {/* Selector de idioma */}

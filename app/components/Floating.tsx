@@ -37,11 +37,11 @@ const Floating = () => {
     <FloatingWhatsApp
       messageDelay={1}
       accountName="Ellie Williams"
-      phoneNumber="+14373882358"
+      phoneNumber="+4162746729"
       statusMessage="Typically replies within 1 hour"
       allowEsc
       chatMessage={
-        "Hi there! 👋 Welcome to Talk & Bloom. \nHow can we assist you today?"
+        "Hi there! 👋 \nWelcome to Talk & Bloom. \nHow can we assist you today?"
       }
       // allowClickAway
       notification

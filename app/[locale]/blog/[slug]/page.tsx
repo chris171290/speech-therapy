@@ -4,6 +4,7 @@ import { ShareButtons } from "@/app/components/blog/share-buttons";
 import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
+import { ReadingProgressBar } from "@/app/components/reading-progress-bar";
 import TopBar from "@/app/components/TopBar";
 import { ImageWithFallback } from "@/app/components/ui/image";
 import type { Metadata } from "next";
@@ -108,7 +109,7 @@ export default async function BlogPostPage({
       <div className="relative overflow-hidden lg:overflow-visible" id="home">
         <TopBar />
         <Header origin="blogpost" />
-        {/* <ReadingProgressBar /> */}
+        <ReadingProgressBar />
         {/* Hero */}
         <div className="relative overflow-hidden border border-primary m-10 mt-24 rounded-2xl">
           <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-10">
