@@ -111,7 +111,7 @@ export default async function BlogPostPage({
         <Header origin="blogpost" />
         <ReadingProgressBar />
         {/* Hero */}
-        <div className="relative overflow-hidden border border-primary m-10 mt-24 rounded-2xl">
+        <div className="relative overflow-hidden border border-primary sm:m-10 m-3 mt-24 rounded-2xl">
           <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-10">
             {/* Breadcrumbs */}
             <nav className="mt-8 flex justify-center" aria-label="Breadcrumb">
@@ -119,7 +119,7 @@ export default async function BlogPostPage({
                 <li className="inline-flex items-center">
                   <a
                     href="/en"
-                    className="text-gray-700 hover:text-gray-900 inline-flex items-center"
+                    className="text-gray-700 hover:text-gray-900 inline-flex items-center text-sm md:text-base"
                   >
                     <svg
                       className="w-5 h-5 mr-2.5"
@@ -148,7 +148,7 @@ export default async function BlogPostPage({
                     </svg>
                     <a
                       href="/en/blog"
-                      className="text-gray-700 hover:text-gray-900 ml-1 md:ml-2 text-sm font-medium"
+                      className="text-gray-700 hover:text-gray-900 ml-1 md:ml-2 text-sm md:text-base"
                     >
                       Blog
                     </a>
@@ -170,9 +170,9 @@ export default async function BlogPostPage({
                     </svg>
                     <a
                       href="/en/blog/free-resources-for-parents"
-                      className="text-gray-700 hover:text-gray-900 ml-1 md:ml-2 text-sm font-bold"
+                      className="text-gray-700 hover:text-gray-900 ml-1 md:ml-2 text-sm md:text-base font-bold"
                     >
-                      Free Resources for Parents
+                      Free Resources
                     </a>
                   </div>
                 </li>
@@ -180,12 +180,12 @@ export default async function BlogPostPage({
             </nav>
             {/* End Breadcrumbs */}
 
-            <div className="mt-14 flex items-center justify-center gap-4 text-ms text-muted-foreground">
+            <div className="mt-14 flex items-center flex-col md:flex-row justify-center gap-4 text-ms text-muted-foreground">
               <span
                 // variant="outline"
                 className="bg-primary/10 text-primary border-primary/20 px-3 rounded-xl font-bold"
               >
-                Language Development
+                Free Resources
               </span>
               <span className="flex items-center gap-1">
                 <MdDateRange className="h-3.5 w-3.5" />
