@@ -111,7 +111,7 @@ export default async function BlogPostPage({
         <Header origin="blogpost" />
         <ReadingProgressBar />
         {/* Hero */}
-        <div className="relative overflow-hidden border border-primary m-3 mt-24 rounded-2xl">
+        <div className="relative overflow-hidden border border-primary m-3 sm:mx-8 mt-24 rounded-2xl">
           <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-10">
             {/* Breadcrumbs */}
             <nav className="mt-8 flex justify-center" aria-label="Breadcrumb">

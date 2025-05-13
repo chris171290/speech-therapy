@@ -53,7 +53,7 @@ export default function Header({ origin = "home" }: HeaderProps) {
       origins: ["home"],
     },
     {
-      href: "#blog",
+      href: "/en/blog",
       label: t("navbar.blog"),
       selected: false,
       origins: ["home"],
@@ -79,7 +79,7 @@ export default function Header({ origin = "home" }: HeaderProps) {
     },
     {
       href: "/en/blog",
-      label: "Post List",
+      label: "Blog",
       selected: false,
       origins: ["blogpost"],
     },
@@ -214,7 +214,7 @@ export default function Header({ origin = "home" }: HeaderProps) {
   // Cálculo de la clase de header basada en el estado de scroll
   const headerClass = useMemo(
     () => `
-    fixed left-0 right-0 w-full z-50 transition-all duration-500 ease-in-out
+    fixed left-0 right-0 w-full z-50 px-2 transition-all duration-500 ease-in-out
     ${
       isScrolled
         ? "top-0 shadow-md bg-white"
@@ -226,7 +226,7 @@ export default function Header({ origin = "home" }: HeaderProps) {
 
   return (
     <header className={headerClass}>
-      <div className="mx-auto max-w-screen-xl px-1 py-1.5 transition-all duration-500 ease-in-out">
+      <div className="max-w-screen px-1 py-1.5 transition-all duration-500 ease-in-out">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex gap-2 items-center px-1">

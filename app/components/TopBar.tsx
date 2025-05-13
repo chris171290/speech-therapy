@@ -105,8 +105,8 @@ export default function TopBar() {
   ];
 
   return (
-    <div className="relative z-40 bg-secondary text-primary py-1 px-4">
-      <div className="container mx-auto flex flex-wrap justify-between items-center text-sm">
+    <div className="relative z-40 bg-secondary text-primary">
+      <div className="flex justify-between items-center text-sm px-3">
         {/* Renderizado dinámico de los ítems de contacto */}
         <div className="flex items-center space-x-4">
           {contactItems.map((item, index) => (
