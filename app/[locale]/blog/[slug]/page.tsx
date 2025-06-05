@@ -638,7 +638,7 @@ async function getBlogPost(slug: string) {
     },
     {
       slug: "early-intervention-vs-wait-and-see",
-      title: `Early Intervention vs. the "Wait and See"`,
+      title: `Early Intervention vs. the 'Wait and See' Approach: Why Taking Action Early Matters`,
       description:
         "Early intervention for kids 0-3 is vital for development. Acting early on signs of delays boosts skills and future success. Parents, with therapist support, are key. Don’t wait—contact for help!",
       content: (
@@ -652,17 +652,17 @@ async function getBlogPost(slug: string) {
               className="w-full h-[20rem] object-cover rounded-xl"
               priority
             />
-            <figcaption className="text-center text-sm text-muted-foreground mt-2">
+            {/* <figcaption className="text-center text-sm text-muted-foreground mt-2">
               Reading together is one of the most effective ways to support
               language development
-            </figcaption>
+            </figcaption> */}
           </figure>
           <div className="max-w-max mt-5">
             <section className="space-y-8">
               <div className="text-lg text-gray-700 leading-relaxed mb-6">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                {/* <h2 className="text-2xl font-bold text-gray-900 mb-4">
                   Why Taking Action Early Matters
-                </h2>
+                </h2> */}
                 <p className="mb-6">
                   The first years of a child's life — especially{" "}
                   <strong>from birth to age three</strong> — are critical for
@@ -721,7 +721,8 @@ async function getBlogPost(slug: string) {
                     <li>• Lack of gestures</li>
                     <li>• Delayed babbling</li>
                     <li>• Limited vocabulary</li>
-                    <li>• Difficulty imitating sounds</li>
+                    <li>• Difficulty imitating sounds or words</li>
+                    <li>• Trouble understanding directions</li>
                   </ul>
                 </div>
 
@@ -732,7 +733,6 @@ async function getBlogPost(slug: string) {
                   <ul className="text-lg text-pink-800 space-y-1">
                     <li>• Not rolling over</li>
                     <li>• Difficulty walking</li>
-                    <li>• Delayed physical milestones</li>
                   </ul>
                 </div>
 
@@ -743,7 +743,8 @@ async function getBlogPost(slug: string) {
                   <ul className="text-lg text-teal-800 space-y-1">
                     <li>• Difficulty paying attention</li>
                     <li>• Issues recalling events</li>
-                    <li>• Struggling with cause-and-effect</li>
+                    <li>• Difficulty following daily routines</li>
+                    <li>• Struggling understanding cause-and-effect</li>
                   </ul>
                 </div>
               </div>
@@ -753,18 +754,18 @@ async function getBlogPost(slug: string) {
                 <strong>
                   identify and address concerns as early as possible,
                 </strong>{" "}
-                before they become more serious,
+                before they become more serious,{" "}
                 <strong>positively influencing</strong> the child's
                 developmental path.
               </p>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Why Not "Wait and See"?
+                Why Not 'Wait and See'?
               </h2>
 
               <div className="bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-orange-400 p-6 mb-8 rounded-r-xl">
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  While the <strong>"wait and see"</strong> approach might seem
+                  While the <strong>'wait and see'</strong> approach might seem
                   cautious, it often results in{" "}
                   <strong>
                     missed opportunities for critical early support.
@@ -790,7 +791,7 @@ async function getBlogPost(slug: string) {
               <p className="text-gray-700 text-lg leading-relaxed mb-8">
                 <strong>Parents are essential partners</strong> in their child's
                 development. By integrating personalized strategies into daily
-                routines, parents
+                routines, parents{" "}
                 <strong>
                   can improve their child's learning and communication skills
                 </strong>
