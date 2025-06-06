@@ -96,7 +96,7 @@ const BlogList: React.FC = () => {
     {
       title: t("post3.title"),
       description: t("post3.content"),
-      slug: "navigating-screen-time-language-growth",
+      slug: "does-bilingualism-cause-language-delay",
       imageSrc: "/blog3.avif",
       by: "Rebeca Schvartzman SLP, reg. CASLPO",
       background: "bg-white/75",

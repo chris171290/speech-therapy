@@ -25,6 +25,7 @@ async function getBlogPost(slug: string) {
     {
       slug: "free-resources-for-parents",
       title: "FREE RESOURCES FOR PARENTS",
+      title2: "FREE RESOURCES FOR PARENTS",
       description:
         "The following is a list of resources that may be helpful. Please note that Talk & Bloom® is not responsible for the content of the websites listed. We are not endorsing any of the resources provided—our goal is simply to offer access to local services for families. It is the responsibility of the family to assess whether a given service is right for their child.",
       content: (
@@ -639,6 +640,7 @@ async function getBlogPost(slug: string) {
     {
       slug: "early-intervention-vs-wait-and-see",
       title: `Early Intervention vs. the 'Wait and See' Approach: Why Taking Action Early Matters`,
+      title2: `Early Intervention vs. the 'Wait and See' Approach`,
       description:
         "Early intervention for kids 0-3 is vital for development. Acting early on signs of delays boosts skills and future success. Parents, with therapist support, are key. Don’t wait—contact for help!",
       content: (
@@ -846,7 +848,219 @@ async function getBlogPost(slug: string) {
       readingTime: "5 min",
       category: "Early Intervention",
     },
-    // More blog posts would be here
+    {
+      slug: "does-bilingualism-cause-language-delay",
+      title:
+        "Does Bilingualism Cause Language Delay? Separating Myths from Facts",
+      title2: "Does Bilingualism Cause Language Delay?",
+      description:
+        "Bilingualism does not cause language delay. Research shows bilingual children reach milestones at the same rate as monolingual peers, offering cognitive, cultural, and social benefits. Learn the facts and debunk myths about bilingual development.",
+      content: (
+        <>
+          <figure className="rounded-xl overflow-hidden">
+            <ImageWithFallback
+              src="/placeholder.svg?height=600&width=1200"
+              alt="Child learning two languages"
+              width={1200}
+              height={600}
+              className="w-full h-[20rem] object-cover rounded-xl"
+              priority
+            />
+          </figure>
+          <div className="max-w-max mt-5">
+            <section className="space-y-8">
+              <div className="text-lg text-gray-700 leading-relaxed mb-6">
+                <p className="mb-6">
+                  <strong>
+                    Bilingualism is becoming increasingly common and is on the
+                    rise worldwide.
+                  </strong>{" "}
+                  Being bilingual means having the ability to use two languages,
+                  while monolingual refers to the ability to speak only one.{" "}
+                  <strong>Language delay</strong> describes a child acquiring
+                  language skills at a slower pace than typical, but still
+                  within an expected range of development.
+                </p>
+                <p className="mb-8">
+                  Research shows that approximately{" "}
+                  <strong>
+                    1 in 10 toddlers (ages 18 months to 3 years) experience
+                    language delay,
+                  </strong>{" "}
+                  and bilingual children exhibit delays at{" "}
+                  <strong>the same rates as monolingual children</strong> —
+                  meaning{" "}
+                  <strong>bilingualism itself is not a risk factor.</strong> In
+                  fact, studies consistently highlight{" "}
+                  <strong>
+                    bilingualism as an advantage, not a disadvantage
+                  </strong>
+                  . Raising a child in a bilingual environment fosters{" "}
+                  <strong>
+                    significant cognitive, cultural, and social benefits
+                  </strong>
+                  , enhancing communication skills and overall development.
+                </p>
+                <p className="mb-8">
+                  <strong>
+                    Despite extensive research, many parents and teachers still
+                    wonder: Does bilingualism cause language delays in children?
+                  </strong>{" "}
+                  Let's explore the evidence to separate facts from myths and
+                  gain a clearer understanding of this topic.
+                </p>
+              </div>
+
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                MYTH: Bilingualism causes language delay
+              </h2>
+              <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                <strong>FACT:</strong> Bilingualism <strong>does not</strong>{" "}
+                cause language delay. Bilingual children typically reach the
+                same language milestones as monolingual peers. Consistent
+                exposure to both languages is essential for balanced bilingual
+                development. While they may initially mix languages or take
+                slightly longer to build vocabulary in each language, they
+                generally catch up—and often surpass—monolingual peers in
+                linguistic skills by school age.{" "}
+                <strong>
+                  If a child has difficulty learning language, they will face
+                  challenges in both languages
+                </strong>
+                —not because of bilingualism itself, but due to an underlying
+                language-learning issue.
+              </p>
+
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                MYTH: Mixing languages is a sign of confusion
+              </h2>
+              <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                <strong>FACT:</strong> No, mixing languages—known as{" "}
+                <strong>code-switching</strong>—is <strong>not</strong> a sign
+                of confusion. It is a natural part of bilingual language
+                development in children learning two languages from birth or
+                simultaneously. Bilingual children instinctively learn to
+                separate and switch between languages. Code-switching helps them
+                express themselves more effectively, especially when a word or
+                phrase is easier to communicate in one language than the other.
+              </p>
+
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                MYTH: Bilingualism worsens learning difficulties
+              </h2>
+              <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                <strong>FACT:</strong> No, research confirms that learning two
+                languages <strong>does not</strong> make reading, writing, or
+                comprehension more difficult for children with learning
+                challenges. While these children may require extra support in
+                both languages, limiting them to just one is unnecessary. With
+                structured learning strategies and a supportive environment,
+                bilingual children with learning difficulties can develop strong
+                literacy and communication skills in both languages.
+              </p>
+
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                MYTH: Children should be fluent in one language before learning
+                another (i.e., sequential bilingualism)
+              </h2>
+              <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                <strong>FACT:</strong> No, research widely agrees that the
+                earlier a child is exposed to multiple languages, the easier it
+                is for them to learn. The{" "}
+                <strong>"window of opportunity"</strong> or{" "}
+                <strong>"critical period"</strong> for language learning occurs
+                between <strong>birth and five years old</strong>, when children
+                experience rapid cognitive development. While language learning
+                can slow down over time, it is never impossible to achieve
+                fluency later in life—it may simply require more effort.
+                Ultimately, a child’s ability to learn a language depends on the
+                amount of exposure and meaningful interaction they receive in
+                both languages.
+              </p>
+
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                MYTH: Children with language delays should focus on one
+                language—"Drop the home language and only speak English."
+              </h2>
+              <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                <strong>FACT:</strong> No, research shows that this
+                recommendation can have serious negative effects. Why? Because
+                it disrupts parent-child communication, weakens connections with
+                extended family, and reduces overall language input. Studies
+                confirm that when children have a solid grasp of their home
+                language, they can transfer skills such as vocabulary, grammar,
+                and comprehension to their second language more effectively.
+                Maintaining and strengthening the first language improves the
+                quality of communication within families and communities while
+                supporting bilingual development.
+              </p>
+
+              <div className="bg-white p-6 rounded-xl mb-8">
+                <h3 className="font-semibold text-gray-900 mb-3 text-xl">
+                  Research shows that:
+                </h3>
+                <ul className="text-lg text-gray-900 space-y-1">
+                  <li>
+                    • <strong>A strong first language</strong> supports second
+                    language acquisition, leading to better long-term outcomes.
+                  </li>
+                  <li>
+                    • <strong>A rich home language environment</strong> provides
+                    a stronger foundation for language development than limited
+                    exposure.
+                  </li>
+                  <li>
+                    • <strong>Maintaining both languages</strong> benefits
+                    cognitive and emotional growth, promoting well-rounded
+                    bilingual development.
+                  </li>
+                </ul>
+              </div>
+
+              <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                <strong>
+                  When children learn two languages from birth (i.e.,
+                  simultaneous bilingualism), they reach the same fundamental
+                  language milestones as monolingual children.
+                </strong>{" "}
+                Babbling (6–9 months),first words (12–15 months), and two-word
+                combinations (18–24 months) typically develop within the
+                expected range. While first words might appear slightly later,
+                they still fall within normal limits.
+              </p>
+              <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                If a child is not meeting these milestones and has{" "}
+                <strong>limited vocabulary in both languages</strong>,{" "}
+                <strong>difficulty understanding simple instructions</strong>,
+                and <strong>frustration with communication</strong>, consulting
+                a speech-language pathologist may be beneficial.
+              </p>
+
+              <div className="bg-gradient-to-r from-primary to-primary text-white p-8 rounded-2xl">
+                <h2 className="text-2xl font-bold mb-4">
+                  Concerned About Your Child's Development? Don't Wait.
+                </h2>
+                <p className="text-purple-100 text-lg mb-6 leading-relaxed">
+                  📞 Contact <strong>Talk & Bloom</strong> for a free
+                  consultation—because every child deserves the right support to
+                  thrive. Take the first step toward unlocking their full
+                  potential today!
+                </p>
+                <button className="bg-white text-primary text-lg px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+                  💬 Contact <strong>Talk & Bloom</strong> for a free
+                  consultation
+                </button>
+              </div>
+            </section>
+          </div>
+        </>
+      ),
+      image: "/hero-speech-therapy.avif",
+      date: "2025-06-06",
+      author: "Rebeca Schvartzman SLP, reg. CASLPO",
+      readingTime: "6 min",
+      category: "Bilingualism",
+    },
   ];
 
   const post = posts.find((post) => post.slug === slug);
@@ -975,7 +1189,7 @@ export default async function BlogPostPage({
                 <li>
                   <div className="flex items-center">
                     <svg
-                      className="w-6 h-6 text-gray-400"
+                      className="w-6 h-6 text-gray-400 shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -990,7 +1204,7 @@ export default async function BlogPostPage({
                       href="/en/blog/free-resources-for-parents"
                       className="text-gray-700 hover:text-gray-900 ml-1 md:ml-2 text-sm md:text-base font-bold"
                     >
-                      {post.title}
+                      {post.title2}
                     </a>
                   </div>
                 </li>

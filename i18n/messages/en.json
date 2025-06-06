@@ -182,7 +182,7 @@
       }
     },
     "post2": {
-      "title": "EarlyEarly Intervention vs. the 'Wait and See'",
+      "title": "Early Intervention vs. the 'Wait and See' Approach",
       "featuredImage": "Early Intervention vs. the 'Wait and See' featured image",
       "content": "Early action is key to child development. Identifying and addressing delays early boosts learning, communication, and well-being—with vital support from parents and speech-language therapists.",
       "author": {
@@ -195,16 +195,16 @@
       }
     },
     "post3": {
-      "title": "Navigating Screen Time and Language Growth",
-      "featuredImage": "Navigating Screen Time and Language Growth featured image",
-      "content": "In an era dominated by screens, find out how speech therapists are addressing the impact of digital media on language development. Get expert tips on balancing technology use while fostering strong communication skills in children.",
+      "title": "Does Bilingualism Cause Language Delay?",
+      "featuredImage": "Does Bilingualism Cause Language Delay? featured image",
+      "content": "Bilingualism doesn't cause language delays. Debunks myths: code-switching is normal, a strong first language aids the second, and bilingualism offers cognitive and social benefits for kids.",
       "author": {
         "name": "Rebeca Schvartzman SLP, reg. CASLPO",
         "avatar": "Author avatar"
       },
       "metadata": {
         "published": "Published 2 days ago",
-        "readTime": "3 min read"
+        "readTime": "6 min read"
       }
     }
   },
