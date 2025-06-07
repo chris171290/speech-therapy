@@ -15,6 +15,7 @@ import Link from "next/link";
 // import Image from "next/image";
 import { notFound } from "next/navigation";
 import { FaClock, FaExternalLinkAlt } from "react-icons/fa";
+import { IoIosCall } from "react-icons/io";
 import { MdDateRange } from "react-icons/md";
 // import { constructMetadata } from "@/components/seo/page-seo"
 
@@ -634,7 +635,7 @@ async function getBlogPost(slug: string) {
       image: "/hero-speech-therapy.avif",
       date: "2025-05-01",
       readingTime: "5 min",
-      author: "Rebeca Schvartzman SLP, reg. CASLPO",
+      author: "Rebeca Schvartzman, SLP, reg. CASLPO",
       category: "Free Resources",
     },
     {
@@ -844,7 +845,7 @@ async function getBlogPost(slug: string) {
       ),
       image: "/hero-speech-therapy.avif",
       date: "2025-05-29",
-      author: "Rebeca Schvartzman SLP, reg. CASLPO",
+      author: "Rebeca Schvartzman, SLP, reg. CASLPO",
       readingTime: "5 min",
       category: "Early Intervention",
     },
@@ -964,9 +965,9 @@ async function getBlogPost(slug: string) {
                 another (i.e., sequential bilingualism)
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                <strong>FACT:</strong> No, research widely agrees that the
-                earlier a child is exposed to multiple languages, the easier it
-                is for them to learn. The{" "}
+                <strong>FACT:</strong> <strong>No</strong>, research widely
+                agrees that the earlier a child is exposed to multiple
+                languages, the easier it is for them to learn. The{" "}
                 <strong>"window of opportunity"</strong> or{" "}
                 <strong>"critical period"</strong> for language learning occurs
                 between <strong>birth and five years old</strong>, when children
@@ -983,16 +984,16 @@ async function getBlogPost(slug: string) {
                 language—"Drop the home language and only speak English."
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                <strong>FACT:</strong> No, research shows that this
-                recommendation can have serious negative effects. Why? Because
-                it disrupts parent-child communication, weakens connections with
-                extended family, and reduces overall language input. Studies
-                confirm that when children have a solid grasp of their home
-                language, they can transfer skills such as vocabulary, grammar,
-                and comprehension to their second language more effectively.
-                Maintaining and strengthening the first language improves the
-                quality of communication within families and communities while
-                supporting bilingual development.
+                <strong>FACT:</strong> <strong>No</strong>, research shows that
+                this recommendation can have serious negative effects. Why?
+                Because it disrupts parent-child communication, weakens
+                connections with extended family, and reduces overall language
+                input. Studies confirm that when children have a solid grasp of
+                their home language, they can transfer skills such as
+                vocabulary, grammar, and comprehension to their second language
+                more effectively. Maintaining and strengthening the first
+                language improves the quality of communication within families
+                and communities while supporting bilingual development.
               </p>
 
               <div className="bg-white p-6 rounded-xl mb-8">
@@ -1023,7 +1024,7 @@ async function getBlogPost(slug: string) {
                   simultaneous bilingualism), they reach the same fundamental
                   language milestones as monolingual children.
                 </strong>{" "}
-                Babbling (6–9 months),first words (12–15 months), and two-word
+                Babbling (6–9 months), first words (12–15 months), and two-word
                 combinations (18–24 months) typically develop within the
                 expected range. While first words might appear slightly later,
                 they still fall within normal limits.
@@ -1038,13 +1039,13 @@ async function getBlogPost(slug: string) {
 
               <div className="bg-gradient-to-r from-primary to-primary text-white p-8 rounded-2xl">
                 <h2 className="text-2xl font-bold mb-4">
-                  Concerned About Your Child's Development? Don't Wait.
+                  Concerned About Your Child's language Development? Don't Wait.
                 </h2>
                 <p className="text-purple-100 text-lg mb-6 leading-relaxed">
-                  📞 Contact <strong>Talk & Bloom</strong> for a free
-                  consultation—because every child deserves the right support to
-                  thrive. Take the first step toward unlocking their full
-                  potential today!
+                  <IoIosCall className="inline text-xl" /> Contact{" "}
+                  <strong>Talk & Bloom</strong> for a free consultation—because
+                  every child deserves the right support to thrive. Take the
+                  first step toward unlocking their full potential today!
                 </p>
                 <button className="bg-white text-primary text-lg px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
                   💬 Contact <strong>Talk & Bloom</strong> for a free
@@ -1057,7 +1058,7 @@ async function getBlogPost(slug: string) {
       ),
       image: "/hero-speech-therapy.avif",
       date: "2025-06-06",
-      author: "Rebeca Schvartzman SLP, reg. CASLPO",
+      author: "Rebeca Schvartzman, SLP, reg. CASLPO",
       readingTime: "6 min",
       category: "Bilingualism",
     },
